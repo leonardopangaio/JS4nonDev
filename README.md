@@ -1,7 +1,7 @@
 # ESTUDOS SOBRE JAVASCRIPT
 
 ## ÍNDICE
-1. Instalando o Node.js no Windows;
+1. (Instalando o Node.js no Windows;)[https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#1-instalando-o-nodejs-no-windows]
 2. Modo restrito;
 3. Declaração de variáveis (let, var const);
 4. Operadores matemáticos;
