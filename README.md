@@ -30,11 +30,17 @@
 3. Instalar no computador;
 4. Validar que o Node.js foi instalado com o comando `node -v` no console;
 
+URL de referência:
+https://youtu.be/E4DBTqgxHGM?si=RpCIPW4Xj8Yg5QEX
+
 ### 2. Modo restrito;
 
 O modo restrito server para forçar que o dev escreva um código mais simples e mais fortemente tipado.
 
 Para ativar o modo restrito, ou o _strict mode_, no código basta inicializarmos o script com `"use strict"`.
+
+URL de referência:
+https://youtu.be/HFOzef8k9GE?si=SfKV9rWqsBDb98YO
 
 ### 3. Declaração de variáveis (let, var const);
 
@@ -53,6 +59,9 @@ No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e co
 
 Existe um exemplo prático em ./Exemplos/topico3-variaveis.js
 
+URL de referência:
+https://youtu.be/zRA8RkDUqH0?si=41z3TICmffqoSdoX
+
 ### 4. Operadores matemáticos;
 
 Os operadores matemáticos ou aritméticos são os operadores para realização de calculos matemáticos:
@@ -63,6 +72,9 @@ Os operadores matemáticos ou aritméticos são os operadores para realização 
 5. Resto ou mod (%)
 6. Incremento (++ ou +=)
 7. Decremento (-- ou -=)
+
+URL de referência:
+https://youtu.be/eDVUmGnQJ_c?si=suSyU3-whupB6adT
 
 ### 5. Operadores relacionais;
 
