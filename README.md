@@ -2,19 +2,19 @@
 
 ## ÍNDICE
 1. [Instalando o Node.js no Windows;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#1-instalando-o-nodejs-no-windows)
-2. Modo restrito;
-3. Declaração de variáveis (let, var const);
-4. Operadores matemáticos;
-5. Operadores relacionais;
-6. Operadores lógicos;
-7. Operadores bitwise;
-8. Pré e Pós incremento;
-9. Operação ternária;
-10. Typeoff function;
-11. Spread functon;
-12. Condicional com IF e Else;
-13. Condicional com Switch Case;
-14. Loop com FOR;
+2. [Modo restrito;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#2-modo-restrito)
+3. [Declaração de variáveis (let, var const);](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#3-declara%C3%A7%C3%A3o-de-vari%C3%A1veis-let-var-const)
+4. [Operadores matemáticos;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#4-operadores-matem%C3%A1ticos)
+5. [Operadores relacionais;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#5-operadores-relacionais)
+6. [Operadores lógicos;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#6-operadores-l%C3%B3gicos)
+7. [Operadores bitwise;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#7-operadores-bitwise)
+8. [Pré e Pós incremento;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#8-pr%C3%A9-e-p%C3%B3s-incremento)
+9. [Operação ternária;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#9-opera%C3%A7%C3%A3o-tern%C3%A1ria)
+10. [Typeoff function;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#10-typeoff-function)
+11. [Spread functon;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#11-spread-functon)
+12. [Condicional com IF e Else;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#12-condicional-com-if-e-else)
+13. [Condicional com Switch Case;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#13-condicional-com-switch-case)
+14. [Loop com FOR;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#14-loop-com-for)
 15. 
 16. 
 17. 
