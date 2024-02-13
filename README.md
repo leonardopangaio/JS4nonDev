@@ -73,10 +73,31 @@ Os operadores matemáticos ou aritméticos são os operadores para realização 
 6. Incremento (++ ou +=)
 7. Decremento (-- ou -=)
 
+Existe um exemplo prático em ./Exemplos/topico4-operadores_matematicos.js
+
 URL de referência:
 https://youtu.be/eDVUmGnQJ_c?si=suSyU3-whupB6adT
 
 ### 5. Operadores relacionais;
+1. Maior que (>)
+2. Maior ou igual (>=)
+3. Menor que (<)
+4. Menor ou igual (<=)
+5. Igual (==)
+    - Quando utilizamos somente o '=' ele é reconhecido como uma atribuição e não uma comparação.
+6. Estritamente igual (===)
+    - A diferença entre o '===' e o '==' é que o primeiro valida o valor, tipo e endereço de memória, e o segundo só valida o valor contido na variável.
+    - Fica evidente em comparação de tipos de variáveis básicas, quando for comparado json, arrays e outros, ele considera que são itens diferentes. Objetos são considerados endereço de memória.
+7. Diferente (!=)
+
+O resultado final das operações de comparação (relacionais) é o retorno verdadeiro ou falso (True ou False). Com base nesse retorno é que o código vai continuar a operação.
+
+Vale dizer também que os operadores relacionais são afetados também pelo operador de negação '!'.
+
+Existe um exemplo prático em ./Exemplos/topico5-operadores_relacionais.js
+
+URL de referência:
+https://youtu.be/5ESHpHXFa4M?si=avK4n4iDcSbYdRcE
 
 ### 6. Operadores lógicos;
 
