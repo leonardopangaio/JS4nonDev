@@ -1,6 +1,6 @@
 console.log("Hello World!");
 
-// This is the line comment format;
+// This is the comment line format;
 
 /*
 This is how

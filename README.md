@@ -15,12 +15,6 @@
 12. [Condicional com IF e Else;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#12-condicional-com-if-e-else)
 13. [Condicional com Switch Case;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#13-condicional-com-switch-case)
 14. [Loop com FOR;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#14-loop-com-for)
-15. 
-16. 
-17. 
-18. 
-19. 
-20. 
 
 ---
 
@@ -65,13 +59,11 @@ https://youtu.be/zRA8RkDUqH0?si=41z3TICmffqoSdoX
 ### 4. Operadores matemáticos;
 
 Os operadores matemáticos ou aritméticos são os operadores para realização de calculos matemáticos:
-1. Soma (+)
-2. Subtração (-)
-3. Multiplicação (*)
-4. Divisão (/)
-5. Resto ou mod (%)
-6. Incremento (++ ou +=)
-7. Decremento (-- ou -=)
+1. Soma (`+`)
+2. Subtração (`-`)
+3. Multiplicação (`*`)
+4. Divisão (`/`)
+5. Resto ou mod (`%`)
 
 Existe um exemplo prático em ./Exemplos/topico4-operadores_matematicos.js
 
@@ -79,16 +71,16 @@ URL de referência:
 https://youtu.be/eDVUmGnQJ_c?si=suSyU3-whupB6adT
 
 ### 5. Operadores relacionais;
-1. Maior que (>)
-2. Maior ou igual (>=)
-3. Menor que (<)
-4. Menor ou igual (<=)
-5. Igual (==)
+1. Maior que (`>`)
+2. Maior ou igual (`>=`)
+3. Menor que (`<`)
+4. Menor ou igual (`<=`)
+5. Igual (`==`)
     - Quando utilizamos somente o '=' ele é reconhecido como uma atribuição e não uma comparação.
-6. Estritamente igual (===)
+6. Estritamente igual (`===`)
     - A diferença entre o '===' e o '==' é que o primeiro valida o valor, tipo e endereço de memória, e o segundo só valida o valor contido na variável.
     - Fica evidente em comparação de tipos de variáveis básicas, quando for comparado json, arrays e outros, ele considera que são itens diferentes. Objetos são considerados endereço de memória.
-7. Diferente (!=)
+7. Diferente (`!=`)
 
 O resultado final das operações de comparação (relacionais) é o retorno verdadeiro ou falso (True ou False). Com base nesse retorno é que o código vai continuar a operação.
 
@@ -100,16 +92,99 @@ URL de referência:
 https://youtu.be/5ESHpHXFa4M?si=avK4n4iDcSbYdRcE
 
 ### 6. Operadores lógicos;
+1. AND (`&&`)
+    - Retorna Verdadeiro ou Falso dependendo das condições testadas.
+2. OR (`||`)
+    - Retorna Verdadeiro ou Falso dependendo das condições testadas;
+    - Vale ressaltar que este ou, conforme é visto na tabela verdade, ele é um OU inclusivo, e não exclusivo.
+3. NOT (`!`)
+    - O NOT inverte o valor do que foi retornado.
+
+**Tabela Verdade**
+![alt text](.\Imagens\tabela_verdade.png)
+
+Existe um exemplo prático em ./Exemplos/topico6-operadores_logicos.js
+
+URL de referência: https://youtu.be/0-dgk6u9WBE?si=_VH0VJLATnBe4LLu
 
 ### 7. Operadores bitwise;
+Também conhecidos como operadores "bit a bit".
+1. AND (`&`)
+    - Este operador realiza a comparação bit a bit dos valores apresentados, seguindo a mesma regra do operador AND da tabela verdade apresentada nos operadores lógicos.
+2. OR (`|`)
+    - Este operador realiza a comparação bit a bit dos valores apresentados, seguindo a mesma regra do operador OR da tabela verdade apresentada nos operadores lógicos.
+3. XOR (`^`)
+    - Este operador realiza a comparação bit a bit dos valores apresentados, seguindo a mesma regra do operador XOR da tabela verdade apresentada nos operadores lógicos.
+4. Deslocamento para a esquerda (`<<`)
+    - Este operador realiza o deslocamento dos bits para a esquerda;
+    - Esta operação faz com que o valor seja dobrado o número de vezes que for declarado;
+    - É possível deslocar quantos bits forem necessários.
+5. Deslocamento para a direita (`>>`)
+    - Este operador realiza o deslocamento dos bits para a direita;
+    - Esta operação faz com que o valor seja dividido ao meio o número de vezes que for declarado;
+    - É possível deslocar quantos bits forem necessários.
 
-### 8. Pré e Pós incremento;
+Existe um arquivo excel explicando a lógica dos operadores bitwise em ./Exemplos/operadores_bitwise.xlsx
+
+Também existe um exemplo prático em ./Exemplos/topico7-operadores_bitwise.js
+
+URL de referência: https://youtu.be/JbGf_hd6g_Q?si=qb7BHaJ9nrN3xky-
+
+### 8. Incremento, decremento e inversão de valor;
+
+Consideremos os operadores de infremento, ou decremento, como `++` junto a variável. O que definirá se será pré ou pós será a localização do operador a variável.
+1. Incremento (`++` ou `+=X`)
+    - Vai incrementar 1 ou X na variável.
+2. Decremento (`--` ou `-=X`)
+    - Vao decrementar 1 ou X na variável.
+3. Inversão (`-X`)
+    - Assim como na matemática ao multiplicar um número por -1, e o sinal do número é trocado, o mesmo ocorre com o operador de inversão.
+4. Pré incremento, ou decremento (`X++` ou `X--`)
+    - Neste caso o incremento será realizado antes da operação realizada.
+5. Pós incremento, ou decremento (`++X` ou `--X`)
+    - Neste caso o incremento será realizado após a operação realizada.
+
+Vale reforçar que as operações de incremento e decremento realmente alteram o valor da variável, e não somente na execução das operações.
+
+Por exemplo, se incrementarmos uma variável que tem valor 10, a variável passará a valer 11.
+
+Obs. Caso tenhamos uma string na operação o operador `+` será considerado um operador de concatenação e não mais um incremento.
+
+Em ambos os casos, fica mais visivel com o exemplo prático.
+
+URL de referência: https://youtu.be/lz03-62owNY?si=oN6O3kLb7OKDRv1c
 
 ### 9. Operação ternária;
 
-### 10. Typeoff function;
+Também são conhecidos como "IF Ternários" ou "Condições Ternárias".
+
+Ele geralmente é utilizado para simplificar um teste, uma condição.
+
+O símbolo utilizado para realizar a operação ternária é o `?`.
+
+A sintaxe de uma operação ternária é dividida em 3 partes `(teste lógico ? retorno se verdadeiro : retorno se falso)`.
+
+Exemplo prático em ./Exemplos/topico9-operacao_ternaria.js
+
+URL de referência: https://youtu.be/5JPfbLGqzXA?si=mbl5yAKNS8kxrQer
+
+### 10. Typeof function;
+
+Também conhecido como "Operador Unário Typeof".
+
+Ele á uma função nativa do Javascript que retorna o tipo da variável que ele vai testar. Muito semelhante ao `type` do Python.
+
+Em Javascript temos 4 tipos de variáveis, são elas: Number, String, Object e Boolean.
+
+Exemplo prático em ./Exemplos/topico10-funcao_typeof.js
+
+URL de referência: https://youtu.be/K2U22waWKGo?si=khIcUPV6sj7NpBTq
 
 ### 11. Spread functon;
+
+Também conhecido como "Operador Spread".
+
+URL de referência: https://youtu.be/_qgObfmqokw?si=hb_Zn3ibD8l-OgEP
 
 ### 12. Condicional com IF e Else;
 
