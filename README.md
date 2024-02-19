@@ -15,6 +15,7 @@
 12. [Condicional com IF e Else;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#12-condicional-com-if-e-else)
 13. [Condicional com Switch Case;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#13-condicional-com-switch-case)
 14. [Loop com FOR;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#14-loop-com-for)
+15. [FOR IN e FOR OF](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#15-for-in-e-for-of)
 
 ---
 
@@ -184,11 +185,156 @@ URL de referência: https://youtu.be/K2U22waWKGo?si=khIcUPV6sj7NpBTq
 
 Também conhecido como "Operador Spread".
 
+O Spread é realizado utilizando os `...` (3 pontos ou reticências) e ele serve para "quebrar" um array.
+
+Comumente é utilizado para converter HTML collections para um array, possibilitando maior controle sobre os valores dentro do array.
+
+Um dos exemplos que será explicado é caso seja utilizado o spread em objetos iguais, nesse caso, ele considerará o último objeto declarado.
+
+Exemplos práticos em ./Exemplos/topico11-funcao_spread.js
+
 URL de referência: https://youtu.be/_qgObfmqokw?si=hb_Zn3ibD8l-OgEP
 
 ### 12. Condicional com IF e Else;
 
+A validação de condicionais determinará qual fluxo o sistema vai trabalhar. A declaração if/else sempre fará uma validação de condições com o que for passado para ela, caso verdadeiro, executará um bloco de código, caso falso, executará outro bloco de código.
+
+Em geral os testes das condições são utilizando as [operações relacionais](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#6-operadores-l%C3%B3gicos) e [operadores lógicos](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#6-operadores-l%C3%B3gicos).
+
+**Diagramas de Exemplos**
+
+````mermaid
+---
+title: Simple IF conditional test.
+---
+flowchart LR
+    subgraph " "
+    direction LR
+        ns(("Start"))-->nt1["Do something"]
+        nt1 --> ni1{"if(x==10)"}
+        ni1 --True--> nt2["print(X = 10)"]
+        nt2 --> ne(("End"))
+        ni1 --False--> ne
+    end
+````
+
+````mermaid
+---
+title: Simple IF/ELSE conditional test.
+---
+flowchart LR
+    subgraph " "
+    direction LR
+        ns(("Start"))-->nt1["Do something"]
+        nt1 --> ni{"if (x>y)"}
+        ni --True--> nt2["Print(True)"]
+        ni --False--> nt3["Print(False)"]
+        nt2 --> ne(("End"))
+        nt3 --> ne
+    end
+````
+
+````mermaid
+---
+title: Simple chained IF/ELSE conditional test.
+---
+flowchart LR
+    subgraph " "
+    direction LR
+        ns(("Start"))-->nt1["Do something"]
+        nt1 --> ni1{"if(x>y)"}
+        ni1 --True--> nt2["print(X > Y)"]
+        ni1 --False--> ni2{"if(x==y)"}
+        ni2 --True--> nt3["print(X = Y)"]
+        ni2 --False--> nt4["print(X < Y)"]
+        nt2 --> ne((End))
+        nt3 --> ne((End))
+        nt4 --> ne((End))
+    end
+````
+
+A sintaxe padrão do IF/ELSE é desta forma:
+````js
+if(condição){
+    Se verdadeiro, este bloco será executado.
+}else{
+    Se falso, este bloco será executado.
+}
+````
+
+Exemplos práticos em ./Exemplos/topico12-validacao_condicoes.js
+
+URL de referência: https://youtu.be/lDTKpamdXzc?si=rCMrTDnE_hV9IBv_
+
 ### 13. Condicional com Switch Case;
+
+A utilização do Switch Case para validação das condicionais é semelhante ao do IF/ELSE, onde ele fará a validação da expressão que lhe for passada e encaminhará para os casos que estão declarados nele.
+
+Será passado para o Switch a declaração que será testada e os casos que esta declaração será testada e seus blocos de código.
+
+A sintaxe padrão do Switch/Case é desta forma:
+
+````js
+switch(declaração){
+    case teste lógico:
+        bloco de código
+        break
+    case teste lógico:
+        bloco de código
+        break
+    default:
+        blóco de código padrão
+        break
+}
+````
+
+**Diagrama de exemplo**
+````mermaid
+---
+title: Simple Switch Case example
+---
+flowchart LR
+    subgraph " "
+    direction LR
+    ns(("Start"))-->nt1["Do something"]
+    nt1 --> nsc1{"Switch(expression)"}
+    nsc1 --> nc1["Case 1"] --> ne(("End"))
+    nsc1 --> nc2["Case 2"] --> ne(("End"))
+    nsc1 --> nc3["Case 3"] --> ne(("End"))
+    nsc1 --> nc4["Case 4"] --> ne(("End"))
+    nsc1 --> ncd["Default Case"] --> ne(("End"))
+    end
+````
+
+Exemplo prático em ./Exemplos/topico13-switch_case.js
+
+URL de referência: https://youtu.be/L4dpMM3MVWY?si=P9LFYMIyp3E6hWWo
 
 ### 14. Loop com FOR;
 
+Estruturas de loop são estruturas de repetições. Elas são utilizadas que é necessário a repetição de determinadas ações. Cada repetição é chamada de iteração.
+
+Temos duas classificações de loop, as definidas e indefinidas.
+
+**Definidas:** As estruturas de repetições definidas são utilizadas quando se é conhecido a quantidade de vezes que aquele loop deverá ser executado. Neste caso utiliza-se a estrutura `FOR`.
+
+**Indefinidas:** As estruturas de repetições indefinidas são utilizadas quando não se é conhecido a quantidade de vezes que aquele loop deverá ser executado. Nestes casos pode ser utilizado tanto o `WHILE` quando o `DO WHILE`.
+
+A sintaxe básica do loop FOR é:
+````js
+for(inicializador; condição; controle){
+    bloco de código que será iterado
+}
+````
+
+O loop FOR será executado enquanto sua condição for verdadeira, caso ela seja falsa, o loop será interrompido.
+
+> :warning: **Warning:** É necessário se ter cuidado com a validação/condição do loop FOR para que não se tenha um loop infinito.
+
+Exemplo prático em ./Exemplos/topico14-loop_for.js
+
+URL de referência: https://youtu.be/qBSB5H7mCGo?si=hNfN1_TBv4NW4DDl
+
+### 15. Variações do loop FOR (FOR IN e FOR OF);
+
+URL de referência: https://youtu.be/WLLCmepsG6Y?si=Xe-AI_yDr18157ZZ
