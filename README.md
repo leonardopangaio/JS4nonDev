@@ -1,5 +1,7 @@
 # ESTUDOS SOBRE JAVASCRIPT
 
+Esse documento visa a ser um caderno de estudos sobre javascript.
+
 ## ÍNDICE
 1. [Instalando o Node.js no Windows;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#1-instalando-o-nodejs-no-windows)
 2. [Modo restrito;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#2-modo-restrito)
@@ -12,11 +14,14 @@
 9. [Operação ternária;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#9-opera%C3%A7%C3%A3o-tern%C3%A1ria)
 10. [Typeoff function;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#10-typeoff-function)
 11. [Spread functon;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#11-spread-functon)
-12. [Condicional com IF e Else;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#12-condicional-com-if-e-else)
+12. [Condicional com IF e ELSE;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#12-condicional-com-if-e-else)
 13. [Condicional com Switch Case;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#13-condicional-com-switch-case)
 14. [Loop com FOR;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#14-loop-com-for)
-15. [FOR IN e FOR OF](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#15-for-in-e-for-of)
-
+15. [FOR IN e FOR OF;](https://github.com/leonardopangaio/JavaScriptStudies?tab=readme-ov-file#15-varia%C3%A7%C3%B5es-do-loop-for-for-in-e-for-of)
+16. [Loop WHILE;]()
+17. [Loop DO WHILE;]()
+18. [Declarações CONTINUE e BREAK;]()
+19. [Funções;]()
 ---
 
 ### 1. Instalando o Node.js no Windows;
@@ -24,6 +29,18 @@
 2. Baixar a versão LTS mais atualizada;
 3. Instalar no computador;
 4. Validar que o Node.js foi instalado com o comando `node -v` no console;
+
+Para executar o código, como por exemplo um "Hello World", devemos criar um arquivo e rodar com o comando node.
+
+Sintaxe básica do comando node:
+
+````sh
+node arquivo.js
+````
+
+> :memo: **Note:** NODE.js é server side, portanto ele não tem acesso aos elementos do DOM. </br> Para se ter acesso aos elementos do DOM, o script deverá ser chamado por uma página HTML dentro do navegador.
+
+Exemplo prático em ./Exemplos/topico1-hello_world.js
 
 URL de referência:
 https://youtu.be/E4DBTqgxHGM?si=RpCIPW4Xj8Yg5QEX
@@ -195,7 +212,7 @@ Exemplos práticos em ./Exemplos/topico11-funcao_spread.js
 
 URL de referência: https://youtu.be/_qgObfmqokw?si=hb_Zn3ibD8l-OgEP
 
-### 12. Condicional com IF e Else;
+### 12. Condicional com IF e ELSE;
 
 A validação de condicionais determinará qual fluxo o sistema vai trabalhar. A declaração if/else sempre fará uma validação de condições com o que for passado para ela, caso verdadeiro, executará um bloco de código, caso falso, executará outro bloco de código.
 
@@ -337,4 +354,121 @@ URL de referência: https://youtu.be/qBSB5H7mCGo?si=hNfN1_TBv4NW4DDl
 
 ### 15. Variações do loop FOR (FOR IN e FOR OF);
 
+FOR IN e FOR OF são variações do loop FOR.
+
+**FOR IN:** O FOR IN é utilizado para percorrer objetos e arrays de uma forma simplificada. Ele fará a iteração e retornará o índice para o valor definido.
+
+Sintaxe básica do loop FOR IN:
+````js
+for(valor in objeto){
+    bloco de código que será iterado, onde valor é o índice da iteração.
+}
+````
+
+**FOR OF:** O FOR OF também é utilizado para percorrer objetos e arrays, contudo ele retorna o valor que está localizado no índice iterado e não o índice em si como o FOR ou o FOR IN.
+
+Sintaxe básica do loop FOR OF:
+````js
+for(valor of objeto){
+    bloco de código que será iterado, onde valor é o item dentro do objeto.
+}
+````
+
+Ambos funcionam também para coleções HTML.
+
+Exemplo prático em ./Exemplos/topico15-for_in_for_of.js
+
 URL de referência: https://youtu.be/WLLCmepsG6Y?si=Xe-AI_yDr18157ZZ
+
+### 16. Loop WHILE
+
+O loop WHILE é considerado um loop indefinido, pois é utilizado quando não se sabe a quantidade de vezes que ele deverá ser executado.
+
+Ao contrário do loop FOR, e suas variações, o loop WHILE não realiza o incremento de forma automática. Caso seja desejado um loop finito, o incremento até chegar a sua condição deverá ser realizado dentro do bloco de código desejado.
+
+O WHILE realiza o teste lógico e então realiza o bloco de código que está dentro dele.
+
+````mermaid
+---
+title: Simple while loop diagram
+---
+flowchart LR
+    subgraph " "
+    direction TB
+        ns(("Start"))
+        tk1["Task"]
+        tk2["Task"]
+        lw{"While(Condition)"}
+        wt["While Loop Task"]
+        ne(("End"))
+
+        ns --> tk1
+        tk1 --> lw
+        subgraph "While"
+            lw --True--> wt --> lw
+        end
+        lw --False--> tk2
+        tk2 --> ne
+    end
+````
+
+A sintaxe básica do loop WHILE é:
+
+````js
+while(condição){
+    bloco de código que será iterado
+}
+````
+
+> :warning: **Warning:** É necessário se ter cuidado com incremento ou alteração dos dados da condição do loop WHILE para que não se tenha um loop infinito indesejado.
+
+Exemplos práticos em ./Exemplos/topico16-loop_while.js
+
+URL de referência: https://youtu.be/Nm6vfrLrGs8?si=tEOiqIG9aRUSaYbI
+
+### 17. Loop DO WHILE
+
+O loop DO WHILE também é considerado um loop indefinido, assim como o WHILE, contudo a diferença entre eles é que, o WHILE realiza o teste lógico e então realiza a atividade, já o DO WHILE realiza a atividade e então o teste lógico. Portanto no loop WHILE não se tem a garantia de que o bloco de código será executado ao menos uma vez, já no DO WHILE sim, pois ele será executado e depois o loop fará o teste da condição.
+
+Sintaxe básica do loop DO WHILE:
+````js
+do{
+    bloco de código que será executado
+}while(condição)
+````
+
+Exemplos práticos em ./Exemplos/topico17-loop_do_while.js
+
+URL de referência: https://youtu.be/nAS21yLt2-Q?si=v3_XG4KvDsEMhVn5
+
+### 18. Declarações CONTINUE e BREAK
+
+**CONTINUE:** Ao encontrar o comando CONTINUE, o loop vai pular somente aquela iteração.
+
+**BREAK:** Ao encontrar o comando BREAK, o loop será interrompido imediatamente.
+
+Exemplos práticos em ./Exemplos/topico18-continue_break.js
+
+URL de referência: https://youtu.be/KRojULEQx24?si=vrMVkrI-_cSsMf6I
+
+### 19. Funções
+
+As funções numa linguagem de programação podem ser entendidas como blocos de código que podem ser utilizados quando necessário e por mais de uma vez.
+
+Quando escrevemos um código, comando a comando, ele será executado do início ao fim, respeitando a ordem e as condições. Quando criamos uma função, esse bloco só será executado caso ele seja requisitado.
+
+Tipos de função:
+1. Basic function
+    - Sintaxe:
+    ````js
+    function funcao(){ //declaração da função
+        bloco de código que será executado
+    }
+
+    funcao() //chamada da função
+    ````
+2. Arrow function
+
+Exemplos práticos em ./Exemplos/topico19-funcoes.js
+
+URL de referência #1: https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
