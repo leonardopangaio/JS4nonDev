@@ -21,7 +21,7 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 16. [Loop WHILE;]()
 17. [Loop DO WHILE;]()
 18. [Declarações CONTINUE e BREAK;]()
-19. [Funções;](#topico-19)
+19. [Funções;](#19-Funções)
 ---
 
 ### 1. Instalando o Node.js no Windows;
@@ -451,7 +451,7 @@ Exemplos práticos em ./Exemplos/topico18-continue_break.js
 
 URL de referência: https://youtu.be/KRojULEQx24?si=vrMVkrI-_cSsMf6I
 
-### 19. Funções {#topico-19}
+### 19. Funções
 
 As funções numa linguagem de programação podem ser entendidas como blocos de código que podem ser utilizados quando necessário e por mais de uma vez.
 
