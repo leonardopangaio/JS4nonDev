@@ -34,9 +34,9 @@ Para executar o código, como por exemplo um "Hello World", devemos criar um arq
 
 Sintaxe básica do comando node:
 
-````sh
+```sh
 node arquivo.js
-````
+```
 
 > :memo: **Note:** NODE.js é server side, portanto ele não tem acesso aos elementos do DOM. </br> Para se ter acesso aos elementos do DOM, o script deverá ser chamado por uma página HTML dentro do navegador.
 
@@ -220,7 +220,7 @@ Em geral os testes das condições são utilizando as [operações relacionais](
 
 **Diagramas de Exemplos**
 
-````mermaid
+```mermaid
 ---
 title: Simple IF conditional test.
 ---
@@ -233,9 +233,9 @@ flowchart LR
         nt2 --> ne(("End"))
         ni1 --False--> ne
     end
-````
+```
 
-````mermaid
+```mermaid
 ---
 title: Simple IF/ELSE conditional test.
 ---
@@ -249,9 +249,9 @@ flowchart LR
         nt2 --> ne(("End"))
         nt3 --> ne
     end
-````
+```
 
-````mermaid
+```mermaid
 ---
 title: Simple chained IF/ELSE conditional test.
 ---
@@ -268,16 +268,18 @@ flowchart LR
         nt3 --> ne((End))
         nt4 --> ne((End))
     end
-````
+```
 
 A sintaxe padrão do IF/ELSE é desta forma:
-````js
+```js
 if(condição){
     Se verdadeiro, este bloco será executado.
 }else{
     Se falso, este bloco será executado.
 }
-````
+```
+
+> :memo: **Obs:** Se o IF/ELSE tiverem apenas uma linha de execução, não será necessário a declaração das chaves "{}".
 
 Exemplos práticos em ./Exemplos/topico12-validacao_condicoes.js
 
@@ -291,7 +293,7 @@ Será passado para o Switch a declaração que será testada e os casos que esta
 
 A sintaxe padrão do Switch/Case é desta forma:
 
-````js
+```js
 switch(declaração){
     case teste lógico:
         bloco de código
@@ -303,10 +305,10 @@ switch(declaração){
         blóco de código padrão
         break
 }
-````
+```
 
 **Diagrama de exemplo**
-````mermaid
+```mermaid
 ---
 title: Simple Switch Case example
 ---
@@ -321,7 +323,7 @@ flowchart LR
     nsc1 --> nc4["Case 4"] --> ne(("End"))
     nsc1 --> ncd["Default Case"] --> ne(("End"))
     end
-````
+```
 
 Exemplo prático em ./Exemplos/topico13-switch_case.js
 
@@ -338,15 +340,17 @@ Temos duas classificações de loop, as definidas e indefinidas.
 **Indefinidas:** As estruturas de repetições indefinidas são utilizadas quando não se é conhecido a quantidade de vezes que aquele loop deverá ser executado. Nestes casos pode ser utilizado tanto o `WHILE` quando o `DO WHILE`.
 
 A sintaxe básica do loop FOR é:
-````js
+```js
 for(inicializador; condição; controle){
     bloco de código que será iterado
 }
-````
+```
 
 O loop FOR será executado enquanto sua condição for verdadeira, caso ela seja falsa, o loop será interrompido.
 
 > :warning: **Warning:** É necessário se ter cuidado com a validação/condição do loop FOR para que não se tenha um loop infinito.
+
+> :memo: **Obs:** Se o FOR tiver apenas uma linha de execução, não será necessário a declaração das chaves "{}".
 
 Exemplo prático em ./Exemplos/topico14-loop_for.js
 
@@ -359,20 +363,20 @@ FOR IN e FOR OF são variações do loop FOR.
 **FOR IN:** O FOR IN é utilizado para percorrer objetos e arrays de uma forma simplificada. Ele fará a iteração e retornará o índice para o valor definido.
 
 Sintaxe básica do loop FOR IN:
-````js
+```js
 for(valor in objeto){
     bloco de código que será iterado, onde valor é o índice da iteração.
 }
-````
+```
 
 **FOR OF:** O FOR OF também é utilizado para percorrer objetos e arrays, contudo ele retorna o valor que está localizado no índice iterado e não o índice em si como o FOR ou o FOR IN.
 
 Sintaxe básica do loop FOR OF:
-````js
+```js
 for(valor of objeto){
     bloco de código que será iterado, onde valor é o item dentro do objeto.
 }
-````
+```
 
 Ambos funcionam também para coleções HTML.
 
@@ -388,7 +392,7 @@ Ao contrário do loop FOR, e suas variações, o loop WHILE não realiza o incre
 
 O WHILE realiza o teste lógico e então realiza o bloco de código que está dentro dele.
 
-````mermaid
+```mermaid
 ---
 title: Simple while loop diagram
 ---
@@ -410,15 +414,15 @@ flowchart LR
         lw --False--> tk2
         tk2 --> ne
     end
-````
+```
 
 A sintaxe básica do loop WHILE é:
 
-````js
+```js
 while(condição){
     bloco de código que será iterado
 }
-````
+```
 
 > :warning: **Warning:** É necessário se ter cuidado com incremento ou alteração dos dados da condição do loop WHILE para que não se tenha um loop infinito indesejado.
 
@@ -431,11 +435,11 @@ URL de referência: https://youtu.be/Nm6vfrLrGs8?si=tEOiqIG9aRUSaYbI
 O loop DO WHILE também é considerado um loop indefinido, assim como o WHILE, contudo a diferença entre eles é que, o WHILE realiza o teste lógico e então realiza a atividade, já o DO WHILE realiza a atividade e então o teste lógico. Portanto no loop WHILE não se tem a garantia de que o bloco de código será executado ao menos uma vez, já no DO WHILE sim, pois ele será executado e depois o loop fará o teste da condição.
 
 Sintaxe básica do loop DO WHILE:
-````js
+```js
 do{
     bloco de código que será executado
 }while(condição)
-````
+```
 
 Exemplos práticos em ./Exemplos/topico17-loop_do_while.js
 
@@ -457,18 +461,86 @@ As funções numa linguagem de programação podem ser entendidas como blocos de
 
 Quando escrevemos um código, comando a comando, ele será executado do início ao fim, respeitando a ordem e as condições. Quando criamos uma função, esse bloco só será executado caso ele seja requisitado.
 
-Tipos de função:
+**Retorno**
+
+As funções podem retornar valores também, não somente realizar as operações. Neste caso, podemos utilizar o `return` para que seja retornado um valor. 
+
+Funções podem ter apenas <ins>um</ins> `return`. Isto se deve ao fato de sempre que uma função executa o `return` ela é finalizada, e não executará mais nenhuma instrução. 
+
+Para se ter mais de um `return` ou retornar mais de um valor, ou devemos ter uma condicional que direcionará para qual retorno será dado ou o retorno deverá ser um objeto ou array.
+
+**Parâmetros**
+
+Parâmetros são valores que serão passados para a função. Os parâmetros de uma função são opcionais. Os parâmetros podem ter um valor padrão definido na declaração.
+
+Existem duas formas de se declarar parâmetros de uma função:
+1. Parâmetros definidos;
+    - Neste caso, a quantidade de parâmetros é definida;
+    - Necessário a declaração deles na criação da função, podendo ter um valor padrão ou não;
+2. Parâmetros REST;
+    - Neste caso, a quantidade de parâmetros não é definida;
+    - A declaração de parâmetros rest se dá através de um spread de um array, portanto deverão ser manipulados/iterados como um array;
+
+**Tipos de função**
+
 1. Basic function
-    - Sintaxe:
-    ````js
+    - Sintaxe básica:
+    ```js
     function funcao(){ //declaração da função
         bloco de código que será executado
     }
 
     funcao() //chamada da função
-    ````
-2. Arrow function
+    ```
+    - Sintaxe com parâmetros:
+    ```js
+    function funcao(parâmetros=valor padrão){
+        bloco de código que será executado
+    }
+
+    funcao(parâmetros)
+    ```
+    - Sintaxe com parâmetros rest:
+    ```js
+    function funcao(...valores){
+        bloco de código que será executado
+    }
+
+    funcao(array de valores)
+    ```
+2. Anonymous function
+    - Funções anônimas são funções sem um nome declarado;
+    - Elas também não ficam em memória, como as funções normais que aguardam serem chamadas;
+    - As funções anônimas são instanciadas em tempo de execução;
+    - Como elas não possuem um nome declarado, devem ser declaradas dentro de variáveis;
+    - É sugerido que as funções anônimas sejam declaradas como `const` para que elas não sofram alteração durante o funcionamento do código, mas elas podem ser declaradas com `var` ou `let` também;
+    - Sintaxe básica:
+    ```js
+    const variavel = function(parâmetros){bloco de código que será executado}
+    ```
+    - Também podemos ter uma função anônima construtora;
+    - Os parâmetros devem ser passados como string;
+    - O último parâmetro será o corpo da função, o bloco de código que será executado;
+    - Sintaxe construtora:
+    ```js
+    const variavel = new Function("parâmetros", "return bloco de código que será executado") //Obrigatório que seja com F maiúsculo
+    ```
+3. Arrow function
+    - Também conhecidas como funções lambda;
+    - Arrow functions também são consideradas como funções anônimas;
+    - Caso a arrow function tenha apenas UM parâmetro, ela não precisa estar entre parênteses;
+    - A saída padrão de uma arrow function já é o `return`;
+    - Caso a arrow function seja simples, com até uma linha, ela não precisa ter o corpo entre chaves;
+    - Sintaxe básica:
+    ```js
+    const variavel = (parâmetros)=>{bloco de código que será executado}
+    ```
 
 Exemplos práticos em ./Exemplos/topico19-funcoes.js
 
-URL de referência #1: https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
+URL de referência #1 (Funções): https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
+URL de referência #2 (Retorno): https://youtu.be/vRHQyl_yu5k?si=FTx7DmWdZrnJA9vh
+URL de referência #3 (Parâmetros): https://youtu.be/hTZ7WJx0de0?si=mJCq05CF0aWs0nlv
+URL de referência #4 (Parâmetros Rest): https://youtu.be/pZfH_UWg8Ro?si=pYPJVLBEa2d0q-8L
+URL de referência #5 (Funções anônimas): https://youtu.be/0HJU96mThMg?si=JJ8-xMJP82koB7du
+URL de referência #5 (Arrow functions): https://youtu.be/maiNY1zYKSQ?si=QJDj3THhoh9DheBW

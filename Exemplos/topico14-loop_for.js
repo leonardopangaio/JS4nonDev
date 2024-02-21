@@ -15,3 +15,8 @@ let familia=["Leonardo", "Lucia", "Isis", "Hera", "Apolo"]
 for(let i=0; i < familia.length; i++){
     console.log("Bom dia " + familia[i])
 }
+
+console.log('---')
+//Example of loop for without courly braces
+for(let u=0; u<2; u++)
+    console.log(u)

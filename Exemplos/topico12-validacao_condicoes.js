@@ -31,3 +31,8 @@ if(typeof(n1)=="number"){
         console.log("X é igual a 10.")
     }
 }
+
+console.log('---')
+//Example of IF statement without curly braces
+if(n1===10)
+    console.log("X é 10")
