@@ -553,14 +553,14 @@ Existem duas formas de se declarar parâmetros de uma função:
 
 :bulb: **Tip:** Devido a dificuldade no entendimento, utilizei o chat gpt pra me auxiliar na explicação. A melhor explicação que obtive está em ./ExplicacoesGPT/funcoes_geradoras.md
 
+**Exemplos e Referências**
+-Exemplos práticos em ./Exemplos/topico19-funcoes.js
 
-Exemplos práticos em ./Exemplos/topico19-funcoes.js
-
-URL de referência #1 (Funções): https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
-URL de referência #2 (Retorno): https://youtu.be/vRHQyl_yu5k?si=FTx7DmWdZrnJA9vh
-URL de referência #3 (Parâmetros): https://youtu.be/hTZ7WJx0de0?si=mJCq05CF0aWs0nlv
-URL de referência #4 (Parâmetros Rest): https://youtu.be/pZfH_UWg8Ro?si=pYPJVLBEa2d0q-8L
-URL de referência #5 (Funções anônimas): https://youtu.be/0HJU96mThMg?si=JJ8-xMJP82koB7du
-URL de referência #5 (Arrow functions): https://youtu.be/maiNY1zYKSQ?si=QJDj3THhoh9DheBW
-URL de referência #6 (Funções aninhadas): https://youtu.be/SNKIzr9JgtQ?si=7nEIpivWRuCGOPrt
-URL de referência #7 (Funções geradoras): https://youtu.be/3j9Ikmm2ieA?si=EZpeVrzlUsmcuSJD
+- URL de referência #1 (Funções): https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
+- URL de referência #2 (Retorno): https://youtu.be/vRHQyl_yu5k?si=FTx7DmWdZrnJA9vh
+- URL de referência #3 (Parâmetros): https://youtu.be/hTZ7WJx0de0?si=mJCq05CF0aWs0nlv
+- URL de referência #4 (Parâmetros Rest): https://youtu.be/pZfH_UWg8Ro?si=pYPJVLBEa2d0q-8L
+- URL de referência #5 (Funções anônimas): https://youtu.be/0HJU96mThMg?si=JJ8-xMJP82koB7du
+- URL de referência #5 (Arrow functions): https://youtu.be/maiNY1zYKSQ?si=QJDj3THhoh9DheBW
+- URL de referência #6 (Funções aninhadas): https://youtu.be/SNKIzr9JgtQ?si=7nEIpivWRuCGOPrt
+- URL de referência #7 (Funções geradoras): https://youtu.be/3j9Ikmm2ieA?si=EZpeVrzlUsmcuSJD
