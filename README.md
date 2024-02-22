@@ -554,7 +554,7 @@ Existem duas formas de se declarar parâmetros de uma função:
 :bulb: **Tip:** Devido a dificuldade no entendimento, utilizei o chat gpt pra me auxiliar na explicação. A melhor explicação que obtive está em ./ExplicacoesGPT/funcoes_geradoras.md
 
 **Exemplos e Referências**
--Exemplos práticos em ./Exemplos/topico19-funcoes.js
+- Exemplos práticos em ./Exemplos/topico19-funcoes.js
 
 - URL de referência #1 (Funções): https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
 - URL de referência #2 (Retorno): https://youtu.be/vRHQyl_yu5k?si=FTx7DmWdZrnJA9vh
