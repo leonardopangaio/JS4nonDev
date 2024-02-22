@@ -144,3 +144,63 @@ const a3 = (...valores)=>{
     console.log(soma)
 }
 a3(2,3,4,5,6)
+
+console.log('---')
+// Nested function example
+const func1 = (...valores) => {
+    const func2 = val => {
+        let result = 0
+        for(v of val){
+            result += v
+        }
+        return result
+    }
+    return func2(valores)
+}
+console.log(func1(10,15,20,35,78))
+
+console.log('---')
+// Example of generator function
+function* cores(){
+    yield "Vermelho"
+    yield "Verde"
+    yield "Azul"
+}
+
+const itc = cores() //1a chamada
+console.log(itc)
+console.log(itc.next().value) //2a iteração
+console.log(itc.next().value) //3a iteração
+console.log(itc.next().value) //4a iteração
+console.log(itc.next().value) //5a iteração
+
+console.log('---')
+function* perguntas(){
+    const nome = yield 'Qual é o seu nome?'
+    const esporte = yield 'Qual é o seu esporte favorito?'
+    return "Seu nome é " + nome + " e seu esporte favorito é " + esporte
+}
+
+const itp = perguntas() //aqui ele só gerou o iterator
+console.log(itp.next().value) //Na primeira chamada, ele só retorna o yield e aguarda o valor dessa variável, portanto a variável deve ser "setada" na próxima iteração.
+console.log(itp.next("Leonardo").value) //Nesta segunda iteração, ela está setando a primeira variável, exibindo o segundo yield e aguardará o valor da segunda variável, que deverá ser "setada" na próxima iteração.
+console.log(itp.next("Futebol Americano").value)
+
+console.log('---')
+function* contador(){
+    let z = 0
+    while(true){
+        yield z++
+        if(z>15){
+            break
+        }
+    }
+}
+const itCont = contador()
+for(i=0; i<10; i++){
+    console.log(itCont.next().value)
+}
+console.log('...')
+for(c of itCont){
+console.log(c)
+}

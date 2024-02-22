@@ -535,6 +535,24 @@ Existem duas formas de se declarar parâmetros de uma função:
     ```js
     const variavel = (parâmetros)=>{bloco de código que será executado}
     ```
+4. Funções aninhadas
+    - Funções aninhadas são funções que ficam dentro de funções;
+    - São geralmente utilizadas para dar uma organização melhor no código;
+5. Funções geradoras
+    - Funções geradoras tem seu retorno atrasado até o momento em que é solicitado;
+    - Uma função geradora não precisa terminar a execução para gerar um retorno, ela pode ir retornando durante o processamento;
+    - Na primeira chamada ela retorna um iterador, e nas demais ela retorna um `yield`;
+    - Geralmente utilizadas em situações assíncronas;
+    - Sintaxe básica:
+    ```js
+    function* função(){
+        Bloco de código com os retornos realizados por yields
+    }
+    ```
+    - As chamadas geralmente são através de variáveis, e podemos percorrer elas pois são objetos iteráveis;
+
+:bulb: **Tip:** Devido a dificuldade no entendimento, utilizei o chat gpt pra me auxiliar na explicação. A melhor explicação que obtive está em ./ExplicacoesGPT/funcoes_geradoras.md
+
 
 Exemplos práticos em ./Exemplos/topico19-funcoes.js
 
@@ -544,3 +562,5 @@ URL de referência #3 (Parâmetros): https://youtu.be/hTZ7WJx0de0?si=mJCq05CF0aW
 URL de referência #4 (Parâmetros Rest): https://youtu.be/pZfH_UWg8Ro?si=pYPJVLBEa2d0q-8L
 URL de referência #5 (Funções anônimas): https://youtu.be/0HJU96mThMg?si=JJ8-xMJP82koB7du
 URL de referência #5 (Arrow functions): https://youtu.be/maiNY1zYKSQ?si=QJDj3THhoh9DheBW
+URL de referência #6 (Funções aninhadas): https://youtu.be/SNKIzr9JgtQ?si=7nEIpivWRuCGOPrt
+URL de referência #7 (Funções geradoras): https://youtu.be/3j9Ikmm2ieA?si=EZpeVrzlUsmcuSJD
