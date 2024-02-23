@@ -22,6 +22,8 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 17. [Loop DO WHILE;](#17-Loop-DO-WHILE)
 18. [Declarações CONTINUE e BREAK;](#18-Declarações-CONTINUE-e-BREAK)
 19. [Funções;](#19-Funções)
+20. [Map method](#20-Map-method)
+21. [Operador THIS](#21-Operador-THIS)
 ---
 
 ### 1. Instalando o Node.js no Windows;
@@ -51,8 +53,10 @@ O modo restrito server para forçar que o dev escreva um código mais simples e 
 
 Para ativar o modo restrito, ou o _strict mode_, no código basta inicializarmos o script com `"use strict"`.
 
-URL de referência:
-https://youtu.be/HFOzef8k9GE?si=SfKV9rWqsBDb98YO
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico1-hello_world.js
+
+- URL de referência: https://youtu.be/HFOzef8k9GE?si=SfKV9rWqsBDb98YO
 
 ### 3. Declaração de variáveis (let, var const);
 
@@ -69,10 +73,10 @@ No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e co
     - A declaração de variável usando `const` é semelhante a declaração com `var`, porém ela não poderá sofrer alteração posterior;
     - Comumente é utilizada para instanciar um objeto ou chamar uma função;
 
-Existe um exemplo prático em ./Exemplos/topico3-variaveis.js
+**Exemplos e Referências**
+- Exemplos prático em ./Exemplos/topico3-variaveis.js
 
-URL de referência:
-https://youtu.be/zRA8RkDUqH0?si=41z3TICmffqoSdoX
+- URL de referência: https://youtu.be/zRA8RkDUqH0?si=41z3TICmffqoSdoX
 
 ### 4. Operadores matemáticos;
 
@@ -83,10 +87,10 @@ Os operadores matemáticos ou aritméticos são os operadores para realização 
 4. Divisão (`/`)
 5. Resto ou mod (`%`)
 
-Existe um exemplo prático em ./Exemplos/topico4-operadores_matematicos.js
+**Exemplos e Referências**
+- Exemplos prático em ./Exemplos/topico4-operadores_matematicos.js
 
-URL de referência:
-https://youtu.be/eDVUmGnQJ_c?si=suSyU3-whupB6adT
+- URL de referência: https://youtu.be/eDVUmGnQJ_c?si=suSyU3-whupB6adT
 
 ### 5. Operadores relacionais;
 1. Maior que (`>`)
@@ -104,10 +108,10 @@ O resultado final das operações de comparação (relacionais) é o retorno ver
 
 Vale dizer também que os operadores relacionais são afetados também pelo operador de negação '!'.
 
-Existe um exemplo prático em ./Exemplos/topico5-operadores_relacionais.js
+**Exemplos e Referências**
+- Exemplos prático em ./Exemplos/topico5-operadores_relacionais.js
 
-URL de referência:
-https://youtu.be/5ESHpHXFa4M?si=avK4n4iDcSbYdRcE
+- URL de referência: https://youtu.be/5ESHpHXFa4M?si=avK4n4iDcSbYdRcE
 
 ### 6. Operadores lógicos;
 1. AND (`&&`)
@@ -121,9 +125,10 @@ https://youtu.be/5ESHpHXFa4M?si=avK4n4iDcSbYdRcE
 **Tabela Verdade**
 ![alt text](.\Imagens\tabela_verdade.png)
 
-Existe um exemplo prático em ./Exemplos/topico6-operadores_logicos.js
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico6-operadores_logicos.js
 
-URL de referência: https://youtu.be/0-dgk6u9WBE?si=_VH0VJLATnBe4LLu
+- URL de referência: https://youtu.be/0-dgk6u9WBE?si=_VH0VJLATnBe4LLu
 
 ### 7. Operadores bitwise;
 Também conhecidos como operadores "bit a bit".
@@ -144,9 +149,10 @@ Também conhecidos como operadores "bit a bit".
 
 Existe um arquivo excel explicando a lógica dos operadores bitwise em ./Exemplos/operadores_bitwise.xlsx
 
-Também existe um exemplo prático em ./Exemplos/topico7-operadores_bitwise.js
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico7-operadores_bitwise.js
 
-URL de referência: https://youtu.be/JbGf_hd6g_Q?si=qb7BHaJ9nrN3xky-
+- URL de referência: https://youtu.be/JbGf_hd6g_Q?si=qb7BHaJ9nrN3xky-
 
 ### 8. Incremento, decremento e inversão de valor;
 
@@ -170,7 +176,10 @@ Obs. Caso tenhamos uma string na operação o operador `+` será considerado um 
 
 Em ambos os casos, fica mais visivel com o exemplo prático.
 
-URL de referência: https://youtu.be/lz03-62owNY?si=oN6O3kLb7OKDRv1c
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico8-pre_pos_incremento.js
+
+- URL de referência: https://youtu.be/lz03-62owNY?si=oN6O3kLb7OKDRv1c
 
 ### 9. Operação ternária;
 
@@ -182,9 +191,10 @@ O símbolo utilizado para realizar a operação ternária é o `?`.
 
 A sintaxe de uma operação ternária é dividida em 3 partes `(teste lógico ? retorno se verdadeiro : retorno se falso)`.
 
-Exemplo prático em ./Exemplos/topico9-operacao_ternaria.js
+**Exemplos e Referências**
+- Exemplo prático em ./Exemplos/topico9-operacao_ternaria.js
 
-URL de referência: https://youtu.be/5JPfbLGqzXA?si=mbl5yAKNS8kxrQer
+- URL de referência: https://youtu.be/5JPfbLGqzXA?si=mbl5yAKNS8kxrQer
 
 ### 10. Typeof function;
 
@@ -194,9 +204,10 @@ Ele á uma função nativa do Javascript que retorna o tipo da variável que ele
 
 Em Javascript temos 4 tipos de variáveis, são elas: Number, String, Object e Boolean.
 
-Exemplo prático em ./Exemplos/topico10-funcao_typeof.js
+**Exemplos e Referências**
+- Exemplo prático em ./Exemplos/topico10-funcao_typeof.js
 
-URL de referência: https://youtu.be/K2U22waWKGo?si=khIcUPV6sj7NpBTq
+- URL de referência: https://youtu.be/K2U22waWKGo?si=khIcUPV6sj7NpBTq
 
 ### 11. Spread functon;
 
@@ -208,9 +219,12 @@ Comumente é utilizado para converter HTML collections para um array, possibilit
 
 Um dos exemplos que será explicado é caso seja utilizado o spread em objetos iguais, nesse caso, ele considerará o último objeto declarado.
 
-Exemplos práticos em ./Exemplos/topico11-funcao_spread.js
+> :memo: **Note:** Os índices de arrays sempre começam com 0. Por exemplo, se tivermos um array de 3 itens, os índices serão 0, 1 e 2.
 
-URL de referência: https://youtu.be/_qgObfmqokw?si=hb_Zn3ibD8l-OgEP
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico11-funcao_spread.js
+
+- URL de referência: https://youtu.be/_qgObfmqokw?si=hb_Zn3ibD8l-OgEP
 
 ### 12. Condicional com IF e ELSE;
 
@@ -281,9 +295,10 @@ if(condição){
 
 > :memo: **Obs:** Se o IF/ELSE tiverem apenas uma linha de execução, não será necessário a declaração das chaves "{}".
 
-Exemplos práticos em ./Exemplos/topico12-validacao_condicoes.js
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico12-validacao_condicoes.js
 
-URL de referência: https://youtu.be/lDTKpamdXzc?si=rCMrTDnE_hV9IBv_
+- URL de referência: https://youtu.be/lDTKpamdXzc?si=rCMrTDnE_hV9IBv_
 
 ### 13. Condicional com Switch Case;
 
@@ -325,9 +340,10 @@ flowchart LR
     end
 ```
 
-Exemplo prático em ./Exemplos/topico13-switch_case.js
+**Exemplos e Referências**
+- Exemplo prático em ./Exemplos/topico13-switch_case.js
 
-URL de referência: https://youtu.be/L4dpMM3MVWY?si=P9LFYMIyp3E6hWWo
+- URL de referência: https://youtu.be/L4dpMM3MVWY?si=P9LFYMIyp3E6hWWo
 
 ### 14. Loop com FOR;
 
@@ -352,9 +368,10 @@ O loop FOR será executado enquanto sua condição for verdadeira, caso ela seja
 
 > :memo: **Obs:** Se o FOR tiver apenas uma linha de execução, não será necessário a declaração das chaves "{}".
 
-Exemplo prático em ./Exemplos/topico14-loop_for.js
+**Exemplos e Referências**
+- Exemplo prático em ./Exemplos/topico14-loop_for.js
 
-URL de referência: https://youtu.be/qBSB5H7mCGo?si=hNfN1_TBv4NW4DDl
+- URL de referência: https://youtu.be/qBSB5H7mCGo?si=hNfN1_TBv4NW4DDl
 
 ### 15. Variações do loop FOR (FOR IN e FOR OF);
 
@@ -380,9 +397,10 @@ for(valor of objeto){
 
 Ambos funcionam também para coleções HTML.
 
-Exemplo prático em ./Exemplos/topico15-for_in_for_of.js
+**Exemplos e Referências**
+- Exemplo prático em ./Exemplos/topico15-for_in_for_of.js
 
-URL de referência: https://youtu.be/WLLCmepsG6Y?si=Xe-AI_yDr18157ZZ
+- URL de referência: https://youtu.be/WLLCmepsG6Y?si=Xe-AI_yDr18157ZZ
 
 ### 16. Loop WHILE
 
@@ -426,9 +444,10 @@ while(condição){
 
 > :warning: **Warning:** É necessário se ter cuidado com incremento ou alteração dos dados da condição do loop WHILE para que não se tenha um loop infinito indesejado.
 
-Exemplos práticos em ./Exemplos/topico16-loop_while.js
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico16-loop_while.js
 
-URL de referência: https://youtu.be/Nm6vfrLrGs8?si=tEOiqIG9aRUSaYbI
+- URL de referência: https://youtu.be/Nm6vfrLrGs8?si=tEOiqIG9aRUSaYbI
 
 ### 17. Loop DO WHILE
 
@@ -441,19 +460,23 @@ do{
 }while(condição)
 ```
 
-Exemplos práticos em ./Exemplos/topico17-loop_do_while.js
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico17-loop_do_while.js
 
-URL de referência: https://youtu.be/nAS21yLt2-Q?si=v3_XG4KvDsEMhVn5
+- URL de referência: https://youtu.be/nAS21yLt2-Q?si=v3_XG4KvDsEMhVn5
 
 ### 18. Declarações CONTINUE e BREAK
+
+As declarações `continue` e `break` servem de controle para iterações.
 
 **CONTINUE:** Ao encontrar o comando CONTINUE, o loop vai pular somente aquela iteração.
 
 **BREAK:** Ao encontrar o comando BREAK, o loop será interrompido imediatamente.
 
-Exemplos práticos em ./Exemplos/topico18-continue_break.js
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico18-continue_break.js
 
-URL de referência: https://youtu.be/KRojULEQx24?si=vrMVkrI-_cSsMf6I
+- URL de referência: https://youtu.be/KRojULEQx24?si=vrMVkrI-_cSsMf6I
 
 ### 19. Funções
 
@@ -564,3 +587,60 @@ Existem duas formas de se declarar parâmetros de uma função:
 - URL de referência #5 (Arrow functions): https://youtu.be/maiNY1zYKSQ?si=QJDj3THhoh9DheBW
 - URL de referência #6 (Funções aninhadas): https://youtu.be/SNKIzr9JgtQ?si=7nEIpivWRuCGOPrt
 - URL de referência #7 (Funções geradoras): https://youtu.be/3j9Ikmm2ieA?si=EZpeVrzlUsmcuSJD
+
+### 20. Map method
+
+A função `map`, ou o método `map`, é utilizado para percorrer todos os elementos de um array, de uma coleção ou json. Ao contrário de uma iteração que pode percorrer apenas parte de um objeto, o `map` **obrigatoriamente** vai percorrer todo o objeto.
+
+- Sintaxe completa:
+
+```js
+let variavel = Array.prototype.map.call(array, (valores)=>{função()})
+```
+
+- Sintaxe simplificada:
+
+```js
+array.map(função)
+```
+A síntaxe básica é utilizada quando desejamos passar apenas o valor corrente do método `map` para uma função externa.
+
+- Sintaxe com funções anônimas:
+
+```js
+array.map((elemento, índice) => função(elemento, índice))
+```
+
+A sintaxe com funções anônimas é utilizada quando desejamos passar, além do valor padrão, os outros valores que o método `map` nos permite, como índice e o próprio array/objeto.
+
+- Parâmetros do método `map`:
+
+| Parameter | Description |
+|-----------|-------------|
+| função() | Obrigatório.</br> Uma função que utilizará os elementos. | 
+| elemento | Obrigatório.</br> O valor corrente do array. |
+| índice | Opcional.</br> O índice do elemento corrente. |
+| array | Opcional.</br> O array do elemento corrente. |
+| valor_extra | Opcional.</br> O valor padrão é undefined. Um valor passado para a função a ser usado como "este valor". |
+
+
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico20-map_function.js
+
+- URL de referência: https://youtu.be/0M2ba5A6DHY?si=ZHW7GuVPa70OVdOU
+- URL de apoio: https://www.w3schools.com/jsref/jsref_map.asp
+
+### 21. Operador THIS
+
+O operador `this` é utilizado para referenciar a função a qual ele está.
+
+Ele força uma divisão de contextos. Onde uma função aninhada interna tenha um contexto diferente da função pai.
+
+Para situações onde se é desejado utilizar o contexto externo, internamente, é sugerido a utilização de arrow functions.
+
+O operador `this` é muito similar à utilização do `self` em uma classe Python.
+
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico21-operador_this.js
+
+- URL de referência: https://youtu.be/21U6gqefijo?si=6ekiTwPssYfkp3fh
