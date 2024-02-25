@@ -24,6 +24,9 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 19. [Funções;](#19-Funções)
 20. [Map method](#20-Map-method)
 21. [Operador THIS](#21-Operador-THIS)
+22. [Manipulando o DOM - GetElementById](#22-Manipulando-o-DOM-GetElementById)
+23. [Manipulando o DOM - GetElementByTagName](#22-Manipulando-o-DOM-GetElementByTagName)
+24. [Manipulando o DOM - GetElementByClassName](#22-Manipulando-o-DOM-GetElementByClassName)
 ---
 
 ### 1. Instalando o Node.js no Windows;
@@ -640,7 +643,81 @@ Para situações onde se é desejado utilizar o contexto externo, internamente, 
 
 O operador `this` é muito similar à utilização do `self` em uma classe Python.
 
+> :bulb: **Tip:** Parte da explicação do funcionamento do `this` está nos comentários dos exemplos.
+
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico21-operador_this.js
 
 - URL de referência: https://youtu.be/21U6gqefijo?si=6ekiTwPssYfkp3fh
+
+### 22. Manipulando o DOM - GetElementById
+
+O método `GetElementById` é um método da classe `document` do javascript. Ele retorna o elemento, buscando por seu ID.
+
+Primeiramende deve ficar claro que o NODE.js é o lado servidor do javascript (server side), para situações onde se é desejado manipular o DOM (client side) deve ser utilizado o navegador, por exemplo o google chrome.
+
+Isto se deve ao fato do NODE não ter acesso aos artefatos do lado do cliente. Desta forma, a página HTML em questão que chamará o código javascript para executar ele do lado do cliente.
+
+- Sintaxe básica:
+```js
+const variavel = document.getElementById("ID")
+```
+
+**Estrutura básica de um HTML**
+```
+HTML (Pai/ROOT)
+|_ HEAD (Filhos)
+    |_ TITLE (Netos)
+|_ BODY (Filhos)
+    |_ DIV (Netos)
+    |_ DIV (Netos)
+    |_ DIV (Netos)
+    |_ SCRIPT (Netos)
+```
+
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico22-manipulando_dom_getelementbyid.js
+
+- Outros exemplos podem ser vistos em:
+    - ./Exemplos/topico1-hello_world.js
+    - ./Exemplos/topico11-funcao_spread.js
+    - ./Exemplos/topico15-for_in_for_of.js
+    - ./Exemplos/topico19-funcoes.js
+    - ./Exemplos/topico20-map_function.js
+
+- URL de referência: https://youtu.be/gtlU0fHvXyk?si=fhi-b8epbUdl9O4t
+
+### 23. Manipulando o DOM - GetElementByTagName
+
+Assim como o `GetElementById`, o `GetElementByTagName` é um método da classe `document` do javascript para manipulação do DOM.
+
+A diferença entre eles, é quem um traz o elemento em si (`GetElementById`), já o `GetElementByTagName` retorna um `HTMLCollection` (coleção de elementos HTML), que se assemelha a um objeto.
+
+- Sintaxe básica:
+```js
+const variavel = document.getElementsByTagName("Nome da Tag")
+```
+
+> :bulb: **Tip:** Uma das formas de se converter um HTMLCollection para um array é utilizando o [spread function](#11-spread-functon), conforme citado nos exemplos da função.
+
+![Array of HTML elements collected by GetElementById](./Imagens/getelementbyid.png)
+![HTMLCollection of HTML elements collected by GetElementsByTagName](./Imagens/getelementbytagname.png)
+
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico23-manipulando_dom_getelementbytagname.js
+- URL de referência: https://youtu.be/FJrcpHllPB8?si=aBY36wN7_pbHKIK-
+
+### 24. Manipulando o DOM - GetElementsByClassName
+
+Assim como o `GetElementById` e `GetElementByTagName`m o `GetElementByClassName` é um método da classe `document` do javascript para manipulação do DOM.
+
+O método `GetElementByClassName` assim como o `GetElementByTagName`, também retorna um HTMLCollection.
+
+- Sintaxe básica:
+```js
+const variavel = document.getElementsByClassName("Nome da Classe")
+```
+
+**Exemplos e Referências**
+- Exemplos práticos em ./Exemplos/topico24-manipulando_dom_getelementbyclassname.js
+- URL de referência: https://youtu.be/g578TMgdi_U?si=jZUVIhJm2EGbDk-0
