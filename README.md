@@ -24,12 +24,13 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 19. [Funções;](#19-Funções)
 20. [Map method](#20-Map-method)
 21. [Operador THIS](#21-Operador-THIS)
-22. [Manipulando o DOM - GetElementById](#22-Manipulando-o-DOM-GetElementById)
-23. [Manipulando o DOM - GetElementByTagName](#22-Manipulando-o-DOM-GetElementByTagName)
-24. [Manipulando o DOM - GetElementByClassName](#22-Manipulando-o-DOM-GetElementByClassName)
----
+22. [Manipulando o DOM - GetElementById](#22-Manipulando-o-DOM---GetElementById)
+23. [Manipulando o DOM - GetElementByTagName](#22-Manipulando-o-DOM---GetElementByTagName)
+24. [Manipulando o DOM - GetElementByClassName](#22-Manipulando-o-DOM---GetElementByClassName)
 
+---
 ### 1. Instalando o Node.js no Windows;
+
 1. Acessar o site do [Node.js](https://nodejs.org/en);
 2. Baixar a versão LTS mais atualizada;
 3. Instalar no computador;
@@ -45,11 +46,11 @@ node arquivo.js
 
 > :memo: **Note:** NODE.js é server side, portanto ele não tem acesso aos elementos do DOM. </br> Para se ter acesso aos elementos do DOM, o script deverá ser chamado por uma página HTML dentro do navegador.
 
-Exemplo prático em ./Exemplos/topico1-hello_world.js
+**Exemplos e Referências**
+- Exemplo prático em ./Exemplos/topico1-hello_world.js
+- URL de referência: https://youtu.be/E4DBTqgxHGM?si=RpCIPW4Xj8Yg5QEX
 
-URL de referência:
-https://youtu.be/E4DBTqgxHGM?si=RpCIPW4Xj8Yg5QEX
-
+---
 ### 2. Modo restrito;
 
 O modo restrito server para forçar que o dev escreva um código mais simples e mais fortemente tipado.
@@ -58,9 +59,9 @@ Para ativar o modo restrito, ou o _strict mode_, no código basta inicializarmos
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico1-hello_world.js
-
 - URL de referência: https://youtu.be/HFOzef8k9GE?si=SfKV9rWqsBDb98YO
 
+---
 ### 3. Declaração de variáveis (let, var const);
 
 No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e const.
@@ -78,9 +79,9 @@ No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e co
 
 **Exemplos e Referências**
 - Exemplos prático em ./Exemplos/topico3-variaveis.js
-
 - URL de referência: https://youtu.be/zRA8RkDUqH0?si=41z3TICmffqoSdoX
 
+---
 ### 4. Operadores matemáticos;
 
 Os operadores matemáticos ou aritméticos são os operadores para realização de calculos matemáticos:
@@ -92,10 +93,11 @@ Os operadores matemáticos ou aritméticos são os operadores para realização 
 
 **Exemplos e Referências**
 - Exemplos prático em ./Exemplos/topico4-operadores_matematicos.js
-
 - URL de referência: https://youtu.be/eDVUmGnQJ_c?si=suSyU3-whupB6adT
 
+---
 ### 5. Operadores relacionais;
+
 1. Maior que (`>`)
 2. Maior ou igual (`>=`)
 3. Menor que (`<`)
@@ -113,10 +115,11 @@ Vale dizer também que os operadores relacionais são afetados também pelo oper
 
 **Exemplos e Referências**
 - Exemplos prático em ./Exemplos/topico5-operadores_relacionais.js
-
 - URL de referência: https://youtu.be/5ESHpHXFa4M?si=avK4n4iDcSbYdRcE
 
+---
 ### 6. Operadores lógicos;
+
 1. AND (`&&`)
     - Retorna Verdadeiro ou Falso dependendo das condições testadas.
 2. OR (`||`)
@@ -130,11 +133,13 @@ Vale dizer também que os operadores relacionais são afetados também pelo oper
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico6-operadores_logicos.js
-
 - URL de referência: https://youtu.be/0-dgk6u9WBE?si=_VH0VJLATnBe4LLu
 
+---
 ### 7. Operadores bitwise;
+
 Também conhecidos como operadores "bit a bit".
+
 1. AND (`&`)
     - Este operador realiza a comparação bit a bit dos valores apresentados, seguindo a mesma regra do operador AND da tabela verdade apresentada nos operadores lógicos.
 2. OR (`|`)
@@ -154,12 +159,13 @@ Existe um arquivo excel explicando a lógica dos operadores bitwise em ./Exemplo
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico7-operadores_bitwise.js
-
 - URL de referência: https://youtu.be/JbGf_hd6g_Q?si=qb7BHaJ9nrN3xky-
 
+---
 ### 8. Incremento, decremento e inversão de valor;
 
 Consideremos os operadores de infremento, ou decremento, como `++` junto a variável. O que definirá se será pré ou pós será a localização do operador a variável.
+
 1. Incremento (`++` ou `+=X`)
     - Vai incrementar 1 ou X na variável.
 2. Decremento (`--` ou `-=X`)
@@ -181,9 +187,9 @@ Em ambos os casos, fica mais visivel com o exemplo prático.
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico8-pre_pos_incremento.js
-
 - URL de referência: https://youtu.be/lz03-62owNY?si=oN6O3kLb7OKDRv1c
 
+---
 ### 9. Operação ternária;
 
 Também são conhecidos como "IF Ternários" ou "Condições Ternárias".
@@ -196,9 +202,9 @@ A sintaxe de uma operação ternária é dividida em 3 partes `(teste lógico ? 
 
 **Exemplos e Referências**
 - Exemplo prático em ./Exemplos/topico9-operacao_ternaria.js
-
 - URL de referência: https://youtu.be/5JPfbLGqzXA?si=mbl5yAKNS8kxrQer
 
+---
 ### 10. Typeof function;
 
 Também conhecido como "Operador Unário Typeof".
@@ -209,9 +215,9 @@ Em Javascript temos 4 tipos de variáveis, são elas: Number, String, Object e B
 
 **Exemplos e Referências**
 - Exemplo prático em ./Exemplos/topico10-funcao_typeof.js
-
 - URL de referência: https://youtu.be/K2U22waWKGo?si=khIcUPV6sj7NpBTq
 
+---
 ### 11. Spread functon;
 
 Também conhecido como "Operador Spread".
@@ -226,9 +232,9 @@ Um dos exemplos que será explicado é caso seja utilizado o spread em objetos i
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico11-funcao_spread.js
-
 - URL de referência: https://youtu.be/_qgObfmqokw?si=hb_Zn3ibD8l-OgEP
 
+---
 ### 12. Condicional com IF e ELSE;
 
 A validação de condicionais determinará qual fluxo o sistema vai trabalhar. A declaração if/else sempre fará uma validação de condições com o que for passado para ela, caso verdadeiro, executará um bloco de código, caso falso, executará outro bloco de código.
@@ -300,9 +306,9 @@ if(condição){
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico12-validacao_condicoes.js
-
 - URL de referência: https://youtu.be/lDTKpamdXzc?si=rCMrTDnE_hV9IBv_
 
+---
 ### 13. Condicional com Switch Case;
 
 A utilização do Switch Case para validação das condicionais é semelhante ao do IF/ELSE, onde ele fará a validação da expressão que lhe for passada e encaminhará para os casos que estão declarados nele.
@@ -345,9 +351,9 @@ flowchart LR
 
 **Exemplos e Referências**
 - Exemplo prático em ./Exemplos/topico13-switch_case.js
-
 - URL de referência: https://youtu.be/L4dpMM3MVWY?si=P9LFYMIyp3E6hWWo
 
+---
 ### 14. Loop com FOR;
 
 Estruturas de loop são estruturas de repetições. Elas são utilizadas que é necessário a repetição de determinadas ações. Cada repetição é chamada de iteração.
@@ -373,9 +379,9 @@ O loop FOR será executado enquanto sua condição for verdadeira, caso ela seja
 
 **Exemplos e Referências**
 - Exemplo prático em ./Exemplos/topico14-loop_for.js
-
 - URL de referência: https://youtu.be/qBSB5H7mCGo?si=hNfN1_TBv4NW4DDl
 
+---
 ### 15. Variações do loop FOR (FOR IN e FOR OF);
 
 FOR IN e FOR OF são variações do loop FOR.
@@ -402,9 +408,9 @@ Ambos funcionam também para coleções HTML.
 
 **Exemplos e Referências**
 - Exemplo prático em ./Exemplos/topico15-for_in_for_of.js
-
 - URL de referência: https://youtu.be/WLLCmepsG6Y?si=Xe-AI_yDr18157ZZ
 
+---
 ### 16. Loop WHILE
 
 O loop WHILE é considerado um loop indefinido, pois é utilizado quando não se sabe a quantidade de vezes que ele deverá ser executado.
@@ -449,9 +455,9 @@ while(condição){
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico16-loop_while.js
-
 - URL de referência: https://youtu.be/Nm6vfrLrGs8?si=tEOiqIG9aRUSaYbI
 
+---
 ### 17. Loop DO WHILE
 
 O loop DO WHILE também é considerado um loop indefinido, assim como o WHILE, contudo a diferença entre eles é que, o WHILE realiza o teste lógico e então realiza a atividade, já o DO WHILE realiza a atividade e então o teste lógico. Portanto no loop WHILE não se tem a garantia de que o bloco de código será executado ao menos uma vez, já no DO WHILE sim, pois ele será executado e depois o loop fará o teste da condição.
@@ -465,9 +471,9 @@ do{
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico17-loop_do_while.js
-
 - URL de referência: https://youtu.be/nAS21yLt2-Q?si=v3_XG4KvDsEMhVn5
 
+---
 ### 18. Declarações CONTINUE e BREAK
 
 As declarações `continue` e `break` servem de controle para iterações.
@@ -478,9 +484,9 @@ As declarações `continue` e `break` servem de controle para iterações.
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico18-continue_break.js
-
 - URL de referência: https://youtu.be/KRojULEQx24?si=vrMVkrI-_cSsMf6I
 
+---
 ### 19. Funções
 
 As funções numa linguagem de programação podem ser entendidas como blocos de código que podem ser utilizados quando necessário e por mais de uma vez.
@@ -581,7 +587,6 @@ Existem duas formas de se declarar parâmetros de uma função:
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico19-funcoes.js
-
 - URL de referência #1 (Funções): https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
 - URL de referência #2 (Retorno): https://youtu.be/vRHQyl_yu5k?si=FTx7DmWdZrnJA9vh
 - URL de referência #3 (Parâmetros): https://youtu.be/hTZ7WJx0de0?si=mJCq05CF0aWs0nlv
@@ -591,6 +596,7 @@ Existem duas formas de se declarar parâmetros de uma função:
 - URL de referência #6 (Funções aninhadas): https://youtu.be/SNKIzr9JgtQ?si=7nEIpivWRuCGOPrt
 - URL de referência #7 (Funções geradoras): https://youtu.be/3j9Ikmm2ieA?si=EZpeVrzlUsmcuSJD
 
+---
 ### 20. Map method
 
 A função `map`, ou o método `map`, é utilizado para percorrer todos os elementos de um array, de uma coleção ou json. Ao contrário de uma iteração que pode percorrer apenas parte de um objeto, o `map` **obrigatoriamente** vai percorrer todo o objeto.
@@ -629,10 +635,10 @@ A sintaxe com funções anônimas é utilizada quando desejamos passar, além do
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico20-map_function.js
-
 - URL de referência: https://youtu.be/0M2ba5A6DHY?si=ZHW7GuVPa70OVdOU
 - URL de apoio: https://www.w3schools.com/jsref/jsref_map.asp
 
+---
 ### 21. Operador THIS
 
 O operador `this` é utilizado para referenciar a função a qual ele está.
@@ -647,9 +653,9 @@ O operador `this` é muito similar à utilização do `self` em uma classe Pytho
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico21-operador_this.js
-
 - URL de referência: https://youtu.be/21U6gqefijo?si=6ekiTwPssYfkp3fh
 
+---
 ### 22. Manipulando o DOM - GetElementById
 
 O método `GetElementById` é um método da classe `document` do javascript. Ele retorna o elemento, buscando por seu ID.
@@ -677,16 +683,15 @@ HTML (Pai/ROOT)
 
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico22-manipulando_dom_getelementbyid.js
-
 - Outros exemplos podem ser vistos em:
     - ./Exemplos/topico1-hello_world.js
     - ./Exemplos/topico11-funcao_spread.js
     - ./Exemplos/topico15-for_in_for_of.js
     - ./Exemplos/topico19-funcoes.js
     - ./Exemplos/topico20-map_function.js
-
 - URL de referência: https://youtu.be/gtlU0fHvXyk?si=fhi-b8epbUdl9O4t
 
+---
 ### 23. Manipulando o DOM - GetElementByTagName
 
 Assim como o `GetElementById`, o `GetElementByTagName` é um método da classe `document` do javascript para manipulação do DOM.
@@ -707,6 +712,7 @@ const variavel = document.getElementsByTagName("Nome da Tag")
 - Exemplos práticos em ./Exemplos/topico23-manipulando_dom_getelementbytagname.js
 - URL de referência: https://youtu.be/FJrcpHllPB8?si=aBY36wN7_pbHKIK-
 
+---
 ### 24. Manipulando o DOM - GetElementsByClassName
 
 Assim como o `GetElementById` e `GetElementByTagName`m o `GetElementByClassName` é um método da classe `document` do javascript para manipulação do DOM.
@@ -721,3 +727,6 @@ const variavel = document.getElementsByClassName("Nome da Classe")
 **Exemplos e Referências**
 - Exemplos práticos em ./Exemplos/topico24-manipulando_dom_getelementbyclassname.js
 - URL de referência: https://youtu.be/g578TMgdi_U?si=jZUVIhJm2EGbDk-0
+
+---
+### 25.
