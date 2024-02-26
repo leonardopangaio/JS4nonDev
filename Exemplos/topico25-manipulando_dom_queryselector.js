@@ -1,0 +1,46 @@
+const todasDivs = document.getElementsByTagName("div")
+const todasClasses = document.getElementsByClassName("nome")
+const umID = document.getElementById("c1")
+
+console.log(todasDivs)
+console.log(todasClasses)
+console.log(umID)
+console.log("---")
+
+const queryDiv = document.querySelector('div') 
+const queryDivAll = document.querySelectorAll('div') //This is similar to use getElementsByTagName
+const queryDivAllOr = document.querySelectorAll('div, p') //This is similar to use getElementsByTagName, but passing more than one parameter (like OR operator mode)
+const queryDivAllAnd = document.querySelectorAll('div[class]') //This is similar to use getElementsByTagName, but passing more than one parameter (like AND operator mode)
+const queryDivAllIn = document.querySelectorAll('div > p') //This is similar to use getElementsByTagName, but passing more than one parameter (one element has a parent element)
+const queryClassesAll = document.querySelectorAll('.nome') //This is similar to use getElementsByClassName
+const queryID = document.querySelector('#c1') //This is similar to use getElementById
+const queryIDAll = document.querySelectorAll('#c1') //This is similar to use getElementById, but return an NodeList
+const queryIDAllOne = document.querySelectorAll('#c1')[0] //This is similar to use getElementById
+
+console.log("querySelector('div') ")
+console.log(queryDiv)
+console.log("...")
+console.log("querySelectorAll('div')")
+console.log(queryDivAll)
+console.log("...")
+console.log("querySelectorAll('div, p')")
+console.log(queryDivAllOr)
+console.log("...")
+console.log("querySelectorAll('div[class]')")
+console.log(queryDivAllAnd)
+console.log("...")
+console.log("querySelectorAll('div > p')")
+console.log(queryDivAllIn)
+console.log("...")
+console.log("querySelectorAll('.nome')")
+console.log(queryClassesAll)
+console.log("...")
+console.log("querySelector('#c1')")
+console.log(queryID)
+console.log("...")
+console.log("querySelectorAll('#c1')")
+console.log(queryIDAll)
+console.log("...")
+console.log("querySelectorAll('#c1')[0]")
+console.log(queryIDAllOne)
+console.log("...")
