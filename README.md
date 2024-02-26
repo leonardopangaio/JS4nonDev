@@ -63,6 +63,7 @@ Para ativar o modo restrito, ou o _strict mode_, no código basta inicializarmos
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico1-hello_world.js
 - URL de referência: https://youtu.be/HFOzef8k9GE?si=SfKV9rWqsBDb98YO
+- URL de apoio: https://www.w3schools.com/js/js_strict.asp
 
 ---
 ### 3. Declaração de variáveis (let, var const);
@@ -96,6 +97,7 @@ No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e co
 **Exemplos e Referências**
 - Exemplos prático em ./Exemplos/topico3-variaveis.js
 - URL de referência: https://youtu.be/zRA8RkDUqH0?si=41z3TICmffqoSdoX
+- URL de apoio: https://www.w3schools.com/js/js_variables.asp
 
 ---
 ### 4. Operadores matemáticos;
@@ -110,6 +112,10 @@ Os operadores matemáticos ou aritméticos são os operadores para realização 
 **Exemplos e Referências**
 - Exemplos prático em ./Exemplos/topico4-operadores_matematicos.js
 - URL de referência: https://youtu.be/eDVUmGnQJ_c?si=suSyU3-whupB6adT
+- URL de apoio: 
+    - Aritméticos: https://www.w3schools.com/js/js_arithmetic.asp
+    - Operadores: https://www.w3schools.com/js/js_operators.asp
+    - Atribuição: https://www.w3schools.com/js/js_assignment.asp
 
 ---
 ### 5. Operadores relacionais;
@@ -132,6 +138,9 @@ Vale dizer também que os operadores relacionais são afetados também pelo oper
 **Exemplos e Referências**
 - Exemplos prático em ./Exemplos/topico5-operadores_relacionais.js
 - URL de referência: https://youtu.be/5ESHpHXFa4M?si=avK4n4iDcSbYdRcE
+- URL de apoio: 
+    - Operadores: https://www.w3schools.com/js/js_operators.asp
+    - Atribuição: https://www.w3schools.com/js/js_assignment.asp
 
 ---
 ### 6. Operadores lógicos;
@@ -150,6 +159,9 @@ Vale dizer também que os operadores relacionais são afetados também pelo oper
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico6-operadores_logicos.js
 - URL de referência: https://youtu.be/0-dgk6u9WBE?si=_VH0VJLATnBe4LLu
+- URL de apoio: 
+    - Operadores: https://www.w3schools.com/js/js_operators.asp
+    - Atribuição: https://www.w3schools.com/js/js_assignment.asp
 
 ---
 ### 7. Operadores bitwise;
@@ -176,6 +188,10 @@ Existe um arquivo excel explicando a lógica dos operadores bitwise em ./Exemplo
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico7-operadores_bitwise.js
 - URL de referência: https://youtu.be/JbGf_hd6g_Q?si=qb7BHaJ9nrN3xky-
+- URL de apoio: 
+    - Operadores: https://www.w3schools.com/js/js_operators.asp
+    - Atribuição: https://www.w3schools.com/js/js_assignment.asp
+    - Bitwise: https://www.w3schools.com/js/js_bitwise.asp
 
 ---
 ### 8. Incremento, decremento e inversão de valor;
@@ -204,6 +220,10 @@ Em ambos os casos, fica mais visivel com o exemplo prático.
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico8-pre_pos_incremento.js
 - URL de referência: https://youtu.be/lz03-62owNY?si=oN6O3kLb7OKDRv1c
+- URL de apoio: 
+    - Aritméticos: https://www.w3schools.com/js/js_arithmetic.asp
+    - Operadores: https://www.w3schools.com/js/js_operators.asp
+    - Atribuição: https://www.w3schools.com/js/js_assignment.asp
 
 ---
 ### 9. Operação ternária;
@@ -242,6 +262,7 @@ Em Javascript temos 4 tipos de variáveis, são elas: Number, String, Object e B
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico10-funcao_typeof.js
 - URL de referência: https://youtu.be/K2U22waWKGo?si=khIcUPV6sj7NpBTq
+- URL de apoio: https://www.w3schools.com/js/js_typeof.asp
 
 ---
 ### 11. Spread functon;
@@ -259,6 +280,7 @@ Um dos exemplos que será explicado é caso seja utilizado o spread em objetos i
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico11-funcao_spread.js
 - URL de referência: https://youtu.be/_qgObfmqokw?si=hb_Zn3ibD8l-OgEP
+- URL de apoio: https://www.w3schools.com/js/js_array_iteration.asp#mark_spread
 
 ---
 ### 12. Condicional com IF e ELSE;
@@ -333,6 +355,7 @@ flowchart LR
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico12-validacao_condicoes.js
 - URL de referência: https://youtu.be/lDTKpamdXzc?si=rCMrTDnE_hV9IBv_
+- URL de apoio: https://www.w3schools.com/js/js_if_else.asp
 
 ---
 ### 13. Condicional com Switch Case;
@@ -364,19 +387,29 @@ title: Simple Switch Case example
 flowchart LR
     subgraph " "
     direction LR
-    ns(("Start"))-->nt1["Do something"]
-    nt1 --> nsc1{"Switch(expression)"}
-    nsc1 --> nc1["Case 1"] --> ne(("End"))
-    nsc1 --> nc2["Case 2"] --> ne(("End"))
-    nsc1 --> nc3["Case 3"] --> ne(("End"))
-    nsc1 --> nc4["Case 4"] --> ne(("End"))
-    nsc1 --> ncd["Default Case"] --> ne(("End"))
+        ns(("Start"))-->nt1["Do something"]
+        nt1 --> nsc1{"Switch(expression)"}
+        subgraph "Switch Case"
+        direction LR
+            nsc1 --> nc1["Case 1"]
+            nsc1 --> nc2["Case 2"]
+            nsc1 --> nc3["Case 3"]
+            nsc1 --> nc4["Case 4"]
+            nsc1 --> ncd["Default Case"]
+        end
+        nc1 --> nt2["Do something else"]
+        nc2 --> nt2["Do something else"]
+        nc3 --> nt2["Do something else"]
+        nc4 --> nt2["Do something else"]
+        ncd --> nt2["Do something else"]
+        nt2 --> ne(("End"))
     end
 ```
 
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico13-switch_case.js
 - URL de referência: https://youtu.be/L4dpMM3MVWY?si=P9LFYMIyp3E6hWWo
+- URL de apoio: https://www.w3schools.com/js/js_switch.asp
 
 ---
 ### 14. Loop com FOR;
@@ -405,6 +438,7 @@ O loop FOR será executado enquanto sua condição for verdadeira, caso ela seja
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico14-loop_for.js
 - URL de referência: https://youtu.be/qBSB5H7mCGo?si=hNfN1_TBv4NW4DDl
+- URL de apoio: https://www.w3schools.com/js/js_loop_for.asp
 
 ---
 ### 15. Variações do loop FOR (FOR IN e FOR OF);
@@ -434,6 +468,9 @@ Ambos funcionam também para coleções HTML.
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico15-for_in_for_of.js
 - URL de referência: https://youtu.be/WLLCmepsG6Y?si=Xe-AI_yDr18157ZZ
+- URLs de apoio:
+    - FOR IN: https://www.w3schools.com/js/js_loop_forin.asp
+    - FOR OF: https://www.w3schools.com/js/js_loop_forof.asp
 
 ---
 ### 16. Loop WHILE
@@ -480,6 +517,7 @@ flowchart LR
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico16-loop_while.js
 - URL de referência: https://youtu.be/Nm6vfrLrGs8?si=tEOiqIG9aRUSaYbI
+- URL de apoio: https://www.w3schools.com/js/js_loop_while.asp
 
 ---
 ### 17. Loop DO WHILE
@@ -496,6 +534,7 @@ O loop DO WHILE também é considerado um loop indefinido, assim como o WHILE, c
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico17-loop_do_while.js
 - URL de referência: https://youtu.be/nAS21yLt2-Q?si=v3_XG4KvDsEMhVn5
+- URL de apoio: https://www.w3schools.com/js/js_loop_while.asp
 
 ---
 ### 18. Declarações CONTINUE e BREAK
@@ -509,6 +548,7 @@ As declarações `continue` e `break` servem de controle para iterações.
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico18-continue_break.js
 - URL de referência: https://youtu.be/KRojULEQx24?si=vrMVkrI-_cSsMf6I
+- URL de apoio: https://www.w3schools.com/js/js_break.asp
 
 ---
 ### 19. Funções
@@ -611,14 +651,16 @@ Existem duas formas de se declarar parâmetros de uma função:
 
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico19-funcoes.js
-- URL de referência #1 (Funções): https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
-- URL de referência #2 (Retorno): https://youtu.be/vRHQyl_yu5k?si=FTx7DmWdZrnJA9vh
-- URL de referência #3 (Parâmetros): https://youtu.be/hTZ7WJx0de0?si=mJCq05CF0aWs0nlv
-- URL de referência #4 (Parâmetros Rest): https://youtu.be/pZfH_UWg8Ro?si=pYPJVLBEa2d0q-8L
-- URL de referência #5 (Funções anônimas): https://youtu.be/0HJU96mThMg?si=JJ8-xMJP82koB7du
-- URL de referência #5 (Arrow functions): https://youtu.be/maiNY1zYKSQ?si=QJDj3THhoh9DheBW
-- URL de referência #6 (Funções aninhadas): https://youtu.be/SNKIzr9JgtQ?si=7nEIpivWRuCGOPrt
-- URL de referência #7 (Funções geradoras): https://youtu.be/3j9Ikmm2ieA?si=EZpeVrzlUsmcuSJD
+- URLs de referência:
+    - Funções: https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
+    - Retorno: https://youtu.be/vRHQyl_yu5k?si=FTx7DmWdZrnJA9vh
+    - Parâmetros: https://youtu.be/hTZ7WJx0de0?si=mJCq05CF0aWs0nlv
+    - Parâmetros Rest: https://youtu.be/pZfH_UWg8Ro?si=pYPJVLBEa2d0q-8L
+    - Funções anônimas: https://youtu.be/0HJU96mThMg?si=JJ8-xMJP82koB7du
+    - Arrow functions: https://youtu.be/maiNY1zYKSQ?si=QJDj3THhoh9DheBW
+    - Funções aninhadas: https://youtu.be/SNKIzr9JgtQ?si=7nEIpivWRuCGOPrt
+    - Funções geradoras: https://youtu.be/3j9Ikmm2ieA?si=EZpeVrzlUsmcuSJD
+- URL de apoio: https://www.w3schools.com/js/js_functions.asp
 
 ---
 ### 20. Map method
@@ -658,7 +700,9 @@ A sintaxe com funções anônimas é utilizada quando desejamos passar, além do
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico20-map_function.js
 - URL de referência: https://youtu.be/0M2ba5A6DHY?si=ZHW7GuVPa70OVdOU
-- URL de apoio: https://www.w3schools.com/jsref/jsref_map.asp
+- URLs de apoio: 
+    - https://www.w3schools.com/jsref/jsref_map.asp
+    - https://www.w3schools.com/js/js_array_iteration.asp#mark_map
 
 ---
 ### 21. Operador THIS
@@ -676,6 +720,7 @@ O operador `this` é muito similar à utilização do `self` em uma classe Pytho
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico21-operador_this.js
 - URL de referência: https://youtu.be/21U6gqefijo?si=6ekiTwPssYfkp3fh
+- URL de apoio: https://www.w3schools.com/js/js_this.asp
 
 ---
 ### 22. Manipulando o DOM - getElementsById method
@@ -700,6 +745,14 @@ Isto se deve ao fato do NODE não ter acesso aos artefatos do lado do cliente. D
     - ./Exemplos/topico19-funcoes.js
     - ./Exemplos/topico20-map_function.js
 - URL de referência: https://youtu.be/gtlU0fHvXyk?si=fhi-b8epbUdl9O4t
+- URLs de apoio:
+    - HTML DOM: https://www.w3schools.com/js/js_htmldom.asp
+    - HTML DOM Methods: https://www.w3schools.com/js/js_htmldom_methods.asp
+    - HTML DOM Document: https://www.w3schools.com/js/js_htmldom_document.asp
+    - HTML DOM Elements: https://www.w3schools.com/js/js_htmldom_elements.asp
+    - HTML DOM - Changing HTML: https://www.w3schools.com/js/js_htmldom_html.asp
+    - HTML DOM Collections: https://www.w3schools.com/js/js_htmldom_collections.asp
+    - HTML DOM Node Lists: https://www.w3schools.com/js/js_htmldom_nodelist.asp
 
 ---
 ### 23. Manipulando o DOM - getElementsByTagName method
@@ -721,6 +774,14 @@ A diferença entre eles, é quem um traz o elemento em si (`getElementsById`), j
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico23-manipulando_dom_getelementbytagname.js
 - URL de referência: https://youtu.be/FJrcpHllPB8?si=aBY36wN7_pbHKIK-
+- URLs de apoio:
+    - HTML DOM: https://www.w3schools.com/js/js_htmldom.asp
+    - HTML DOM Methods: https://www.w3schools.com/js/js_htmldom_methods.asp
+    - HTML DOM Document: https://www.w3schools.com/js/js_htmldom_document.asp
+    - HTML DOM Elements: https://www.w3schools.com/js/js_htmldom_elements.asp
+    - HTML DOM - Changing HTML: https://www.w3schools.com/js/js_htmldom_html.asp
+    - HTML DOM Collections: https://www.w3schools.com/js/js_htmldom_collections.asp
+    - HTML DOM Node Lists: https://www.w3schools.com/js/js_htmldom_nodelist.asp
 
 ---
 ### 24. Manipulando o DOM - getElementsByClassName method
@@ -737,6 +798,14 @@ O método `getElementsByClassName` assim como o `getElementsByTagName`, também 
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico24-manipulando_dom_getelementbyclassname.js
 - URL de referência: https://youtu.be/g578TMgdi_U?si=jZUVIhJm2EGbDk-0
+- URLs de apoio:
+    - HTML DOM: https://www.w3schools.com/js/js_htmldom.asp
+    - HTML DOM Methods: https://www.w3schools.com/js/js_htmldom_methods.asp
+    - HTML DOM Document: https://www.w3schools.com/js/js_htmldom_document.asp
+    - HTML DOM Elements: https://www.w3schools.com/js/js_htmldom_elements.asp
+    - HTML DOM - Changing HTML: https://www.w3schools.com/js/js_htmldom_html.asp
+    - HTML DOM Collections: https://www.w3schools.com/js/js_htmldom_collections.asp
+    - HTML DOM Node Lists: https://www.w3schools.com/js/js_htmldom_nodelist.asp
 
 ---
 ### 25. Manipulando o DOM - querySelector method
@@ -768,6 +837,14 @@ A diferença deles para os anteriores, é que eles são versáteis nas buscas qu
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico25-manipulando_dom_queryselector.js
 - URL de referência: https://youtu.be/2V7rfcVg5UQ?si=zyHBCrPHnL8aHZ-b
+- URLs de apoio:
+    - HTML DOM: https://www.w3schools.com/js/js_htmldom.asp
+    - HTML DOM Methods: https://www.w3schools.com/js/js_htmldom_methods.asp
+    - HTML DOM Document: https://www.w3schools.com/js/js_htmldom_document.asp
+    - HTML DOM Elements: https://www.w3schools.com/js/js_htmldom_elements.asp
+    - HTML DOM - Changing HTML: https://www.w3schools.com/js/js_htmldom_html.asp
+    - HTML DOM Collections: https://www.w3schools.com/js/js_htmldom_collections.asp
+    - HTML DOM Node Lists: https://www.w3schools.com/js/js_htmldom_nodelist.asp
 
 ---
 ### 26. Manipulando o DOM - Adicionando eventos com addEventListener method
@@ -793,6 +870,9 @@ O retorno do método `addEventListener` é um objeto `PointerEvent`, onde todos 
     - Apresentação do módulo: https://youtu.be/4vCBmu3z5FY?si=BNqEvbdA3kqnwOtV
     - Exercício prático p1: https://youtu.be/aanyXzOaic8?si=JHrQDuPBoYMCMPdB
     - Exercício prático p2: https://youtu.be/94KKNdx42lM?si=PikjKacoOmWA31BQ
+- URLs de apoio:
+    - HTML DOM Events: https://www.w3schools.com/js/js_htmldom_events.asp
+    - HTML DOM EventListener: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 ---
 ### 27. Manipulando o DOM - stopPropagation method
@@ -802,13 +882,16 @@ Existem situações onde o evento é declarado em um elemento do DOM que contém
 Para que não haja essa propagação, deve ser utilizado o método `stopPropagation`.
 
 - Sintaxe básica:
-```js
-elemento.stopPropagation()
-```
+    ```js
+    elemento.stopPropagation()
+    ```
 
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico27-manipulando_dom_stoppropagation.js
 - URL de referência: https://youtu.be/7NcRhRN4MAw?si=iXymeMAEDFvGfq8A
+- URLs de apoio:
+    - HTML DOM Events: https://www.w3schools.com/js/js_htmldom_events.asp
+    - HTML DOM EventListener: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 ---
 ### 28. Entendendo a relação dos elementos no DOM em Javascript
@@ -850,3 +933,7 @@ Podemos observar as relações através dos campos: _childNodes_, _children_, _f
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico28-referenciando_elementos_dom.js
 - URL de referência: https://youtu.be/HOLoqv3meTI?si=HATjsofqPQWs7zsk
+- URLs de apoio:
+    - HTML DOM: https://www.w3schools.com/js/js_htmldom.asp
+    - HTML DOM Navigation: https://www.w3schools.com/js/js_htmldom_navigation.asp
+
