@@ -930,10 +930,58 @@ Uma forma de observar essa relação no navegador é desta forma:
 
 Podemos observar as relações através dos campos: _childNodes_, _children_, _firstChild_, _firstElementChild_, _lastChild_, _lastElementChild_, _nextElementSibling_, _nextSibling_, _previousSibling_, _parentElement_ e _parentNode_ por exemplo.
 
+Uma das formas que temos para verificar se um determinado elemento possuí filhos, é a utilização do médoto `hasChildNodes`. Este método retornará `true` ou `false` se o elemento tiver ou não filhos. 
+
+- Sintaxe básica:
+    ```js
+    elemento.hasChildNodes()
+    ```
+
+Vale ressaltar que o texto do elemento é considerado como filho, portanto dependendo da abordagem que se deseja utilizar, será mais interessante fazer uma validação pelo `length` dos `children`.
+
+Também é possível navegar pelos nós, através de sua relação entre eles, como por exemplo, chamando o pai do elemento desejado, ou seu avô, e nada impede que seja acessado um outro nó filho do pai.
+
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico28-referenciando_elementos_dom.js
-- URL de referência: https://youtu.be/HOLoqv3meTI?si=HATjsofqPQWs7zsk
+- URLs de referência: 
+    - https://youtu.be/HOLoqv3meTI?si=HATjsofqPQWs7zsk
+    - https://youtu.be/woT9kGbzJU4?si=1zPzkX0bj0yAssVO
+    - https://youtu.be/KzXZMemQ_Lc?si=KkX8yrD6qwm5qfK1
 - URLs de apoio:
     - HTML DOM: https://www.w3schools.com/js/js_htmldom.asp
     - HTML DOM Navigation: https://www.w3schools.com/js/js_htmldom_navigation.asp
+    - HTML DOM Elements (Nodes): https://www.w3schools.com/js/js_htmldom_nodes.asp
 
+### 29. Manipulando o DOM - Criando elementos dinamicamente
+
+O javascript permite a manipulação do DOM, inclusive criação e manipulação de elementos dinamicamente. Os métodos mais utilizados para isto são `createElement`, `innerHTML`, `setAttribute` e `appendChild`. Onde:
+- createElement: Cria o elemento em memória;
+    - Sintaxe básica:
+        ```js
+        const novo_elemento = document.createElement("tipo do elemento")
+        ```
+    - A criação do elemento é através de uma variável, então pode ser utilizada a declaração de variável desejada ou que melhor se ajuste ao caso.
+
+- innerHTML: Diz qual será o atributo texto desse elemento;
+    - Sintaxe básica:
+        ```js
+        novo_elemento.innerHTML = "Texto do elemento"
+        ```
+
+- setAttribute: Define um atributo e seu valor;
+    - Sintaxe básica:
+        ```js
+        novo_elemento.setAttribute("atributo","valor do atributo")
+        ```
+
+- appendChild: Adiciona o elemento no elemento pai;
+    - Sintaxe básica:
+        ```js
+        elemento_pai.appendChild(novo_elemento)
+        ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico29-manipulando_dom_criando_elementos.js
+- URL de referência: https://youtu.be/KzXZMemQ_Lc?si=ZMoRrWDqOJwchl-r
+- URL de apoio:
+    - HTML DOM Elements (Nodes): https://www.w3schools.com/js/js_htmldom_nodes.asp
