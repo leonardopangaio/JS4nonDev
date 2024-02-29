@@ -30,7 +30,10 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 25. [Manipulando o DOM - querySelector method;](#25-Manipulando-o-DOM---querySelector-method)
 26. [Manipulando o DOM - Adicionando eventos com addEventListener method;](#26-Manipulando-o-DOM---Adicionando-eventos-com-addEventListener-method)
 27. [Manipulando o DOM - stopPropagation method;](#27-Manipulando-o-DOM---stopPropagation-method)
-28. [Entendendo a relação dos elementos no DOM em Javascript](#28-Entendendo-a-relação-dos-elementos-no-DOM-em-Javascript)
+28. [Entendendo a relação dos elementos no DOM em Javascript;](#28-Entendendo-a-relação-dos-elementos-no-DOM-em-Javascript)
+29. [Manipulando o DOM - Criando elementos dinamicamente;](#29-Manipulando-o-DOM---Criando-elementos-dinamicamente)
+30. [Manipulando o DOM - Removendo elementos dinamicamente;](#30-Manipulando-o-DOM---Removendo-elementos-dinamicamente)
+31. [Filter method](#31-Filter-method)
 ---
 
 ### 1. Instalando o Node.js no Windows;
@@ -955,26 +958,27 @@ Também é possível navegar pelos nós, através de sua relação entre eles, c
 ### 29. Manipulando o DOM - Criando elementos dinamicamente
 
 O javascript permite a manipulação do DOM, inclusive criação e manipulação de elementos dinamicamente. Os métodos mais utilizados para isto são `createElement`, `innerHTML`, `setAttribute` e `appendChild`. Onde:
-- createElement: Cria o elemento em memória;
+
+- **createElement**: Cria o elemento em memória;
     - Sintaxe básica:
         ```js
         const novo_elemento = document.createElement("tipo do elemento")
         ```
     - A criação do elemento é através de uma variável, então pode ser utilizada a declaração de variável desejada ou que melhor se ajuste ao caso.
 
-- innerHTML: Diz qual será o atributo texto desse elemento;
+- **innerHTML**: Diz qual será o atributo texto desse elemento;
     - Sintaxe básica:
         ```js
         novo_elemento.innerHTML = "Texto do elemento"
         ```
 
-- setAttribute: Define um atributo e seu valor;
+- **setAttribute**: Define um atributo e seu valor;
     - Sintaxe básica:
         ```js
         novo_elemento.setAttribute("atributo","valor do atributo")
         ```
 
-- appendChild: Adiciona o elemento no elemento pai;
+- **appendChild**: Adiciona o elemento no elemento pai;
     - Sintaxe básica:
         ```js
         elemento_pai.appendChild(novo_elemento)
@@ -985,3 +989,58 @@ O javascript permite a manipulação do DOM, inclusive criação e manipulação
 - URL de referência: https://youtu.be/KzXZMemQ_Lc?si=ZMoRrWDqOJwchl-r
 - URL de apoio:
     - HTML DOM Elements (Nodes): https://www.w3schools.com/js/js_htmldom_nodes.asp
+
+### 30. Manipulando o DOM - Removendo elementos dinamicamente
+
+Com a manipulação do DOM realizada pelo javascript, também é possível realizar a remoção de itens dinamicamente. Para isto, utiliza-se o comando `removeChild`, onde ele irá remover o nó filho informado.
+
+- Sintaxe básica:
+    ```js
+    elemento.removeChild(elemento filho)
+    ```
+
+Vale ressaltar, que como elemento filho, pode-se declarar a relação do elemento, portanto pode ser declarado o nó pai.
+
+Já o método `remove` é utilizado, ao contrário do `removeChild`, para remover o elemento em si.
+
+- Sintaxe básica:
+    ```js
+    elemento.remove()
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: 
+    - ./Exemplos/topico30-manipulando_dom_removendo_elementos.js
+    - ./Exemplos/topico31p2-exemplo_filter_method.js
+- URLs de referência: 
+    - removeChild: https://youtu.be/Rx1AbTkK-kc?si=DKX2nUAM9Rmh4Xk7
+    - remove: https://youtu.be/eEc8O8JKtWo?si=ti9_efi-EQ2ejfeE
+- URL de apoio:
+    - HTML DOM Elements (Nodes): https://www.w3schools.com/js/js_htmldom_nodes.asp
+
+### 31. Filter method
+
+O método `filter` de um array, possibilita iterar um array e retornar os valores desejados.
+
+A forma de iterar é semelhante ao método `map`, contudo ele é otimizado para realização de filtros.
+
+Nos exemplos, há um mostrando a diferença entre eles.
+
+- Sitaxe básica:
+    ```js
+    array.filter(função)
+    ```
+    - array é o elemento que será filtrado;
+    - filter é o método;
+    - função é onde estará a lógica de filtragem, podendo ser uma função anônima declarada dentro do método ou uma função externa;
+
+O método filter passa 3 parâmetros ordenados: o elemento do array, índice do elemento do array e o array propriamente dito.
+
+**Exemplos e Referências**
+- Exemplos em: 
+    - ./Exemplos/topico31-filter_method.js
+    - ./Exemplos/topico31p2-exemplo_filter_method.js
+- URLs de referência: 
+    - https://youtu.be/r2lw77tFd8o?si=Zh4FAY4hfT_F9E_8
+    - https://youtu.be/ks3uaFS-idQ?si=MTqvZkD4tJWrR8hT
+- URL de apoio: https://www.w3schools.com/js/js_array_iteration.asp#mark_filter
