@@ -33,7 +33,9 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 28. [Entendendo a relação dos elementos no DOM em Javascript;](#28-Entendendo-a-relação-dos-elementos-no-DOM-em-Javascript)
 29. [Manipulando o DOM - Criando elementos dinamicamente;](#29-Manipulando-o-DOM---Criando-elementos-dinamicamente)
 30. [Manipulando o DOM - Removendo elementos dinamicamente;](#30-Manipulando-o-DOM---Removendo-elementos-dinamicamente)
-31. [Filter method](#31-Filter-method)
+31. [Filter method;](#31-Filter-method)
+32. [Manipulando o DOM - Toggle method;](#32-Manipulando-o-DOM---Toggle-method)
+33. [Find method;](#33-Find-method)
 ---
 
 ### 1. Instalando o Node.js no Windows;
@@ -957,36 +959,50 @@ Também é possível navegar pelos nós, através de sua relação entre eles, c
 
 ### 29. Manipulando o DOM - Criando elementos dinamicamente
 
-O javascript permite a manipulação do DOM, inclusive criação e manipulação de elementos dinamicamente. Os métodos mais utilizados para isto são `createElement`, `innerHTML`, `setAttribute` e `appendChild`. Onde:
+O javascript permite a manipulação do DOM, inclusive criação e manipulação de elementos dinamicamente. Os métodos e atributos mais utilizados, para isto, são `createElement`, `innerHTML`, `value`, `setAttribute`, `appendChild` e `insertBefore`. Onde:
 
-- **createElement**: Cria o elemento em memória;
+- **createElement**: Método para criação do elemento em memória;
     - Sintaxe básica:
         ```js
         const novo_elemento = document.createElement("tipo do elemento")
         ```
     - A criação do elemento é através de uma variável, então pode ser utilizada a declaração de variável desejada ou que melhor se ajuste ao caso.
 
-- **innerHTML**: Diz qual será o atributo texto desse elemento;
+- **innerHTML**: Atributo que contém o texto do elemento;
     - Sintaxe básica:
         ```js
         novo_elemento.innerHTML = "Texto do elemento"
         ```
 
-- **setAttribute**: Define um atributo e seu valor;
+- **value**: Atributo que contém o texto do element do tipo input;
+    - Sintaxe básica:
+        ```js
+        novo_elemento.value
+        ```
+
+- **setAttribute**: Método que define um atributo e seu valor;
     - Sintaxe básica:
         ```js
         novo_elemento.setAttribute("atributo","valor do atributo")
         ```
 
-- **appendChild**: Adiciona o elemento no elemento pai;
+- **appendChild**: Método que adiciona o elemento no elemento pai;
     - Sintaxe básica:
         ```js
         elemento_pai.appendChild(novo_elemento)
         ```
 
+- **insertBefore**: Método que insere o elemento antes do elemento informado;
+    - Sintaxe básica:
+        ```js
+        elemento_pai.insertBefore(novo_elemento, elemento_informado)
+        ```
+
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico29-manipulando_dom_criando_elementos.js
-- URL de referência: https://youtu.be/KzXZMemQ_Lc?si=ZMoRrWDqOJwchl-r
+- URL de referência: 
+    - Criando elementos dinamicamente: https://youtu.be/KzXZMemQ_Lc?si=ZMoRrWDqOJwchl-r
+    - Criando elementos antes: https://youtu.be/41MaPviOS5Y?si=sVDmOi6YVl2WL0iD
 - URL de apoio:
     - HTML DOM Elements (Nodes): https://www.w3schools.com/js/js_htmldom_nodes.asp
 
@@ -1044,3 +1060,48 @@ O método filter passa 3 parâmetros ordenados: o elemento do array, índice do 
     - https://youtu.be/r2lw77tFd8o?si=Zh4FAY4hfT_F9E_8
     - https://youtu.be/ks3uaFS-idQ?si=MTqvZkD4tJWrR8hT
 - URL de apoio: https://www.w3schools.com/js/js_array_iteration.asp#mark_filter
+
+### 32. Manipulando o DOM - Toggle method
+
+Assim como o método `add` e o `remove`, o método `toggle` é um método do `classList`, que por sua ves é uma propriedade dos elementos do DOM.
+
+- **add**: Utilizado para adicionar uma classe a lista de classes do elemento.
+    - Sintaxe básica:
+        ```js
+        elemento.classList.add(classe)
+        ```
+
+- **remove**: Utilizado para remover uma classe a lista de classes do elemento.
+    - Sintaxe básica:
+        ```js
+        elemento.classList.remove(classe)
+        ```
+
+- **toggle**: Utilizado para adicionar/remover uma classe da listagem de classes do elemento.
+    - Sintaxe básica:
+        ```js
+        elemento.classList.toggle(classe)
+        ```
+
+**Exemplos e Referências**
+- Exemplos em: 
+    - ./Exemplos/topico32-manipulando_dom_toggle_method.js
+    - ./Exemplos/topico26-manipulando_dom_addeventlistener.js
+- URLs de referência: https://youtu.be/Z3sp3xK04P0?si=7b_PuBnXB-9bsQoz
+- URL de apoio: https://www.w3schools.com/jsref/prop_element_classlist.asp
+
+### 33. Find method
+
+O método `find` pesquisa elementos dentro de um array, e retorna o primeiro elemento encontrado. Caso algum elemento seja encontrado, ele retorna como true e o valor do elemento, caso seja falso, ele retorna como undefined.
+
+Ao contrário dos métodos `filter` e `map`, o `find` retorna se o termo pesquisado foi encontrado ou não, seu valor e seu índice.
+
+- Sintaxe básica:
+    ```js
+    array.find(funcao)
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico33-find_method.js
+- URLs de referência: https://youtu.be/bEovepaalZA?si=TUGY0rbaNyroqR3L
+- URL de apoio: https://www.w3schools.com/jsref/jsref_find.asp
