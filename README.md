@@ -36,8 +36,13 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 31. [Filter method;](#31-Filter-method)
 32. [Manipulando o DOM - Toggle method;](#32-Manipulando-o-DOM---Toggle-method)
 33. [Find method;](#33-Find-method)
----
+34. [Every method;](#34-Every-method)
+35. [Some method;](#35-Some-method)
+36. [Reduce method;](#36-Reduce-method)
+37. [Push method;](#37-Push-method)
+38. [Protocolo de Iteração (Iterador);](#38-Protocolo-de-Iteração-(Iterador))
 
+---
 ### 1. Instalando o Node.js no Windows;
 
 1. Acessar o site do [Node.js](https://nodejs.org/en);
@@ -670,7 +675,7 @@ Existem duas formas de se declarar parâmetros de uma função:
 ---
 ### 20. Map method
 
-A função `map`, ou o método `map`, é utilizado para percorrer todos os elementos de um array, de uma coleção ou json. Ao contrário de uma iteração que pode percorrer apenas parte de um objeto, o `map` **obrigatoriamente** vai percorrer todo o objeto.
+O método `map()` é utilizado para percorrer todos os elementos de um array, de uma coleção ou json. Ao contrário de uma iteração que pode percorrer apenas parte de um objeto, o `map()` **obrigatoriamente** vai percorrer todo o objeto.
 
 - Sintaxe completa:
     ```js
@@ -689,9 +694,9 @@ A função `map`, ou o método `map`, é utilizado para percorrer todos os eleme
     array.map((elemento, índice) => função(elemento, índice))
     ```
 
-A sintaxe com funções anônimas é utilizada quando desejamos passar, além do valor padrão, os outros valores que o método `map` nos permite, como índice e o próprio array/objeto.
+A sintaxe com funções anônimas é utilizada quando desejamos passar, além do valor padrão, os outros valores que o método `map()` nos permite, como índice e o próprio array/objeto.
 
-- Parâmetros do método `map`:
+- Parâmetros do método `map()`:
 
 | Parameter | Description |
 |-----------|-------------|
@@ -728,9 +733,9 @@ O operador `this` é muito similar à utilização do `self` em uma classe Pytho
 - URL de apoio: https://www.w3schools.com/js/js_this.asp
 
 ---
-### 22. Manipulando o DOM - getElementsById method
+### 22. Manipulando o DOM - getElementById method
 
-O método `getElementsById` é um método da classe `document` do javascript. Ele retorna o elemento, buscando por seu ID.
+O método `getElementById()` é um método da classe `document` do javascript. Ele retorna o elemento, buscando por seu ID.
 
 Primeiramende deve ficar claro que o NODE.js é o lado servidor do javascript (server side), para situações onde se é desejado manipular o DOM (client side) deve ser utilizado o navegador, por exemplo o google chrome.
 
@@ -762,9 +767,9 @@ Isto se deve ao fato do NODE não ter acesso aos artefatos do lado do cliente. D
 ---
 ### 23. Manipulando o DOM - getElementsByTagName method
 
-Assim como o `getElementsById`, o `getElementsByTagName` é um método da classe `document` do javascript para manipulação do DOM.
+Assim como o `getElementsById()`, o `getElementsByTagName()` é um método da classe `document` do javascript para manipulação do DOM.
 
-A diferença entre eles, é quem um traz o elemento em si (`getElementsById`), já o `getElementsByTagName` retorna um `HTMLCollection` (coleção de elementos HTML), que se assemelha a um objeto.
+A diferença entre eles, é quem um traz o elemento em si (`getElementsById()`), já o `getElementsByTagName()` retorna um `HTMLCollection` (coleção de elementos HTML), que se assemelha a um objeto.
 
 - Sintaxe básica:
     ```js
@@ -791,9 +796,9 @@ A diferença entre eles, é quem um traz o elemento em si (`getElementsById`), j
 ---
 ### 24. Manipulando o DOM - getElementsByClassName method
 
-Assim como o `getElementById` e `getElementsByTagName`m o `getElementsByClassName` é um método da classe `document` do javascript para manipulação do DOM.
+Assim como o `getElementById()` e `getElementsByTagName()`m o `getElementsByClassName()` é um método da classe `document` do javascript para manipulação do DOM.
 
-O método `getElementsByClassName` assim como o `getElementsByTagName`, também retorna um HTMLCollection.
+O método `getElementsByClassName()` assim como o `getElementsByTagName()`, também retorna um HTMLCollection.
 
 - Sintaxe básica:
     ```js
@@ -815,7 +820,7 @@ O método `getElementsByClassName` assim como o `getElementsByTagName`, também 
 ---
 ### 25. Manipulando o DOM - querySelector method
 
-Tanto o `querySelector` quanto o `querySelectorAll` são métodos da clase `document` do javascript para manipulação do DOM.
+Tanto o `querySelector()` quanto o `querySelectorAll()` são métodos da clase `document` do javascript para manipulação do DOM.
 
 A diferença deles para os anteriores, é que eles são versáteis nas buscas que eles realizam.
 
@@ -826,7 +831,7 @@ A diferença deles para os anteriores, é que eles são versáteis nas buscas qu
     ```
 
 - **querySelectorAll:** Retorna um objeto do tipo `NodeList`, que é muito similar ao `HTMLCollection`, só que num padrão mais antigo.
-    - O `querySelectorAll` permite que sejam declarados mais de um filtro; 
+    - O `querySelectorAll()` permite que sejam declarados mais de um filtro; 
         - Os filtros podem ser combinados de três formas:
             - Filtro **ou** Filtro;
             - Filtro **e** Filtro;
@@ -856,9 +861,9 @@ A diferença deles para os anteriores, é que eles são versáteis nas buscas qu
 
 Existem duas formas de se trabalhar com eventos entre o HTML e o javascript, uma seria trabalhar com o evento dentro da tag HTML e a outra seria trabalhar com o evento dentro do script javascript.
 
-Utilizando o `addEventListener` ele cria um "escutador" de eventos vindos do DOM para o script javascript.
+Utilizando o `addEventListener()` ele cria um "escutador" de eventos vindos do DOM para o script javascript.
 
-O retorno do método `addEventListener` é um objeto `PointerEvent`, onde todos os dados daquele evento estão declarados.
+O retorno do método `addEventListener()` é um objeto `PointerEvent`, onde todos os dados daquele evento estão declarados.
 
 - Sintaxe básica:
     ```js
@@ -884,7 +889,7 @@ O retorno do método `addEventListener` é um objeto `PointerEvent`, onde todos 
 
 Existem situações onde o evento é declarado em um elemento do DOM que contém outros elementos. Neste tipo de caso, o evento é propagado para os elementos filhos.
 
-Para que não haja essa propagação, deve ser utilizado o método `stopPropagation`.
+Para que não haja essa propagação, deve ser utilizado o método `stopPropagation()`.
 
 - Sintaxe básica:
     ```js
@@ -957,9 +962,10 @@ Também é possível navegar pelos nós, através de sua relação entre eles, c
     - HTML DOM Navigation: https://www.w3schools.com/js/js_htmldom_navigation.asp
     - HTML DOM Elements (Nodes): https://www.w3schools.com/js/js_htmldom_nodes.asp
 
+---
 ### 29. Manipulando o DOM - Criando elementos dinamicamente
 
-O javascript permite a manipulação do DOM, inclusive criação e manipulação de elementos dinamicamente. Os métodos e atributos mais utilizados, para isto, são `createElement`, `innerHTML`, `value`, `setAttribute`, `appendChild` e `insertBefore`. Onde:
+O javascript permite a manipulação do DOM, inclusive criação e manipulação de elementos dinamicamente. Os métodos e atributos mais utilizados, para isto, são `createElement()`, `innerHTML`, `value`, `setAttribute()`, `appendChild()` e `insertBefore()`. Onde:
 
 - **createElement**: Método para criação do elemento em memória;
     - Sintaxe básica:
@@ -1006,9 +1012,10 @@ O javascript permite a manipulação do DOM, inclusive criação e manipulação
 - URL de apoio:
     - HTML DOM Elements (Nodes): https://www.w3schools.com/js/js_htmldom_nodes.asp
 
+---
 ### 30. Manipulando o DOM - Removendo elementos dinamicamente
 
-Com a manipulação do DOM realizada pelo javascript, também é possível realizar a remoção de itens dinamicamente. Para isto, utiliza-se o comando `removeChild`, onde ele irá remover o nó filho informado.
+Com a manipulação do DOM realizada pelo javascript, também é possível realizar a remoção de itens dinamicamente. Para isto, utiliza-se o comando `removeChild()`, onde ele irá remover o nó filho informado.
 
 - Sintaxe básica:
     ```js
@@ -1017,7 +1024,7 @@ Com a manipulação do DOM realizada pelo javascript, também é possível reali
 
 Vale ressaltar, que como elemento filho, pode-se declarar a relação do elemento, portanto pode ser declarado o nó pai.
 
-Já o método `remove` é utilizado, ao contrário do `removeChild`, para remover o elemento em si.
+Já o método `remove()` é utilizado, ao contrário do `removeChild()`, para remover o elemento em si.
 
 - Sintaxe básica:
     ```js
@@ -1034,11 +1041,12 @@ Já o método `remove` é utilizado, ao contrário do `removeChild`, para remove
 - URL de apoio:
     - HTML DOM Elements (Nodes): https://www.w3schools.com/js/js_htmldom_nodes.asp
 
+---
 ### 31. Filter method
 
-O método `filter` de um array, possibilita iterar um array e retornar os valores desejados.
+O método `filter()` de um array, possibilita iterar um array e retornar os valores desejados.
 
-A forma de iterar é semelhante ao método `map`, contudo ele é otimizado para realização de filtros.
+A forma de iterar é semelhante ao método `map()`, contudo ele é otimizado para realização de filtros.
 
 Nos exemplos, há um mostrando a diferença entre eles.
 
@@ -1061,9 +1069,10 @@ O método filter passa 3 parâmetros ordenados: o elemento do array, índice do 
     - https://youtu.be/ks3uaFS-idQ?si=MTqvZkD4tJWrR8hT
 - URL de apoio: https://www.w3schools.com/js/js_array_iteration.asp#mark_filter
 
+---
 ### 32. Manipulando o DOM - Toggle method
 
-Assim como o método `add` e o `remove`, o método `toggle` é um método do `classList`, que por sua ves é uma propriedade dos elementos do DOM.
+Assim como o método `add()` e o `remove()`, o método `toggle()` é um método do `classList`, que por sua ves é uma propriedade dos elementos do DOM.
 
 - **add**: Utilizado para adicionar uma classe a lista de classes do elemento.
     - Sintaxe básica:
@@ -1090,11 +1099,12 @@ Assim como o método `add` e o `remove`, o método `toggle` é um método do `cl
 - URLs de referência: https://youtu.be/Z3sp3xK04P0?si=7b_PuBnXB-9bsQoz
 - URL de apoio: https://www.w3schools.com/jsref/prop_element_classlist.asp
 
+---
 ### 33. Find method
 
-O método `find` pesquisa elementos dentro de um array, e retorna o primeiro elemento encontrado. Caso algum elemento seja encontrado, ele retorna como true e o valor do elemento, caso seja falso, ele retorna como undefined.
+O método `find()` pesquisa elementos dentro de um array, e retorna o primeiro elemento encontrado. Caso algum elemento seja encontrado, ele retorna como true e o valor do elemento, caso seja falso, ele retorna como undefined.
 
-Ao contrário dos métodos `filter` e `map`, o `find` retorna se o termo pesquisado foi encontrado ou não, seu valor e seu índice.
+Ao contrário dos métodos `filter()` e `map()`, o `find()` retorna se o termo pesquisado foi encontrado ou não, seu valor e seu índice.
 
 - Sintaxe básica:
     ```js
@@ -1105,3 +1115,101 @@ Ao contrário dos métodos `filter` e `map`, o `find` retorna se o termo pesquis
 - Exemplos em: ./Exemplos/topico33-find_method.js
 - URLs de referência: https://youtu.be/bEovepaalZA?si=TUGY0rbaNyroqR3L
 - URL de apoio: https://www.w3schools.com/jsref/jsref_find.asp
+
+---
+### 34. Every method
+
+O `every()` é um método de manipulação de arrays. Ele verifica se um array respeita a regra passada para ele, retornando true para caso todo o array respeite o teste lógico, e retornando false para caso haja um elemento fora da regra.
+
+Similar a outros métodos de manipulação de array, ele trabalha com o elemento, índice e o array em si.
+
+Caso haja algum elemento no array que não respeite o filtro aplicado, ele pode retornar o índice da primeira ocorrência que não respeita o filtro.
+
+A diferença entre a utilização do `every()` e do `map()`, é que o `every()` vai parar após encontrar o primeiro elemento falso, já o `map()` vai retornar um array contendo o teste lógico em cima de cada elemento do array originário.
+
+- Sintaxe básica:
+    ```js
+    array.every(funcao)
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico34-every_method.js
+- URLs de referência: https://youtu.be/XzcOiyl40zk?si=ODDtbYeHwdd7gs-c
+- URL de apoio: https://www.w3schools.com/jsref/jsref_every.asp
+
+---
+### 35. Some method
+
+Muito similar ao método `every()`, o método `some()` realiza a validação do array, contudo ele retornará `true` caso algum elemento coincida com o filtro aplicado. Caso, nenhum elemento coincida com o filtro, ele retornará `false` e o íncide do último elemento, pois ele percorreu todo o array.
+
+- Sintaxe básica:
+    ```js
+    array.some(funcao)
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico34-every_method.js
+- URLs de referência: https://youtu.be/TGHleqCYXF4?si=vlUJep2-WKo-6rkV
+- URL de apoio: https://www.w3schools.com/jsref/jsref_some.asp
+
+---
+### 36. Reduce method
+
+O `reduce()` é um método de array, onde ele vai iterar o array, assim como os outros métodos, contudo ele tem um parâmetro a mais que é o "valor anterior", onde ele armazena a resposta da última iteração.
+
+- Sintaxe básica:
+    ```js
+    array.reduce(funcao)
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico36-reduce_method.js
+- URLs de referência: https://youtu.be/LfKJFLqQgGo?si=BMGamsn0IfoIlr1g
+- URL de apoio: https://www.w3schools.com/jsref/jsref_reduce.asp
+
+---
+### 37. Push method
+
+O `push()` é um método de array, onde é adicionado um valor ao final do array.
+
+- Sintaxe básica:
+    ```js
+    array.push(valor)
+    ```
+
+- Exemplo básico:
+    ```js
+    let array=[]
+    array.push(1)
+    array.push(2)
+    // [1,2]
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico36-reduce_method.js
+- URLs de referência: 
+- URL de apoio: https://www.w3schools.com/jsref/jsref_push.asp
+
+---
+### 38. Protocolo de Iteração (Iterador)
+
+O protocolo de iteração define como produzir uma sequência de valores de um objeto. Um objeto se torna iterável quando implementado o método `next()`.
+
+Iteradores são aplicáveis em coleções, como array, strings, maps, sets, etc...
+
+Um iterador Javascript é um objeto que tenha a função `Symbol.iterator`, que retorna a função `next()`.
+
+O método `next()` deve retrnar um objeto com duas propriedates:
+
+> `value` (o próximo valor)
+> `done` (`true` ou `false`)
+
+|||
+|---|---|
+| value | O valor retornado pelo iterador (pode ser omitido quanto `done` for `true`) |
+| done | `true` se o iterador tiver terminado, se ele já tiver chegado ao final da coleção, `false` se o iterador retornou um novo valor |
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico38-iteracao.js
+- URLs de referência: https://youtu.be/2oHEGBx1HR8?si=in9jBOOMoZDE3Xl3
+- URL de apoio: https://www.w3schools.com/js/js_object_iterables.asp
