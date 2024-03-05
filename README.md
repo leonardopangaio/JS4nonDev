@@ -40,7 +40,7 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 35. [Some method;](#35-Some-method)
 36. [Reduce method;](#36-Reduce-method)
 37. [Push method;](#37-Push-method)
-38. [Protocolo de Iteração (Iterador);](#38-Protocolo-de-Iteração-(Iterador))
+38. [Protocolo de Iteração (Iterador);](#38-Protocolo-de-Iteração-Iterador)
 
 ---
 ### 1. Instalando o Node.js no Windows;
