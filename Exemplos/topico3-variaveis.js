@@ -26,5 +26,12 @@ function MinhaPrimeiraFuncao(){
 };
 
 const TesteChamaFuncao = MinhaPrimeiraFuncao();
-//se tentarmos usar a var4 aqui, teremos uma exceção sendo exibida no console.
+//se tentarmos usar a var aqui, teremos uma exceção sendo exibida no console.
 console.log('Após a execução da função a variável var1 ficou desta forma: ' + var1)
+
+console.log("---")
+
+// When a variable is declared with "const" it's not possible to change the variable or to assign another value, but if the variable is a collection, it's possible to add itens on it.
+const TesteArray=[]
+TesteArray.push("Leo")
+console.log(TesteArray)

@@ -1179,11 +1179,12 @@ O `push()` é um método de array, onde é adicionado um valor ao final do array
 
 - Exemplo básico:
     ```js
-    let array=[]
-    array.push(1)
-    array.push(2)
+    let _array=[]
+    _array.push(1)
+    _array.push(2)
     // [1,2]
     ```
+> :memo: **Note:** Foi utilizado _array e não array, pois array é uma palavra protegida de javascript.
 
 **Exemplos e Referências**
 - Exemplos em: ./Exemplos/topico36-reduce_method.js
@@ -1213,3 +1214,38 @@ O método `next()` deve retrnar um objeto com duas propriedates:
 - Exemplos em: ./Exemplos/topico38-iteracao.js
 - URLs de referência: https://youtu.be/2oHEGBx1HR8?si=in9jBOOMoZDE3Xl3
 - URL de apoio: https://www.w3schools.com/js/js_object_iterables.asp
+
+### 39. Coleções de Dados - Arrays
+
+Arrays são os tipos mais simples de coleção em Javascript e eles podem receber todos os tipos de dados (strings, numbers, arrays, objetos, funções) dentro deles. Também são chamados de vetores, ou em casos onde um array está contido em outro array, podem ser chamados de matrizes.
+
+Arrays são objetos iteraveis, e que possuem diversos métodos como `map()`, `filter()`, `reduce()`, etc...
+
+Como são iteraveis, eles possuem índice para definir a posição dos itens. Os índices sempre serão iniciados com 0 (zero), portanto o item de índice [0] é o primeiro elemento, o elemento de índice [1] é o segundo elemento e por aí vai.
+
+Os arrays no Javascript podem ser comparados com as listas do Python.
+
+- Sintaxe básica:
+    ```js
+    const array=[itens]
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: 
+    - Exemplo teórico: ./Exemplos/topico39-Arrays.js
+    - Exemplo prático: ./ExemplosRW/topico39-calculadora.js
+- URLs de referência: 
+    - Inicial: https://youtu.be/err29ahFES4?si=kgGisQij_2Ot8ruU
+    - Exercício: https://youtu.be/IzADtpBafSQ?si=R_SHekfNEUsWlPQi
+- URL de apoio: 
+    - https://www.w3schools.com/js/js_arrays.asp
+    - https://www.w3schools.com/jsref/jsref_obj_array.asp
+
+### 40. Coleções de Dados - Map
+
+
+
+**Exemplos e Referências**
+- Exemplos em: 
+- URLs de referência: 
+- URL de apoio: 
