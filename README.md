@@ -41,6 +41,8 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 36. [Reduce method;](#36-Reduce-method)
 37. [Push method;](#37-Push-method)
 38. [Protocolo de Iteração (Iterador);](#38-Protocolo-de-Iteração-Iterador)
+39. [Coleções de Dados - Arrays;](#39-Coleções-de-Dados---Arrays)
+40. [Coleções de Dados - Map;](#40-Coleções-de-Dados---Map)
 
 ---
 ### 1. Instalando o Node.js no Windows;
@@ -1215,6 +1217,7 @@ O método `next()` deve retrnar um objeto com duas propriedates:
 - URLs de referência: https://youtu.be/2oHEGBx1HR8?si=in9jBOOMoZDE3Xl3
 - URL de apoio: https://www.w3schools.com/js/js_object_iterables.asp
 
+---
 ### 39. Coleções de Dados - Arrays
 
 Arrays são os tipos mais simples de coleção em Javascript e eles podem receber todos os tipos de dados (strings, numbers, arrays, objetos, funções) dentro deles. Também são chamados de vetores, ou em casos onde um array está contido em outro array, podem ser chamados de matrizes.
@@ -1241,6 +1244,7 @@ Os arrays no Javascript podem ser comparados com as listas do Python.
     - https://www.w3schools.com/js/js_arrays.asp
     - https://www.w3schools.com/jsref/jsref_obj_array.asp
 
+---
 ### 40. Coleções de Dados - Map
 
 
