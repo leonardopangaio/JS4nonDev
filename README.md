@@ -1226,6 +1226,13 @@ Arrays são objetos iteraveis, e que possuem diversos métodos como `map()`, `fi
 
 Como são iteraveis, eles possuem índice para definir a posição dos itens. Os índices sempre serão iniciados com 0 (zero), portanto o item de índice [0] é o primeiro elemento, o elemento de índice [1] é o segundo elemento e por aí vai.
 
+- Exemplo:
+
+| | | | | |
+|:---:|:---:|:---:|:---:|:---:|
+|0|1|2|3|4|
+|"leo"|"lucia"|"isis"|"hera"|"apolo"|
+
 Os arrays no Javascript podem ser comparados com as listas do Python.
 
 - Sintaxe básica:
@@ -1247,9 +1254,127 @@ Os arrays no Javascript podem ser comparados com as listas do Python.
 ---
 ### 40. Coleções de Dados - Map
 
+A coleção map é uma coleção de chaves e valores, faz lembrar os dicionários do Python.
+
+Diferente dos arrays, que utilizam índice para serem iteraveis e terem seus valores retornados, o Map utiliza a chave para fazer a indexação, portanto não é possível ter chaves iguais (pode haver valores iguais sem problemas). Caso uma chave seja passada e ela já exista, ela terá seu valor atualizado.
+
+As chaves e valores do Map podem ser de qualquer tipo, e também podem armazenar funções.
+
+Os elementos do Map não podem ser passados no construtor.
+
+|**Método** | **Descrição** |
+|---|---|
+| new Map() | Cria uma nova coleção Map |
+| set() | Define um valor para uma chave num Map |
+| get() | Exibe um valor para uma chave num Map |
+| delete() | Remove um elemento da coleção pela chave |
+| has() | Retorna `true` se o elemento existe no Map |
+| forEach() | Chama uma função para cada par chave/valor do Map |
+| entries() | Retorna um iterador com o par chave/valor no Map |
+| keys() | Retorna as chaves de um Map |
+| values() | Retorna os valores de um Map |
+| clear() | Apaga toda a coleção |
+| **Propriedade** | **Descrição** |
+| size | Retorna o número de elementos do Map |
+
+- Sintaxe básica:
+    ```js
+    const variavel = new Map()
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico40-Maps.js
+- URLs de referência: https://youtu.be/y9Tz0bjXBXs?si=eqIj3GdArwVq641a
+- URL de apoio: https://www.w3schools.com/js/js_maps.asp
+
+---
+### 41. Coleções de Dados - Set
+
+O Set é uma coleção que recebe um array, porém diferente do array, ele não aceita valores duplicados, ela aceitará somente a primeira ocorrência do valor passado.
+
+O Set diferentemnete do Map pode já ter os valores passados em seu construtor.
+
+|**Método** | **Descrição** |
+|---|---|
+| new Set() | Cria uma nova coleção Set |
+| add() | Adiciona um valor para uma chave num Set |
+| delete() | Remove um elemento da coleção |
+| has() | Retorna `true` se o elemento existe no Set |
+| forEach() | Chama uma função para cada elemento do Set |
+| values() | Retorna um iterador com o elemento no Set |
+| clear() | Apaga toda a coleção |
+| **Propriedade** | **Descrição** |
+| size | Retorna o número de elementos do Set |
+
+- Sintaxe básica:
+    ```js
+    const variavel = new Set()
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico41-Sets.js
+- URLs de referência: https://youtu.be/v24QAyoiAo0?si=6yLanVHvN24C27WB
+- URL de apoio: https://www.w3schools.com/js/js_sets.asp
+
+---
+### 42. Strings Template
+
+O string template é uma forma de concatenação de strings, muito similar ao fstrings do python.
+
+A sua declaração é utilizando crases "`" e as variáveis são declaradas com uma notação similar a do shellscript "${}".
+
+Essa forma de declaração de strings também permite strings com multiplas linhas.
+
+- Sintaxe básica:
+    ```js
+    const variavel = `Texto da variável ${variavel_concatenada}`
+    ```
 
 
 **Exemplos e Referências**
-- Exemplos em: 
+- Exemplos em: ./Exemplos/topico42-strings_template.js
+- URLs de referência: https://youtu.be/R2PvSZU5xLY?si=Q9IABrJZvgEwD4nw
+- URL de apoio: https://www.w3schools.com/js/js_string_templates.asp
+
+---
+### 43. Objetos
+
+Em Javascripts objetos podem ser variáveis ou objetos literais (tipo json) ou instâncias de classes.
+
+#### Classes
+
+- **Classe**: Uma classe é como um plano ou modelo para criar objetos. Ela define as propriedades e comportamentos que os objetos desse tipo terão. É como um conjunto de instruções sobre como construir algo.
+
+- **Objeto**: Um objeto é uma instância concreta de uma classe. É uma entidade que possui características (propriedades) e ações (métodos) definidas pela classe à qual pertence. Em termos simples, um objeto é algo real que é criado com base nas especificações da classe.
+
+Por exemplo, imagine que você tem uma classe chamada "Cachorro". Esta classe define que um cachorro tem propriedades como "nome", "idade" e métodos como "latir" e "andar". Quando você cria um objeto a partir dessa classe, como "meuCachorro" ou "seuCachorro", você está criando instâncias individuais de cachorros que têm suas próprias características específicas, mas seguem o modelo definido pela classe "Cachorro".
+
+**Atributos:** Também conhecidos como propriedades ou campos, os atributos são as características ou dados que um objeto possui. Eles representam o estado do objeto e são usados para descrever suas características. Por exemplo, se tivermos uma classe "Carro", os atributos podem incluir coisas como "marca", "modelo", "ano", "cor", etc. Esses atributos são variáveis que armazenam informações específicas de cada objeto.
+
+A classe pode ter atributos que não são declarados no contrutor, porém caso o sejam, serão substituídos pelo do construtor.
+
+**Métodos:** Os métodos são funções definidas na classe que representam o comportamento dos objetos dessa classe. Eles permitem que os objetos executem ações e manipulem seus dados. Por exemplo, a classe "Carro" pode ter métodos como "ligar", "desligar", "acelerar", "frear", etc. Esses métodos definem o que um objeto da classe Carro pode fazer.
+
+- Sintaxe básica:
+    ```js
+    class Nome_da_Classe{
+        constructor(){
+            this.variavel = valor
+        }
+    }
+
+    let instancia_objeto = new Nome_da_Classe()
+    ```
+> :memo: **Note:** O parêntesis da instaciação do objeto é o que será passado para o método construtor. 
+
+#### Variáveis ou Literal
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico43-objetos.js
 - URLs de referência: 
+    - https://youtu.be/h8HvEPIOQ1k?si=_PrfyYv_L-nWZodu
+    - https://youtu.be/Y8KBN1NN6tU?si=3CC7KINw4n-VTEUi
+    - https://youtu.be/LJBS2qaG08U?si=IQc7r7GE60oFjK-V
 - URL de apoio: 
+    - https://www.w3schools.com/js/js_objects.asp
+    - https://www.w3schools.com/jsref/jsref_obj_object.asp
