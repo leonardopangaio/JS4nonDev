@@ -1429,3 +1429,4 @@ Ao contrário da classe, os métodos dentro de um objeto literal não retornam e
 - URL de apoio: 
     - https://www.w3schools.com/js/js_objects.asp
     - https://www.w3schools.com/jsref/jsref_obj_object.asp
+
