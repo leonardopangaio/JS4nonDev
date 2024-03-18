@@ -1367,14 +1367,65 @@ A classe pode ter atributos que não são declarados no contrutor, porém caso o
     ```
 > :memo: **Note:** O parêntesis da instaciação do objeto é o que será passado para o método construtor. 
 
-#### Variáveis ou Literal
+Existe também uma forma de trabalhar com classes que seria através de funções, neste caso, a passagem de parâmetros seria na criação da função, e os atributos e parâmetros seriam declarados com `this`, no caso dos métodos, é feita a declaração com funções anônimas.
+
+Para separação dos métodos, neste formato de função, se faz necessário a utilização de ";".
+
+- Sintaxe básica:
+    ```js
+    function Nome_da_Classe(parâmetros){
+        this.atributo=parâmetro,
+        this.medoto=function(){
+            "corpo do método"
+        }
+    }
+    ```
+
+**Herança:** é quando uma classe herda os atributos e propriedades de uma classe já existente. Por exemplo, uma classe carro terá os atributos e métodos básicos de todos os carros, e uma classe esportivo, herdando de carro, terá todos os atributos/métodos da classe pai carro e mais os seus próprios atributos/métodos.
+
+- Sintaxe básica de herança:
+    ```js
+    class NomeDaClasse extends NomeDoPai{
+        constructor("atributos do pai/filho"){
+            super("atributos do pai")
+        }
+    }
+    ```
+
+#### Literal
+
+Diferentemente dos objetos criados pelas classes, onde um objeto é uma instância da classe em memória, possibilitando ter vários objetos distintos, os objetos literais são apontamentos do mesmo endereço de memória. É o objeto em si que é criado e manipulado, e não uma classe como visto anteriormente.
+
+- Sintaxe básica:
+    ```js
+    objeto = {
+        atributo:valor,
+        atributo:"valor",
+        metodo:function(){
+            "corpo do método"
+        },
+        metodo:function(parâmetro){
+            "corpo do método"
+        }
+    }
+    ```
+
+> :memo: **Note:** A atribuição de valores nos objetos literais são através de ":" e não "=".
+
+Ao contrário da classe, os métodos dentro de um objeto literal não retornam ele em si, portanto, ou deve ser declarado em seus métodos esse retorno ou o objeto deverá ser retornado posterior a utilização de algum de seus métodos.
 
 **Exemplos e Referências**
-- Exemplos em: ./Exemplos/topico43-objetos.js
+- Exemplos em: 
+    - Classes: ./Exemplos/topico43-objetos_classes.js
+    - Literais: ./Exemplos/topico43-objetos_literais.js
 - URLs de referência: 
     - https://youtu.be/h8HvEPIOQ1k?si=_PrfyYv_L-nWZodu
     - https://youtu.be/Y8KBN1NN6tU?si=3CC7KINw4n-VTEUi
     - https://youtu.be/LJBS2qaG08U?si=IQc7r7GE60oFjK-V
+    - https://youtu.be/OoyPZMrz7GY?si=g7hgIEpxFe58S9yW
+    - https://youtu.be/YLokpJmtvRw?si=5n7M_7NJd_UtMYV0
+    - https://youtu.be/-fOCg39SBzc?si=7DZxBRxPs7aztExT
+    - https://youtu.be/-85DzYOfoRw?si=gF41y3FQKyJyqB2d
 - URL de apoio: 
     - https://www.w3schools.com/js/js_objects.asp
     - https://www.w3schools.com/jsref/jsref_obj_object.asp

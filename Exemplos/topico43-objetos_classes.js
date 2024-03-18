@@ -97,3 +97,72 @@ btn_add.addEventListener("click",(evt)=>{
     console.log(carros)
     addCarro()
 })
+
+//---------------
+function CarroF(pNome, pTipo){
+    this.name=pNome;
+    if(pTipo == 1){
+        this.tipo="Esportivo"
+        this.velmax=300
+    }else if(pTipo == 2){
+        this.tipo="Utilitário"
+        this.velmax=100
+    }else if(pTipo == 3){
+        this.tipo="Passeio"
+        this.velmax=160
+    }else{
+        this.tipo="Militar"
+        this.velmax=200
+    };
+    this.getNome=function(){
+        return this.name
+    };
+    this.getTipo=function(){
+        return this.tipo
+    };
+    this.getVelMax=function(){
+        return this.velmax
+    };
+    this.getInfo=function(){
+        return [this.name, this.tipo, this.velmax]
+    };
+    this.setNome=function(pNome){
+        this.name=pNome
+    };
+    this.setTipo=function(pTipo){
+        if(pTipo == 1){
+            this.tipo="Esportivo"
+            this.velmax=300
+        }else if(pTipo == 2){
+            this.tipo="Utilitário"
+            this.velmax=100
+        }else if(pTipo == 3){
+            this.tipo="Passeio"
+            this.velmax=160
+        }else{
+            this.tipo="Militar"
+            this.velmax=200
+        }
+    };
+    this.info=function(){
+        console.log(`Nome: ${this.name}`)
+        console.log(`Tipo: ${this.tipo}`)
+        console.log(`Vel. Max.: ${this.velmax}`)
+        console.log(`---`)
+    }
+}
+
+let c2 = new CarroF("corsa",3)
+c2.info()
+console.log(c2.getInfo())
+console.log(c2.getNome())
+console.log(c2.getTipo())
+console.log(c2.getVelMax())
+
+console.log("---")
+c2.setTipo(1)
+console.log(c2.getInfo())
+
+console.log("---")
+console.log(c2.curso)
+
