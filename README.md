@@ -1365,6 +1365,16 @@ A classe pode ter atributos que não são declarados no contrutor, porém caso o
 
     let instancia_objeto = new Nome_da_Classe()
     ```
+
+- Sintaxe como função:
+    ```js
+    const Nome_da_Classe=function(valor){
+        this.variavel = valor
+    }
+
+    let instancia_objeto = new Nome_da_Classe()
+    ```
+
 > :memo: **Note:** O parêntesis da instaciação do objeto é o que será passado para o método construtor. 
 
 Existe também uma forma de trabalhar com classes que seria através de funções, neste caso, a passagem de parâmetros seria na criação da função, e os atributos e parâmetros seriam declarados com `this`, no caso dos métodos, é feita a declaração com funções anônimas.
@@ -1392,6 +1402,22 @@ Para separação dos métodos, neste formato de função, se faz necessário a u
     }
     ```
 
+**Static:** `static` é uma palavra reservada que define que o atributo ou o método será da classe e não do objeto. Neste caso, o atributo ou método só poderá ser chamado pela própria classe, e não por uma instância da classe.
+
+**Prototype:** É uma forma de se incluir um atributo ou método a uma classe, depois de declarada ou até mesmo instanciada.
+
+- Sintaxe básica:
+    ```js
+    classe.prototype.atributo = valor
+    classe.prototype.metodo = function(){
+        "Corpo do novo método"
+    }
+    ```
+
+> :memo: **Note:** Para inclusão de métodos, só funcionará com a declaração `function` e não com uma `arrow function`.
+
+**Polimorfismo:** é quando um método de uma classe filha é diferente do método da classe pai.
+
 #### Literal
 
 Diferentemente dos objetos criados pelas classes, onde um objeto é uma instância da classe em memória, possibilitando ter vários objetos distintos, os objetos literais são apontamentos do mesmo endereço de memória. É o objeto em si que é criado e manipulado, e não uma classe como visto anteriormente.
@@ -1416,8 +1442,12 @@ Ao contrário da classe, os métodos dentro de um objeto literal não retornam e
 
 **Exemplos e Referências**
 - Exemplos em: 
-    - Classes: ./Exemplos/topico43-objetos_classes.js
-    - Literais: ./Exemplos/topico43-objetos_literais.js
+    - Classes:      ./Exemplos/topico43-objetos_classes.js
+    - Literais:     ./Exemplos/topico43-objetos_literais.js
+    - Herança:      ./Exemplos/topico43-heranca.js
+    - Exemplo:      ./Exemplos/topico43-exemplo.js
+    - Static:       ./Exemplos/topico43-static.js
+    - Prototype:    ./Exemplos/topico43-prototype.js
 - URLs de referência: 
     - https://youtu.be/h8HvEPIOQ1k?si=_PrfyYv_L-nWZodu
     - https://youtu.be/Y8KBN1NN6tU?si=3CC7KINw4n-VTEUi
@@ -1426,7 +1456,52 @@ Ao contrário da classe, os métodos dentro de um objeto literal não retornam e
     - https://youtu.be/YLokpJmtvRw?si=5n7M_7NJd_UtMYV0
     - https://youtu.be/-fOCg39SBzc?si=7DZxBRxPs7aztExT
     - https://youtu.be/-85DzYOfoRw?si=gF41y3FQKyJyqB2d
-- URL de apoio: 
+    - https://youtu.be/KXE0-UeHcJI?si=0NMVlpEpI_tGdE-M
+    - https://youtu.be/lJ35mX0t1eE?si=zIEIT76rqFChJSvp
+    - https://youtu.be/xwqvmRXodC0?si=bH-8udB6-m5fU3uF
+    - https://youtu.be/c2t7m3Whyb4?si=hI3Bn4Po00lhBhho (rever)
+- URLs de apoio: 
     - https://www.w3schools.com/js/js_objects.asp
     - https://www.w3schools.com/jsref/jsref_obj_object.asp
+    - https://www.w3schools.com/js/js_classes.asp
+    - https://www.w3schools.com/jsref/jsref_classes.asp
+    - https://www.w3schools.com/jsref/jsref_class_extends.asp
+    - https://www.w3schools.com/jsref/jsref_class_static.asp
+    - https://www.w3schools.com/jsref/jsref_class_super.asp
+    - https://www.w3schools.com/jsref/jsref_constructor_class.asp
+    - https://www.w3schools.com/js/js_object_definition.asp
+    - https://www.w3schools.com/js/js_object_properties.asp
+    - https://www.w3schools.com/js/js_object_methods.asp
+    - https://www.w3schools.com/js/js_object_constructors.asp
+    - https://www.w3schools.com/js/js_object_prototypes.asp
+    - https://www.w3schools.com/js/js_class_inheritance.asp
+    - https://www.w3schools.com/js/js_class_static.asp
+    - https://www.w3schools.com/jsref/jsref_object_constructor.asp
+    - https://www.w3schools.com/jsref/jsref_object_prototype.asp
 
+
+
+---
+### 44. Conversão de JSON em Objeto Literal e vice-versa
+
+JSON é uma sigla para **J**ava**S**cript **O**bject **N**otation, traduzindo, seria Notação de Objeto de JavaScript.
+
+JSON é considerado uma string, e muito utilizado para comunicação entre aplicações.
+
+Para realizar a conversão, é utilizada uma classe de mesmo nome, chamada `JSON`, que possui dois métodos: `stringify()` e `parse()`.
+
+O método `stringify()` realiza a conversão do objeto em string json e `parse()` realiza a conversão de uma string json em objeto literal.
+
+- Sintaxe básica:
+    ```js
+    JSON.stringfy(objeto_literal)
+    JSON.parse(string_json)
+
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico44-conversaoJsonObjetoLiteral.js
+- URLs de referência: https://youtu.be/-EF_SYy2h7Q?si=cBoa1hQF5Ia8LQmW
+- URL de apoio: 
+    - https://www.w3schools.com/js/js_json.asp
+    - https://www.w3schools.com/jsref/jsref_obj_json.asp
