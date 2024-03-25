@@ -3,7 +3,7 @@
 Esse documento visa a ser um caderno de estudos sobre javascript.
 
 ## ÍNDICE
-1. [Instalando o Node.js no Windows;](#1-instalando-o-nodejs-no-windows)
+1. [Instalando o Node.js;](#1-instalando-o-nodejs)
 2. [Modo restrito;](#2-modo-restrito)
 3. [Declaração de variáveis (let, var const);](#3-declara%C3%A7%C3%A3o-de-vari%C3%A1veis-let-var-const)
 4. [Operadores matemáticos;](#4-operadores-matem%C3%A1ticos)
@@ -43,14 +43,28 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 38. [Protocolo de Iteração (Iterador);](#38-Protocolo-de-Iteração-Iterador)
 39. [Coleções de Dados - Arrays;](#39-Coleções-de-Dados---Arrays)
 40. [Coleções de Dados - Map;](#40-Coleções-de-Dados---Map)
+41. [Coleções de Dados - Set;](#41-Coleções-de-Dados---Set)
+42. [Strings Template;](#42-Strings-Template)
+43. [Classes e Objetos;](#43-Classes-e-Objetos)
+44. [Conversão de JSON em Objeto Literal e vice-versa;](#44-Conversão-de-JSON-em-Objeto-Literal-e-vice-versa)
+45. [Promise;](#45-Promise)
+46. [Biblioteca Date;](#46-Biblioteca-Date)
 
 ---
-### 1. Instalando o Node.js no Windows;
+### 1. Instalando o Node.js;
 
+**Instalação em ambiente Windows:**
 1. Acessar o site do [Node.js](https://nodejs.org/en);
 2. Baixar a versão LTS mais atualizada;
 3. Instalar no computador;
-4. Validar que o Node.js foi instalado com o comando `node -v` no console;
+
+**Instalação em ambiente Linux:**
+
+No ambiente Linux existem algumas formas de se instalar o Node.js. É sugerido a utilização do método via NVM, relacionado no site da [Hostinger](https://www.hostinger.com/tutorials/how-to-install-node-ubuntu).
+
+**Validando a instalação:**
+
+Em ambos os casos, para validar que o Node.js foi instalado com o comando `node -v` no console;
 
 Para executar o código, como por exemplo um "Hello World", devemos criar um arquivo e rodar com o comando node.
 
@@ -61,7 +75,7 @@ Para executar o código, como por exemplo um "Hello World", devemos criar um arq
 
 > :memo: **Note:** NODE.js é server side, portanto ele não tem acesso aos elementos do DOM. </br> Para se ter acesso aos elementos do DOM, o script deverá ser chamado por uma página HTML dentro do navegador.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico1-hello_world.js
 - URL de referência: https://youtu.be/E4DBTqgxHGM?si=RpCIPW4Xj8Yg5QEX
 
@@ -72,7 +86,7 @@ O modo restrito server para forçar que o dev escreva um código mais simples e 
 
 Para ativar o modo restrito, ou o _strict mode_, no código basta inicializarmos o script com `"use strict"`.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico1-hello_world.js
 - URL de referência: https://youtu.be/HFOzef8k9GE?si=SfKV9rWqsBDb98YO
 - URL de apoio: https://www.w3schools.com/js/js_strict.asp
@@ -106,7 +120,7 @@ No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e co
         const variavel = valor
         ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos prático em ./Exemplos/topico3-variaveis.js
 - URL de referência: https://youtu.be/zRA8RkDUqH0?si=41z3TICmffqoSdoX
 - URL de apoio: https://www.w3schools.com/js/js_variables.asp
@@ -121,7 +135,7 @@ Os operadores matemáticos ou aritméticos são os operadores para realização 
 4. Divisão (`/`)
 5. Resto ou mod (`%`)
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos prático em ./Exemplos/topico4-operadores_matematicos.js
 - URL de referência: https://youtu.be/eDVUmGnQJ_c?si=suSyU3-whupB6adT
 - URL de apoio: 
@@ -147,7 +161,7 @@ O resultado final das operações de comparação (relacionais) é o retorno ver
 
 Vale dizer também que os operadores relacionais são afetados também pelo operador de negação '!'.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos prático em ./Exemplos/topico5-operadores_relacionais.js
 - URL de referência: https://youtu.be/5ESHpHXFa4M?si=avK4n4iDcSbYdRcE
 - URL de apoio: 
@@ -168,7 +182,7 @@ Vale dizer também que os operadores relacionais são afetados também pelo oper
 **Tabela Verdade**
 ![alt text](.\Imagens\tabela_verdade.png)
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico6-operadores_logicos.js
 - URL de referência: https://youtu.be/0-dgk6u9WBE?si=_VH0VJLATnBe4LLu
 - URL de apoio: 
@@ -197,7 +211,7 @@ Também conhecidos como operadores "bit a bit".
 
 Existe um arquivo excel explicando a lógica dos operadores bitwise em ./Exemplos/operadores_bitwise.xlsx
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico7-operadores_bitwise.js
 - URL de referência: https://youtu.be/JbGf_hd6g_Q?si=qb7BHaJ9nrN3xky-
 - URL de apoio: 
@@ -229,7 +243,7 @@ Obs. Caso tenhamos uma string na operação o operador `+` será considerado um 
 
 Em ambos os casos, fica mais visivel com o exemplo prático.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico8-pre_pos_incremento.js
 - URL de referência: https://youtu.be/lz03-62owNY?si=oN6O3kLb7OKDRv1c
 - URL de apoio: 
@@ -251,7 +265,7 @@ O símbolo utilizado para realizar a operação ternária é o `?`.
     (teste lógico ? retorno se verdadeiro : retorno se falso)
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico9-operacao_ternaria.js
 - URL de referência: https://youtu.be/5JPfbLGqzXA?si=mbl5yAKNS8kxrQer
 
@@ -271,7 +285,7 @@ Em Javascript temos 4 tipos de variáveis, são elas: Number, String, Object e B
     ```
 > :memo: **Note:** A função typeof retorna um valor, poranto para ser exibido, ou ela deverá ser explicitamente, ou o retorno deverá ser inserido em outra variável. 
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico10-funcao_typeof.js
 - URL de referência: https://youtu.be/K2U22waWKGo?si=khIcUPV6sj7NpBTq
 - URL de apoio: https://www.w3schools.com/js/js_typeof.asp
@@ -289,7 +303,7 @@ Um dos exemplos que será explicado é caso seja utilizado o spread em objetos i
 
 > :memo: **Note:** Os índices de arrays sempre começam com 0. Por exemplo, se tivermos um array de 3 itens, os índices serão 0, 1 e 2.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico11-funcao_spread.js
 - URL de referência: https://youtu.be/_qgObfmqokw?si=hb_Zn3ibD8l-OgEP
 - URL de apoio: https://www.w3schools.com/js/js_array_iteration.asp#mark_spread
@@ -364,7 +378,7 @@ flowchart LR
 
 > :memo: **Obs:** Se o IF/ELSE tiverem apenas uma linha de execução, não será necessário a declaração das chaves "{}".
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico12-validacao_condicoes.js
 - URL de referência: https://youtu.be/lDTKpamdXzc?si=rCMrTDnE_hV9IBv_
 - URL de apoio: https://www.w3schools.com/js/js_if_else.asp
@@ -418,7 +432,7 @@ flowchart LR
     end
 ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico13-switch_case.js
 - URL de referência: https://youtu.be/L4dpMM3MVWY?si=P9LFYMIyp3E6hWWo
 - URL de apoio: https://www.w3schools.com/js/js_switch.asp
@@ -447,7 +461,7 @@ O loop FOR será executado enquanto sua condição for verdadeira, caso ela seja
 
 > :memo: **Obs:** Se o FOR tiver apenas uma linha de execução, não será necessário a declaração das chaves "{}".
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico14-loop_for.js
 - URL de referência: https://youtu.be/qBSB5H7mCGo?si=hNfN1_TBv4NW4DDl
 - URL de apoio: https://www.w3schools.com/js/js_loop_for.asp
@@ -477,7 +491,7 @@ FOR IN e FOR OF são variações do loop FOR.
 
 Ambos funcionam também para coleções HTML.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico15-for_in_for_of.js
 - URL de referência: https://youtu.be/WLLCmepsG6Y?si=Xe-AI_yDr18157ZZ
 - URLs de apoio:
@@ -526,7 +540,7 @@ flowchart LR
 
 > :warning: **Warning:** É necessário se ter cuidado com incremento ou alteração dos dados da condição do loop WHILE para que não se tenha um loop infinito indesejado.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico16-loop_while.js
 - URL de referência: https://youtu.be/Nm6vfrLrGs8?si=tEOiqIG9aRUSaYbI
 - URL de apoio: https://www.w3schools.com/js/js_loop_while.asp
@@ -543,7 +557,7 @@ O loop DO WHILE também é considerado um loop indefinido, assim como o WHILE, c
     }while(condição)
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico17-loop_do_while.js
 - URL de referência: https://youtu.be/nAS21yLt2-Q?si=v3_XG4KvDsEMhVn5
 - URL de apoio: https://www.w3schools.com/js/js_loop_while.asp
@@ -557,7 +571,7 @@ As declarações `continue` e `break` servem de controle para iterações.
 
 **BREAK:** Ao encontrar o comando BREAK, o loop será interrompido imediatamente.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico18-continue_break.js
 - URL de referência: https://youtu.be/KRojULEQx24?si=vrMVkrI-_cSsMf6I
 - URL de apoio: https://www.w3schools.com/js/js_break.asp
@@ -661,7 +675,7 @@ Existem duas formas de se declarar parâmetros de uma função:
 
 :bulb: **Tip:** Devido a dificuldade no entendimento, utilizei o chat gpt pra me auxiliar na explicação. A melhor explicação que obtive está em ./ExplicacoesGPT/funcoes_geradoras.md
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico19-funcoes.js
 - URLs de referência:
     - Funções: https://youtu.be/Ig1nVMDLXns?si=DRTIdCTqZ1DGxSW-
@@ -709,7 +723,7 @@ A sintaxe com funções anônimas é utilizada quando desejamos passar, além do
 | valor_extra | Opcional.</br> O valor padrão é undefined. Um valor passado para a função a ser usado como "este valor". |
 
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico20-map_function.js
 - URL de referência: https://youtu.be/0M2ba5A6DHY?si=ZHW7GuVPa70OVdOU
 - URLs de apoio: 
@@ -729,7 +743,7 @@ O operador `this` é muito similar à utilização do `self` em uma classe Pytho
 
 > :bulb: **Tip:** Parte da explicação do funcionamento do `this` está nos comentários dos exemplos.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico21-operador_this.js
 - URL de referência: https://youtu.be/21U6gqefijo?si=6ekiTwPssYfkp3fh
 - URL de apoio: https://www.w3schools.com/js/js_this.asp
@@ -748,7 +762,7 @@ Isto se deve ao fato do NODE não ter acesso aos artefatos do lado do cliente. D
     const variavel = document.getElementById("ID")
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico22-manipulando_dom_getelementbyid.js
 - Outros exemplos podem ser vistos em:
     - ./Exemplos/topico1-hello_world.js
@@ -783,7 +797,7 @@ A diferença entre eles, é quem um traz o elemento em si (`getElementsById()`),
 ![Array of HTML elements collected by getElementsById](./Imagens/getelementbyid.png)
 ![HTMLCollection of HTML elements collected by GetElementsByTagName](./Imagens/getelementbytagname.png)
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico23-manipulando_dom_getelementbytagname.js
 - URL de referência: https://youtu.be/FJrcpHllPB8?si=aBY36wN7_pbHKIK-
 - URLs de apoio:
@@ -807,7 +821,7 @@ O método `getElementsByClassName()` assim como o `getElementsByTagName()`, tamb
     const variavel = document.getElementsByClassName("Nome da Classe")
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico24-manipulando_dom_getelementbyclassname.js
 - URL de referência: https://youtu.be/g578TMgdi_U?si=jZUVIhJm2EGbDk-0
 - URLs de apoio:
@@ -846,7 +860,7 @@ A diferença deles para os anteriores, é que eles são versáteis nas buscas qu
         const variavel = document.querySelectorAll(filtro)
         ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico25-manipulando_dom_queryselector.js
 - URL de referência: https://youtu.be/2V7rfcVg5UQ?si=zyHBCrPHnL8aHZ-b
 - URLs de apoio:
@@ -874,7 +888,7 @@ O retorno do método `addEventListener()` é um objeto `PointerEvent`, onde todo
 
 > :memp: **Note:** É sugerido que sempre se utilize os eventos pelo lado do javascript e não no HTML para se manter uma página limpa.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em:
     - Apresentação do módulo: ./Exemplos/topico26-manipulando_dom_addeventlistener.js
     - Exercício prático: ./Exemplos/topico26-copiando_elementos.js
@@ -898,7 +912,7 @@ Para que não haja essa propagação, deve ser utilizado o método `stopPropagat
     elemento.stopPropagation()
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico27-manipulando_dom_stoppropagation.js
 - URL de referência: https://youtu.be/7NcRhRN4MAw?si=iXymeMAEDFvGfq8A
 - URLs de apoio:
@@ -953,7 +967,7 @@ Vale ressaltar que o texto do elemento é considerado como filho, portanto depen
 
 Também é possível navegar pelos nós, através de sua relação entre eles, como por exemplo, chamando o pai do elemento desejado, ou seu avô, e nada impede que seja acessado um outro nó filho do pai.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico28-referenciando_elementos_dom.js
 - URLs de referência: 
     - https://youtu.be/HOLoqv3meTI?si=HATjsofqPQWs7zsk
@@ -1006,7 +1020,7 @@ O javascript permite a manipulação do DOM, inclusive criação e manipulação
         elemento_pai.insertBefore(novo_elemento, elemento_informado)
         ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico29-manipulando_dom_criando_elementos.js
 - URL de referência: 
     - Criando elementos dinamicamente: https://youtu.be/KzXZMemQ_Lc?si=ZMoRrWDqOJwchl-r
@@ -1033,7 +1047,7 @@ Já o método `remove()` é utilizado, ao contrário do `removeChild()`, para re
     elemento.remove()
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: 
     - ./Exemplos/topico30-manipulando_dom_removendo_elementos.js
     - ./Exemplos/topico31p2-exemplo_filter_method.js
@@ -1062,7 +1076,7 @@ Nos exemplos, há um mostrando a diferença entre eles.
 
 O método filter passa 3 parâmetros ordenados: o elemento do array, índice do elemento do array e o array propriamente dito.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: 
     - ./Exemplos/topico31-filter_method.js
     - ./Exemplos/topico31p2-exemplo_filter_method.js
@@ -1094,7 +1108,7 @@ Assim como o método `add()` e o `remove()`, o método `toggle()` é um método 
         elemento.classList.toggle(classe)
         ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: 
     - ./Exemplos/topico32-manipulando_dom_toggle_method.js
     - ./Exemplos/topico26-manipulando_dom_addeventlistener.js
@@ -1113,7 +1127,7 @@ Ao contrário dos métodos `filter()` e `map()`, o `find()` retorna se o termo p
     array.find(funcao)
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico33-find_method.js
 - URLs de referência: https://youtu.be/bEovepaalZA?si=TUGY0rbaNyroqR3L
 - URL de apoio: https://www.w3schools.com/jsref/jsref_find.asp
@@ -1134,7 +1148,7 @@ A diferença entre a utilização do `every()` e do `map()`, é que o `every()` 
     array.every(funcao)
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico34-every_method.js
 - URLs de referência: https://youtu.be/XzcOiyl40zk?si=ODDtbYeHwdd7gs-c
 - URL de apoio: https://www.w3schools.com/jsref/jsref_every.asp
@@ -1149,7 +1163,7 @@ Muito similar ao método `every()`, o método `some()` realiza a validação do 
     array.some(funcao)
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico34-every_method.js
 - URLs de referência: https://youtu.be/TGHleqCYXF4?si=vlUJep2-WKo-6rkV
 - URL de apoio: https://www.w3schools.com/jsref/jsref_some.asp
@@ -1164,7 +1178,7 @@ O `reduce()` é um método de array, onde ele vai iterar o array, assim como os 
     array.reduce(funcao)
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico36-reduce_method.js
 - URLs de referência: https://youtu.be/LfKJFLqQgGo?si=BMGamsn0IfoIlr1g
 - URL de apoio: https://www.w3schools.com/jsref/jsref_reduce.asp
@@ -1188,7 +1202,7 @@ O `push()` é um método de array, onde é adicionado um valor ao final do array
     ```
 > :memo: **Note:** Foi utilizado _array e não array, pois array é uma palavra protegida de javascript.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico36-reduce_method.js
 - URLs de referência: 
 - URL de apoio: https://www.w3schools.com/jsref/jsref_push.asp
@@ -1212,7 +1226,7 @@ O método `next()` deve retrnar um objeto com duas propriedates:
 | value | O valor retornado pelo iterador (pode ser omitido quanto `done` for `true`) |
 | done | `true` se o iterador tiver terminado, se ele já tiver chegado ao final da coleção, `false` se o iterador retornou um novo valor |
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico38-iteracao.js
 - URLs de referência: https://youtu.be/2oHEGBx1HR8?si=in9jBOOMoZDE3Xl3
 - URL de apoio: https://www.w3schools.com/js/js_object_iterables.asp
@@ -1240,7 +1254,7 @@ Os arrays no Javascript podem ser comparados com as listas do Python.
     const array=[itens]
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: 
     - Exemplo teórico: ./Exemplos/topico39-Arrays.js
     - Exemplo prático: ./ExemplosRW/topico39-calculadora.js
@@ -1282,7 +1296,7 @@ Os elementos do Map não podem ser passados no construtor.
     const variavel = new Map()
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico40-Maps.js
 - URLs de referência: https://youtu.be/y9Tz0bjXBXs?si=eqIj3GdArwVq641a
 - URL de apoio: https://www.w3schools.com/js/js_maps.asp
@@ -1311,7 +1325,7 @@ O Set diferentemnete do Map pode já ter os valores passados em seu construtor.
     const variavel = new Set()
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico41-Sets.js
 - URLs de referência: https://youtu.be/v24QAyoiAo0?si=6yLanVHvN24C27WB
 - URL de apoio: https://www.w3schools.com/js/js_sets.asp
@@ -1331,13 +1345,13 @@ Essa forma de declaração de strings também permite strings com multiplas linh
     ```
 
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico42-strings_template.js
 - URLs de referência: https://youtu.be/R2PvSZU5xLY?si=Q9IABrJZvgEwD4nw
 - URL de apoio: https://www.w3schools.com/js/js_string_templates.asp
 
 ---
-### 43. Objetos
+### 43. Classes e Objetos
 
 Em Javascripts objetos podem ser variáveis ou objetos literais (tipo json) ou instâncias de classes.
 
@@ -1406,6 +1420,9 @@ Para separação dos métodos, neste formato de função, se faz necessário a u
 
 **Prototype:** É uma forma de se incluir um atributo ou método a uma classe, depois de declarada ou até mesmo instanciada.
 
+![Prototype](./Imagens/prototype.png)
+*Atributo e métodos adicionados com o prototype.*
+
 - Sintaxe básica:
     ```js
     classe.prototype.atributo = valor
@@ -1416,7 +1433,50 @@ Para separação dos métodos, neste formato de função, se faz necessário a u
 
 > :memo: **Note:** Para inclusão de métodos, só funcionará com a declaração `function` e não com uma `arrow function`.
 
-**Polimorfismo:** é quando um método de uma classe filha é diferente do método da classe pai.
+**Polimorfismo:** é quando um método de uma classe filha é implementado diferente do método da classe pai.
+
+Por exemplo, considere a classe pai "Animal" e suas subclasses "Cachorro" e "Gato". A classe "Animal" pode ter um método chamado "fazerSom()", e as subclasses "Cachorro" e "Gato" podem sobrescrever esse método com implementações diferentes.
+
+Então, enquanto a classe "Animal" pode ter uma implementação genérica de "fazerSom()" que imprime "Som de animal", a classe "Cachorro" pode sobrescrever esse método para imprimir "Au au!" e a classe "Gato" pode sobrescrevê-lo para imprimir "Miau!".
+
+**Abstract:** Uma classe abstrata é uma classe que não pode ser instanciada diretamente. Em vez disso, ela serve como um modelo para outras classes que estendem ou herdam dela. Uma classe abstrata pode conter métodos e propriedades que são compartilhados por suas subclasses, mas ela própria não. Em vez disso, ela define uma estrutura ou contrato que suas subclasses devem seguir.
+
+Em Javascript não se tem uma forma nativa de se declarar uma classe abstrata, contudo existe uma forma de forçar que a classe não seja instanciada, servido apenas para ser herdada/extendida pelas classes filhas.
+
+- Sintaxe de exemplo de classe abstrata:
+    ```js
+    class NomeClasse{
+        contructor(){
+            if(this.constructor===NomeClasse){
+                throw new TypeError("Mensagem de exceção")
+            }
+            this.atributo=valor
+            this.atributo="valor"
+        }
+    }
+    ```
+    Desta forma a classe abstrata não poderá ser instanciada, somente herdada.
+
+Também é possível fazer que seja obrigatória a implementação de um método ou atribudo em uma classe que herda ou extende nossa classe "abstrata".
+
+- Sintaxe de exemplo obrigatoriedade de implementação de método:
+    ```js
+    class NomeClasse{
+        contructor(){
+            if(this.constructor===NomeClasse){
+                throw new TypeError("Mensagem de exceção")
+            }
+            if(this.metodo===undefined){
+                throw new TypeError("Mensagem de exceção")
+            }
+            this.atributo=valor
+            this.atributo="valor"
+        }
+    }
+    ```
+    Desta forma, todas as classes que herdam desta classe abstrata, serão obrigadas a implementar o método obrigatório.
+
+Ambos os exemplos citados anteriormente foram implementados nos exemplos de polimorfismo.
 
 #### Literal
 
@@ -1440,7 +1500,7 @@ Diferentemente dos objetos criados pelas classes, onde um objeto é uma instânc
 
 Ao contrário da classe, os métodos dentro de um objeto literal não retornam ele em si, portanto, ou deve ser declarado em seus métodos esse retorno ou o objeto deverá ser retornado posterior a utilização de algum de seus métodos.
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: 
     - Classes:      ./Exemplos/topico43-objetos_classes.js
     - Literais:     ./Exemplos/topico43-objetos_literais.js
@@ -1448,6 +1508,7 @@ Ao contrário da classe, os métodos dentro de um objeto literal não retornam e
     - Exemplo:      ./Exemplos/topico43-exemplo.js
     - Static:       ./Exemplos/topico43-static.js
     - Prototype:    ./Exemplos/topico43-prototype.js
+    - Polimorfismo: ./Exemplos/topico43-polimorfismo.js
 - URLs de referência: 
     - https://youtu.be/h8HvEPIOQ1k?si=_PrfyYv_L-nWZodu
     - https://youtu.be/Y8KBN1NN6tU?si=3CC7KINw4n-VTEUi
@@ -1499,9 +1560,148 @@ O método `stringify()` realiza a conversão do objeto em string json e `parse()
 
     ```
 
-**Exemplos e Referências**
+#### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico44-conversaoJsonObjetoLiteral.js
 - URLs de referência: https://youtu.be/-EF_SYy2h7Q?si=cBoa1hQF5Ia8LQmW
 - URL de apoio: 
     - https://www.w3schools.com/js/js_json.asp
+    - https://www.w3schools.com/js/js_json_intro.asp
     - https://www.w3schools.com/jsref/jsref_obj_json.asp
+
+---
+### 45. Promise
+
+*"EU PROMETO UMA RESPOSTA!"*
+
+O Javascript executa as linhas de código sequencialmente, não aguardando o retorno delas, contudo existem cituações onde é necessário aguardar o retorno da função chamada ou de ações externas, como uma operação em arquivos, consumir uma API, uma atividade de outra aplicação, dentre outros. Nestes casos, pode-se ser utilizado `Promises`, onde será criada uma "promessa" de um retorno.
+
+Uma `Promise` pode ser dividida em duas etapas:
+- **Código produtor** é o trecho de código que vai realizar a atividade "demorada";
+- **Código consumidor** é o trecho de código que vai aguardar a atividade "demorada";
+
+- Sintaxe básica (CFB):
+    ```js
+    //Código Produtor
+    instancia = new Promise(function(resolve,reject){
+        if(condição){
+            resolve("o que será retornado em caso de sucesso")
+        }else{
+            reject("o que será retornado em caso de falha")
+        }
+    })
+
+    //Código Consumidor
+    instancia.then((retorno)=>{
+        "código em caso de retorno com sucesso da promise"
+    })
+    instancia.catch((retorno)=>{
+        "código em caso de retorno com falha da promise"
+    })
+    ```
+
+- Sintaxe básica (W3Schools):
+    ```js
+    let myPromise = new Promise(function(myResolve, myReject) {
+    // "Producing Code" (May take some time)
+
+    myResolve(); // when successful
+    myReject();  // when error
+    });
+
+    // "Consuming Code" (Must wait for a fulfilled Promise)
+    myPromise.then(
+    function(value) { /* code if successful */ },
+    function(error) { /* code if some error */ }
+    );
+    ```
+    *Quando o consumidor obter o resultado, ele dev e chamar uma das duas funções de callback declaradas.*
+    
+    |Quando|Chamada|
+    |---|---|
+    |Sucesso|myResolve(result value)|
+    |Falha|myReject(error object)|
+
+#### Propriedades de um objeto Promise
+
+O objeto `Promise` suporta duas propriedades: **estado** e **resultado**.
+- Enquanto a `Promise` for "pending" (trabalhando), o resultado é `undefined`.
+- Quando a `Promise` for "fulfilled", o resultado será um valor.
+- Quando a `Promise` for "rejected", o resultado será um objeto de erro.
+
+|Estado|Descrição|Resultado|
+|---|---|---|
+|"pending"|estado inicial|`undefined`|
+|"fulfilled"|operação completa|o valor do resultado|
+|"rejected"|operação falhou|um objeto erro|
+
+> :warning: **Warning:** Não é possível acessar o estaduo nem o resultado da Promise, somente utilizando seus métodos de manipulação.
+
+#### Funções de callback
+
+Uma coisa importante para trabalhar com `Promise` é saber o que são funções de callback.
+
+Em JavaScript, uma função de callback é simplesmente uma função que é passada como argumento para outra função. Essa função de callback é então chamada dentro da função principal em um momento específico ou quando uma determinada condição é atendida.
+
+Por exemplo, considere a função setTimeout(). Ela é usada para agendar uma chamada de função para ser executada após um certo período de tempo. Aqui está um exemplo de como você poderia usá-la com uma função de callback:
+
+```js
+function minhaCallback() {
+    console.log("A função de callback foi chamada após 2 segundos.");
+}
+
+setTimeout(minhaCallback, 2000); // Chama minhaCallback após 2000 milissegundos (2 segundos)
+```
+*Neste exemplo, minhaCallback é a função de callback passada como argumento para setTimeout(). Após 2 segundos, minhaCallback será chamada.*
+
+#### Exemplos e Referências
+- Exemplos em: ./Exemplos/topico45-promise.js
+- URLs de referência: 
+    - https://youtu.be/1ZiDrKMZnws?si=sKs4EWGXtv3DGoOA
+    - https://youtu.be/JLROo9PVhCw?si=N2f7OcP8iZtJjfEh
+- URL de apoio: 
+    - https://www.w3schools.com/js/js_promise.asp
+    - https://www.w3schools.com/jsref/jsref_obj_promise.asp
+
+---
+### 46. Biblioteca Date
+
+A manipulação de data e hora no Javascript se da pela lib/classe Date().
+
+Os objetos data são estáticos, e não em movimento como um relógio. Eles são como uma "foto" daquele momento do relógio.
+
+Um exemplo de objeto data seria:
+
+```
+Mon Mar 25 2024 05:30:38 GMT-0300 (Horário Padrão de Brasília)
+```
+
+#### Exemplos e Referências
+- Exemplos em: ./ExemplosRW/Alarme/alarme.js
+- URLs de referência: 
+    - https://youtu.be/KHq_RO_8Qb0?si=uBRBQJT7dCEUEL0c
+    - https://youtu.be/32yZvWcA1pI?si=PqT_NIvF_S4H1D-3
+    - https://youtu.be/HLZxacX8wyg?si=RkzIOAUEee_lruBa
+- URL de apoio: 
+    - https://www.w3schools.com/jsref/jsref_obj_date.asp
+    - https://www.w3schools.com/js/js_dates.asp
+    - https://www.w3schools.com/js/js_date_formats.asp
+    - https://www.w3schools.com/js/js_date_methods.asp
+    - https://www.w3schools.com/js/js_date_methods_set.asp
+    - Conversor de epoch - https://www.epochconverter.com/
+    - https://pt.wikipedia.org/wiki/Era_Unix
+
+---
+### 47. Biblioteca Math
+
+A biblioteca Math permite a execução de tarefas matemáticas.
+
+Math não é uma classe construtora, portanto seus métodos e atributos deverão ser acessados diretamente por ela, sem instanciar ela.
+
+#### Exemplos e Referências
+- Exemplos em: ./Exemplos/topico47-math.js
+- URLs de referência: 
+    - https://youtu.be/oSXBD3g3TeM?si=8sSoseiyx5VkKckH
+    - https://youtu.be/uXLXfU2qZ0E?si=tW-K3-zXgrKhPqhj
+- URL de apoio: 
+    - https://www.w3schools.com/js/js_math.asp
+    - https://www.w3schools.com/jsref/jsref_obj_math.asp
