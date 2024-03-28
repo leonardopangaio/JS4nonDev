@@ -13,7 +13,7 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 8. [Pré e Pós incremento;](#8-pr%C3%A9-e-p%C3%B3s-incremento)
 9. [Operação ternária;](#9-opera%C3%A7%C3%A3o-tern%C3%A1ria)
 10. [Typeoff function;](#10-typeoff-function)
-11. [Spread functon;](#11-spread-functon)
+11. [Spread function;](#11-spread-function)
 12. [Condicional com IF e ELSE;](#12-condicional-com-if-e-else)
 13. [Condicional com Switch Case;](#13-condicional-com-switch-case)
 14. [Loop com FOR;](#14-loop-com-for)
@@ -49,6 +49,11 @@ Esse documento visa a ser um caderno de estudos sobre javascript.
 44. [Conversão de JSON em Objeto Literal e vice-versa;](#44-Conversão-de-JSON-em-Objeto-Literal-e-vice-versa)
 45. [Promise;](#45-Promise)
 46. [Biblioteca Date;](#46-Biblioteca-Date)
+47. [Biblioteca Math;](#47-Biblioteca-Math)
+48. [Redirecionamento de páginas e histórico;](#48-Redirecionamento-de-páginas-e-histórico)
+49. [Caixas de Diálogo;](#49-Caixas-de-Diálogo)
+50. [PDF e Impressão;](#50-PDF-e-Impressão)
+51. [Módulos;](#51-Módulos)
 
 ---
 ### 1. Instalando o Node.js;
@@ -101,7 +106,7 @@ No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e co
     - Por exemplo, se ela for declarada dentro de uma classe ou função, ela poderá ser utilizada pela classe/função como um todo.
     - Sintaxe básica:
         ```js
-        var variavel = valor
+        var variável = valor
         ```
 
 2. let
@@ -109,7 +114,7 @@ No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e co
     - Por exemplo, se ela for declarada dentro de uma validação, ela será utilizada somente dentro daquela validação e não em toda a função ou classe a qual aquela validação pertence;
     - Sintaxe básica:
         ```js
-        let variavel = valor
+        let variável = valor
         ```
 
 3. const
@@ -117,7 +122,7 @@ No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e co
     - Comumente é utilizada para instanciar um objeto ou chamar uma função;
     - Sintaxe básica:
         ```js
-        const variavel = valor
+        const variável = valor
         ```
 
 #### Exemplos e Referências
@@ -128,7 +133,7 @@ No JavaScript temos 3 formas de declarar uma variável, são elas: var, let e co
 ---
 ### 4. Operadores matemáticos;
 
-Os operadores matemáticos ou aritméticos são os operadores para realização de calculos matemáticos:
+Os operadores matemáticos ou aritméticos são os operadores para realização de cálculos matemáticos:
 1. Soma (`+`)
 2. Subtração (`-`)
 3. Multiplicação (`*`)
@@ -222,7 +227,7 @@ Existe um arquivo excel explicando a lógica dos operadores bitwise em ./Exemplo
 ---
 ### 8. Incremento, decremento e inversão de valor;
 
-Consideremos os operadores de infremento, ou decremento, como `++` junto a variável. O que definirá se será pré ou pós será a localização do operador a variável.
+Consideremos os operadores de incremento, ou decremento, como `++` junto a variável. O que definirá se será pré ou pós será a localização do operador a variável.
 
 1. Incremento (`++` ou `+=X`)
     - Vai incrementar 1 ou X na variável.
@@ -241,7 +246,7 @@ Por exemplo, se incrementarmos uma variável que tem valor 10, a variável passa
 
 Obs. Caso tenhamos uma string na operação o operador `+` será considerado um operador de concatenação e não mais um incremento.
 
-Em ambos os casos, fica mais visivel com o exemplo prático.
+Em ambos os casos, fica mais visível com o exemplo prático.
 
 #### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico8-pre_pos_incremento.js
@@ -280,10 +285,10 @@ Em Javascript temos 4 tipos de variáveis, são elas: Number, String, Object e B
 
 - Sintaxe básica:
     ```js
-    let variavel = valor
-    typeof(variavel)
+    let variável = valor
+    typeof(variável)
     ```
-> :memo: **Note:** A função typeof retorna um valor, poranto para ser exibido, ou ela deverá ser explicitamente, ou o retorno deverá ser inserido em outra variável. 
+> :memo: **Note:** A função typeof retorna um valor, portanto para ser exibido, ou ela deverá ser explicitamente, ou o retorno deverá ser inserido em outra variável. 
 
 #### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico10-funcao_typeof.js
@@ -291,7 +296,7 @@ Em Javascript temos 4 tipos de variáveis, são elas: Number, String, Object e B
 - URL de apoio: https://www.w3schools.com/js/js_typeof.asp
 
 ---
-### 11. Spread functon;
+### 11. Spread function;
 
 Também conhecido como "Operador Spread".
 
@@ -608,27 +613,27 @@ Existem duas formas de se declarar parâmetros de uma função:
 1. Basic function
     - Sintaxe básica:
         ```js
-        function funcao(){ //declaração da função
+        function função(){ //declaração da função
             bloco de código que será executado
         }
 
-        funcao() //chamada da função
+        função() //chamada da função
         ```
     - Sintaxe com parâmetros:
         ```js
-        function funcao(parâmetros=valor padrão){
+        function função(parâmetros=valor padrão){
             bloco de código que será executado
         }
 
-        funcao(parâmetros)
+        função(parâmetros)
         ```
     - Sintaxe com parâmetros rest:
         ```js
-        function funcao(...valores){
+        function função(...valores){
             bloco de código que será executado
         }
 
-        funcao(array de valores)
+        função(array de valores)
         ```
 2. Anonymous function
     - Funções anônimas são funções sem um nome declarado;
@@ -638,14 +643,14 @@ Existem duas formas de se declarar parâmetros de uma função:
     - É sugerido que as funções anônimas sejam declaradas como `const` para que elas não sofram alteração durante o funcionamento do código, mas elas podem ser declaradas com `var` ou `let` também;
     - Sintaxe básica:
         ```js
-        const variavel = function(parâmetros){bloco de código que será executado}
+        const variável = function(parâmetros){bloco de código que será executado}
         ```
     - Também podemos ter uma função anônima construtora;
     - Os parâmetros devem ser passados como string;
     - O último parâmetro será o corpo da função, o bloco de código que será executado;
     - Sintaxe construtora:
         ```js
-        const variavel = new Function("parâmetros", "return bloco de código que será executado") //Obrigatório que seja com F maiúsculo
+        const variável = new Function("parâmetros", "return bloco de código que será executado") //Obrigatório que seja com F maiúsculo
         ```
 3. Arrow function
     - Também conhecidas como funções lambda;
@@ -655,7 +660,7 @@ Existem duas formas de se declarar parâmetros de uma função:
     - Caso a arrow function seja simples, com até uma linha, ela não precisa ter o corpo entre chaves;
     - Sintaxe básica:
         ```js
-        const variavel = (parâmetros)=>{bloco de código que será executado}
+        const variável = (parâmetros)=>{bloco de código que será executado}
         ```
 4. Funções aninhadas
     - Funções aninhadas são funções que ficam dentro de funções;
@@ -695,7 +700,7 @@ O método `map()` é utilizado para percorrer todos os elementos de um array, de
 
 - Sintaxe completa:
     ```js
-    let variavel = Array.prototype.map.call(array, (valores)=>{função()})
+    let variável = Array.prototype.map.call(array, (valores)=>{função()})
     ```
 
 - Sintaxe simplificada:
@@ -703,7 +708,7 @@ O método `map()` é utilizado para percorrer todos os elementos de um array, de
     array.map(função)
     ```
 
-    **OBS.:** A síntaxe básica é utilizada quando desejamos passar apenas o valor corrente do método `map` para uma função externa.
+    **OBS.:** A sintaxe básica é utilizada quando desejamos passar apenas o valor corrente do método `map` para uma função externa.
 
 - Sintaxe com funções anônimas:
     ```js
@@ -753,7 +758,7 @@ O operador `this` é muito similar à utilização do `self` em uma classe Pytho
 
 O método `getElementById()` é um método da classe `document` do javascript. Ele retorna o elemento, buscando por seu ID.
 
-Primeiramende deve ficar claro que o NODE.js é o lado servidor do javascript (server side), para situações onde se é desejado manipular o DOM (client side) deve ser utilizado o navegador, por exemplo o google chrome.
+Primeiramente deve ficar claro que o NODE.js é o lado servidor do javascript (server side), para situações onde se é desejado manipular o DOM (client side) deve ser utilizado o navegador, por exemplo o google chrome.
 
 Isto se deve ao fato do NODE não ter acesso aos artefatos do lado do cliente. Desta forma, a página HTML em questão que chamará o código javascript para executar ele do lado do cliente.
 
@@ -789,7 +794,7 @@ A diferença entre eles, é quem um traz o elemento em si (`getElementsById()`),
 
 - Sintaxe básica:
     ```js
-    const variavel = document.getElementsByTagName("Nome da Tag")
+    const variável = document.getElementsByTagName("Nome da Tag")
     ```
 
 > :bulb: **Tip:** Uma das formas de se converter um HTMLCollection para um array é utilizando o [spread function](#11-spread-functon), conforme citado nos exemplos da função.
@@ -836,14 +841,14 @@ O método `getElementsByClassName()` assim como o `getElementsByTagName()`, tamb
 ---
 ### 25. Manipulando o DOM - querySelector method
 
-Tanto o `querySelector()` quanto o `querySelectorAll()` são métodos da clase `document` do javascript para manipulação do DOM.
+Tanto o `querySelector()` quanto o `querySelectorAll()` são métodos da classe `document` do javascript para manipulação do DOM.
 
 A diferença deles para os anteriores, é que eles são versáteis nas buscas que eles realizam.
 
 - **querySelector:** Retorna o primeiro elemento respeitando a query realizada.
 - Sintaxe básica:
     ```js
-    const variavel = document.querySelector(filtro)
+    const variável = document.querySelector(filtro)
     ```
 
 - **querySelectorAll:** Retorna um objeto do tipo `NodeList`, que é muito similar ao `HTMLCollection`, só que num padrão mais antigo.
@@ -857,7 +862,7 @@ A diferença deles para os anteriores, é que eles são versáteis nas buscas qu
     - Para realizar a busca pelo id, assim como no getElementById, devemos escrever '#id';
     - Sintaxe básica:
         ```js
-        const variavel = document.querySelectorAll(filtro)
+        const variável = document.querySelectorAll(filtro)
         ```
 
 #### Exemplos e Referências
@@ -886,7 +891,7 @@ O retorno do método `addEventListener()` é um objeto `PointerEvent`, onde todo
     elemento.addEventListener("Evento", Função)
     ```
 
-> :memp: **Note:** É sugerido que sempre se utilize os eventos pelo lado do javascript e não no HTML para se manter uma página limpa.
+> :memo: **Note:** É sugerido que sempre se utilize os eventos pelo lado do javascript e não no HTML para se manter uma página limpa.
 
 #### Exemplos e Referências
 - Exemplos em:
@@ -956,7 +961,7 @@ Uma forma de observar essa relação no navegador é desta forma:
 
 Podemos observar as relações através dos campos: _childNodes_, _children_, _firstChild_, _firstElementChild_, _lastChild_, _lastElementChild_, _nextElementSibling_, _nextSibling_, _previousSibling_, _parentElement_ e _parentNode_ por exemplo.
 
-Uma das formas que temos para verificar se um determinado elemento possuí filhos, é a utilização do médoto `hasChildNodes`. Este método retornará `true` ou `false` se o elemento tiver ou não filhos. 
+Uma das formas que temos para verificar se um determinado elemento possuí filhos, é a utilização do método `hasChildNodes`. Este método retornará `true` ou `false` se o elemento tiver ou não filhos. 
 
 - Sintaxe básica:
     ```js
@@ -1066,7 +1071,7 @@ A forma de iterar é semelhante ao método `map()`, contudo ele é otimizado par
 
 Nos exemplos, há um mostrando a diferença entre eles.
 
-- Sitaxe básica:
+- Sinaxe básica:
     ```js
     array.filter(função)
     ```
@@ -1124,7 +1129,7 @@ Ao contrário dos métodos `filter()` e `map()`, o `find()` retorna se o termo p
 
 - Sintaxe básica:
     ```js
-    array.find(funcao)
+    array.find(função)
     ```
 
 #### Exemplos e Referências
@@ -1145,7 +1150,7 @@ A diferença entre a utilização do `every()` e do `map()`, é que o `every()` 
 
 - Sintaxe básica:
     ```js
-    array.every(funcao)
+    array.every(função)
     ```
 
 #### Exemplos e Referências
@@ -1160,7 +1165,7 @@ Muito similar ao método `every()`, o método `some()` realiza a validação do 
 
 - Sintaxe básica:
     ```js
-    array.some(funcao)
+    array.some(função)
     ```
 
 #### Exemplos e Referências
@@ -1175,7 +1180,7 @@ O `reduce()` é um método de array, onde ele vai iterar o array, assim como os 
 
 - Sintaxe básica:
     ```js
-    array.reduce(funcao)
+    array.reduce(função)
     ```
 
 #### Exemplos e Referências
@@ -1216,7 +1221,7 @@ Iteradores são aplicáveis em coleções, como array, strings, maps, sets, etc.
 
 Um iterador Javascript é um objeto que tenha a função `Symbol.iterator`, que retorna a função `next()`.
 
-O método `next()` deve retrnar um objeto com duas propriedates:
+O método `next()` deve retornar um objeto com duas propriedades:
 
 > `value` (o próximo valor)
 > `done` (`true` ou `false`)
@@ -1236,9 +1241,9 @@ O método `next()` deve retrnar um objeto com duas propriedates:
 
 Arrays são os tipos mais simples de coleção em Javascript e eles podem receber todos os tipos de dados (strings, numbers, arrays, objetos, funções) dentro deles. Também são chamados de vetores, ou em casos onde um array está contido em outro array, podem ser chamados de matrizes.
 
-Arrays são objetos iteraveis, e que possuem diversos métodos como `map()`, `filter()`, `reduce()`, etc...
+Arrays são objetos iteráveis, e que possuem diversos métodos como `map()`, `filter()`, `reduce()`, etc...
 
-Como são iteraveis, eles possuem índice para definir a posição dos itens. Os índices sempre serão iniciados com 0 (zero), portanto o item de índice [0] é o primeiro elemento, o elemento de índice [1] é o segundo elemento e por aí vai.
+Como são iteráveis, eles possuem índice para definir a posição dos itens. Os índices sempre serão iniciados com 0 (zero), portanto o item de índice [0] é o primeiro elemento, o elemento de índice [1] é o segundo elemento e por aí vai.
 
 - Exemplo:
 
@@ -1270,7 +1275,7 @@ Os arrays no Javascript podem ser comparados com as listas do Python.
 
 A coleção map é uma coleção de chaves e valores, faz lembrar os dicionários do Python.
 
-Diferente dos arrays, que utilizam índice para serem iteraveis e terem seus valores retornados, o Map utiliza a chave para fazer a indexação, portanto não é possível ter chaves iguais (pode haver valores iguais sem problemas). Caso uma chave seja passada e ela já exista, ela terá seu valor atualizado.
+Diferente dos arrays, que utilizam índice para serem iteráveis e terem seus valores retornados, o Map utiliza a chave para fazer a indexação, portanto não é possível ter chaves iguais (pode haver valores iguais sem problemas). Caso uma chave seja passada e ela já exista, ela terá seu valor atualizado.
 
 As chaves e valores do Map podem ser de qualquer tipo, e também podem armazenar funções.
 
@@ -1293,20 +1298,22 @@ Os elementos do Map não podem ser passados no construtor.
 
 - Sintaxe básica:
     ```js
-    const variavel = new Map()
+    const variável = new Map()
     ```
 
 #### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico40-Maps.js
 - URLs de referência: https://youtu.be/y9Tz0bjXBXs?si=eqIj3GdArwVq641a
-- URL de apoio: https://www.w3schools.com/js/js_maps.asp
+- URL de apoio: 
+    - https://www.w3schools.com/js/js_maps.asp
+    - https://www.w3schools.com/js/js_object_maps.asp
 
 ---
 ### 41. Coleções de Dados - Set
 
 O Set é uma coleção que recebe um array, porém diferente do array, ele não aceita valores duplicados, ela aceitará somente a primeira ocorrência do valor passado.
 
-O Set diferentemnete do Map pode já ter os valores passados em seu construtor.
+O Set diferentemente do Map pode já ter os valores passados em seu construtor.
 
 |**Método** | **Descrição** |
 |---|---|
@@ -1322,26 +1329,28 @@ O Set diferentemnete do Map pode já ter os valores passados em seu construtor.
 
 - Sintaxe básica:
     ```js
-    const variavel = new Set()
+    const variável = new Set()
     ```
 
 #### Exemplos e Referências
 - Exemplos em: ./Exemplos/topico41-Sets.js
 - URLs de referência: https://youtu.be/v24QAyoiAo0?si=6yLanVHvN24C27WB
-- URL de apoio: https://www.w3schools.com/js/js_sets.asp
+- URL de apoio: 
+    - https://www.w3schools.com/js/js_sets.asp
+    - https://www.w3schools.com/js/js_object_sets.asp
 
 ---
 ### 42. Strings Template
 
-O string template é uma forma de concatenação de strings, muito similar ao fstrings do python.
+O string template é uma forma de concatenação de strings, muito similar ao `fstrings` do python.
 
 A sua declaração é utilizando crases "`" e as variáveis são declaradas com uma notação similar a do shellscript "${}".
 
-Essa forma de declaração de strings também permite strings com multiplas linhas.
+Essa forma de declaração de strings também permite strings com múltiplas linhas.
 
 - Sintaxe básica:
     ```js
-    const variavel = `Texto da variável ${variavel_concatenada}`
+    const variável = `Texto da variável ${variável_concatenada}`
     ```
 
 
@@ -1353,7 +1362,7 @@ Essa forma de declaração de strings também permite strings com multiplas linh
 ---
 ### 43. Classes e Objetos
 
-Em Javascripts objetos podem ser variáveis ou objetos literais (tipo json) ou instâncias de classes.
+Em Javascript objetos podem ser variáveis ou objetos literais (tipo json) ou instâncias de classes.
 
 #### Classes
 
@@ -1365,7 +1374,7 @@ Por exemplo, imagine que você tem uma classe chamada "Cachorro". Esta classe de
 
 **Atributos:** Também conhecidos como propriedades ou campos, os atributos são as características ou dados que um objeto possui. Eles representam o estado do objeto e são usados para descrever suas características. Por exemplo, se tivermos uma classe "Carro", os atributos podem incluir coisas como "marca", "modelo", "ano", "cor", etc. Esses atributos são variáveis que armazenam informações específicas de cada objeto.
 
-A classe pode ter atributos que não são declarados no contrutor, porém caso o sejam, serão substituídos pelo do construtor.
+A classe pode ter atributos que não são declarados no construtor, porém caso o sejam, serão substituídos pelo do construtor.
 
 **Métodos:** Os métodos são funções definidas na classe que representam o comportamento dos objetos dessa classe. Eles permitem que os objetos executem ações e manipulem seus dados. Por exemplo, a classe "Carro" pode ter métodos como "ligar", "desligar", "acelerar", "frear", etc. Esses métodos definem o que um objeto da classe Carro pode fazer.
 
@@ -1373,7 +1382,7 @@ A classe pode ter atributos que não são declarados no contrutor, porém caso o
     ```js
     class Nome_da_Classe{
         constructor(){
-            this.variavel = valor
+            this.variável = valor
         }
     }
 
@@ -1383,13 +1392,13 @@ A classe pode ter atributos que não são declarados no contrutor, porém caso o
 - Sintaxe como função:
     ```js
     const Nome_da_Classe=function(valor){
-        this.variavel = valor
+        this.variável = valor
     }
 
     let instancia_objeto = new Nome_da_Classe()
     ```
 
-> :memo: **Note:** O parêntesis da instaciação do objeto é o que será passado para o método construtor. 
+> :memo: **Note:** O parêntesis da instanciação do objeto é o que será passado para o método construtor. 
 
 Existe também uma forma de trabalhar com classes que seria através de funções, neste caso, a passagem de parâmetros seria na criação da função, e os atributos e parâmetros seriam declarados com `this`, no caso dos métodos, é feita a declaração com funções anônimas.
 
@@ -1399,7 +1408,7 @@ Para separação dos métodos, neste formato de função, se faz necessário a u
     ```js
     function Nome_da_Classe(parâmetros){
         this.atributo=parâmetro,
-        this.medoto=function(){
+        this.método=function(){
             "corpo do método"
         }
     }
@@ -1426,7 +1435,7 @@ Para separação dos métodos, neste formato de função, se faz necessário a u
 - Sintaxe básica:
     ```js
     classe.prototype.atributo = valor
-    classe.prototype.metodo = function(){
+    classe.prototype.método = function(){
         "Corpo do novo método"
     }
     ```
@@ -1441,12 +1450,12 @@ Então, enquanto a classe "Animal" pode ter uma implementação genérica de "fa
 
 **Abstract:** Uma classe abstrata é uma classe que não pode ser instanciada diretamente. Em vez disso, ela serve como um modelo para outras classes que estendem ou herdam dela. Uma classe abstrata pode conter métodos e propriedades que são compartilhados por suas subclasses, mas ela própria não. Em vez disso, ela define uma estrutura ou contrato que suas subclasses devem seguir.
 
-Em Javascript não se tem uma forma nativa de se declarar uma classe abstrata, contudo existe uma forma de forçar que a classe não seja instanciada, servido apenas para ser herdada/extendida pelas classes filhas.
+Em Javascript não se tem uma forma nativa de se declarar uma classe abstrata, contudo existe uma forma de forçar que a classe não seja instanciada, servido apenas para ser herdada/estendida pelas classes filhas.
 
 - Sintaxe de exemplo de classe abstrata:
     ```js
     class NomeClasse{
-        contructor(){
+        constructor(){
             if(this.constructor===NomeClasse){
                 throw new TypeError("Mensagem de exceção")
             }
@@ -1457,16 +1466,16 @@ Em Javascript não se tem uma forma nativa de se declarar uma classe abstrata, c
     ```
     Desta forma a classe abstrata não poderá ser instanciada, somente herdada.
 
-Também é possível fazer que seja obrigatória a implementação de um método ou atribudo em uma classe que herda ou extende nossa classe "abstrata".
+Também é possível fazer que seja obrigatória a implementação de um método ou atributo em uma classe que herda ou estende nossa classe "abstrata".
 
 - Sintaxe de exemplo obrigatoriedade de implementação de método:
     ```js
     class NomeClasse{
-        contructor(){
+        constructor(){
             if(this.constructor===NomeClasse){
                 throw new TypeError("Mensagem de exceção")
             }
-            if(this.metodo===undefined){
+            if(this.método===undefined){
                 throw new TypeError("Mensagem de exceção")
             }
             this.atributo=valor
@@ -1487,10 +1496,10 @@ Diferentemente dos objetos criados pelas classes, onde um objeto é uma instânc
     objeto = {
         atributo:valor,
         atributo:"valor",
-        metodo:function(){
+        método:function(){
             "corpo do método"
         },
-        metodo:function(parâmetro){
+        método:function(parâmetro){
             "corpo do método"
         }
     }
@@ -1499,6 +1508,10 @@ Diferentemente dos objetos criados pelas classes, onde um objeto é uma instânc
 > :memo: **Note:** A atribuição de valores nos objetos literais são através de ":" e não "=".
 
 Ao contrário da classe, os métodos dentro de um objeto literal não retornam ele em si, portanto, ou deve ser declarado em seus métodos esse retorno ou o objeto deverá ser retornado posterior a utilização de algum de seus métodos.
+
+Os objetos literais nos possibilitam a criação de tipos de objetos, em outras palavras, podemos criar um objeto padrão e referenciar ele na criação dos demais objetos literais, como se fossemos "instanciar" um objeto com base em outro.
+
+Para Javascript, qualquer tipo de dados que contém a notação de {chaves} será considerado um objeto.
 
 #### Exemplos e Referências
 - Exemplos em: 
@@ -1520,7 +1533,9 @@ Ao contrário da classe, os métodos dentro de um objeto literal não retornam e
     - https://youtu.be/KXE0-UeHcJI?si=0NMVlpEpI_tGdE-M
     - https://youtu.be/lJ35mX0t1eE?si=zIEIT76rqFChJSvp
     - https://youtu.be/xwqvmRXodC0?si=bH-8udB6-m5fU3uF
-    - https://youtu.be/c2t7m3Whyb4?si=hI3Bn4Po00lhBhho (rever)
+    - https://youtu.be/c2t7m3Whyb4?si=hI3Bn4Po00lhBhho
+    - https://youtu.be/x_TVjjm6cNM?si=IntfHXc8SCpBrsmL
+    - https://youtu.be/Z7w-TZ5mnE4?si=lW6zeg6nQD3eUNXb
 - URLs de apoio: 
     - https://www.w3schools.com/js/js_objects.asp
     - https://www.w3schools.com/jsref/jsref_obj_object.asp
@@ -1535,6 +1550,7 @@ Ao contrário da classe, os métodos dentro de um objeto literal não retornam e
     - https://www.w3schools.com/js/js_object_methods.asp
     - https://www.w3schools.com/js/js_object_constructors.asp
     - https://www.w3schools.com/js/js_object_prototypes.asp
+    - https://www.w3schools.com/js/js_object_display.asp
     - https://www.w3schools.com/js/js_class_inheritance.asp
     - https://www.w3schools.com/js/js_class_static.asp
     - https://www.w3schools.com/jsref/jsref_object_constructor.asp
@@ -1573,7 +1589,7 @@ O método `stringify()` realiza a conversão do objeto em string json e `parse()
 
 *"EU PROMETO UMA RESPOSTA!"*
 
-O Javascript executa as linhas de código sequencialmente, não aguardando o retorno delas, contudo existem cituações onde é necessário aguardar o retorno da função chamada ou de ações externas, como uma operação em arquivos, consumir uma API, uma atividade de outra aplicação, dentre outros. Nestes casos, pode-se ser utilizado `Promises`, onde será criada uma "promessa" de um retorno.
+O Javascript executa as linhas de código sequencialmente, não aguardando o retorno delas, contudo existem situações onde é necessário aguardar o retorno da função chamada ou de ações externas, como uma operação em arquivos, consumir uma API, uma atividade de outra aplicação, dentre outros. Nestes casos, pode-se ser utilizado `Promises`, onde será criada uma "promessa" de um retorno.
 
 Uma `Promise` pode ser dividida em duas etapas:
 - **Código produtor** é o trecho de código que vai realizar a atividade "demorada";
@@ -1634,7 +1650,7 @@ O objeto `Promise` suporta duas propriedades: **estado** e **resultado**.
 |"fulfilled"|operação completa|o valor do resultado|
 |"rejected"|operação falhou|um objeto erro|
 
-> :warning: **Warning:** Não é possível acessar o estaduo nem o resultado da Promise, somente utilizando seus métodos de manipulação.
+> :warning: **Warning:** Não é possível acessar o estado nem o resultado da Promise, somente utilizando seus métodos de manipulação.
 
 #### Funções de callback
 
@@ -1705,3 +1721,85 @@ Math não é uma classe construtora, portanto seus métodos e atributos deverão
 - URL de apoio: 
     - https://www.w3schools.com/js/js_math.asp
     - https://www.w3schools.com/jsref/jsref_obj_math.asp
+
+---
+### 48. Redirecionamento de páginas e histórico
+
+Utilizando as classes `location` e `history` é possível redirecionar URLs e navegar pelo histórico do navegador.
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico48-redirecionamento-historico.js
+- URLs de referência: https://youtu.be/aAdw_U7uTyE?si=A4hK5JB1mM-4ICWJ
+- URL de apoio: 
+    - https://www.w3schools.com/js/js_window_location.asp
+    - https://www.w3schools.com/jsref/obj_location.asp
+    - https://www.w3schools.com/js/js_window_history.asp
+    - https://www.w3schools.com/jsref/obj_history.asp
+
+---
+### 49. Caixas de Diálogo
+
+Nativamente, temos 3 tipos de caixas de diálogo em javascript: `alert()`, `confirm()` e `prompt()`.
+
+**Alerta**
+
+Uma caixa de alerta geralmente é usada para passar algum tipo de informação ao usuário. 
+
+Quando for exibida o usuário deverá pressionar "OK" para prosseguir.
+
+- Sintaxe básica:
+    ```js
+    alert("Mensagem")
+    ```
+
+**Confirmação**
+
+Uma caixa de confirmação geralmente é usada quando se deseja que o usuário verifique ou aceite alguma coisa. 
+
+Quando ela é exibida, o usuário poderá clicar em "OK" ou "Cancel" para prosseguir. Caso seja pressionado "OK" ela retornará `true`, se clicar em "Cancel" ela retornará `false`.
+
+Como ela retorna um `boolean`, a saída dela pode ser inserida em variáveis, ou utilizar diretamente ela.
+
+- Sintaxe básica:
+    ```js
+    confirm("Mensagem")
+    ```
+
+**Prompt**
+
+Uma caixa do tipo prompt geralmente é usada quando se deseja que o usuário insira alguma informação.
+
+Quando exibida, será exibido um campo para o usuário preencher e um botão de "OK" e "Cancel" para que o usuário prossiga. Caso seja pressionado o "OK" o valor dela será retornado, caso seja pressionado o "Cancel" será retornado o valor `null`.
+
+- Sintaxe básica:
+    ```js
+    prompt("Mensagem","Resposta Padrão Opcional")
+    ```
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico49-caixas_dialogo.js
+- URLs de referência: https://youtu.be/56eMlh3glW0?si=G_y2iV3KuHBmmXJ4
+- URL de apoio: 
+    - https://www.w3schools.com/js/js_popup.asp
+    - https://www.w3schools.com/jsref/met_win_alert.asp
+    - https://www.w3schools.com/jsref/met_win_confirm.asp
+    - https://www.w3schools.com/jsref/met_win_prompt.asp
+
+---
+### 50. PDF e Impressão
+
+No exemplo, veremos uma abordagem de como realizar a impressão de documentos de uma forma limpa, não sendo apenas um print da tela do navegador.
+
+**Exemplos e Referências**
+- Exemplos em: ./Exemplos/topico50-impressao.js
+- URLs de referência: https://youtu.be/z8CSuoFX7Ko?si=BNv9wnFQ7wAa8RKn
+- URL de apoio: 
+
+---
+### 51. Módulos
+
+
+**Exemplos e Referências**
+- Exemplos em: ./
+- URLs de referência: https://youtu.be/z3ZfhL6bDJc?si=IEgTT8nRx4Jw4GYI
+- URL de apoio: 
